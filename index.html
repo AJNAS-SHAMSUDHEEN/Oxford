@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oxford Adventure Tourism – Discover the Soul of Qatar</title>
-  <meta name="description" content="Your Gateway to Extraordinary Qatar Experiences. Discover luxury desert safaris, skydiving, kayaking, and authentic cultural tours with Oxford Adventure Tourism.">
-  
+  <meta name="description"
+    content="Your Gateway to Extraordinary Qatar Experiences. Discover luxury desert safaris, skydiving, kayaking, and authentic cultural tours with Oxford Adventure Tourism.">
+
   <!-- Google Fonts: Playfair Display for Editorial Serifs & Plus Jakarta Sans for UI -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
 
   <!-- Page Wrapper Framed in Vibrant Coral -->
   <div class="page-wrapper">
-    
+
     <!-- Top Utility & Currency Bar -->
     <header class="frame-control-bar">
       <div class="frame-control-left">
         <span class="qatar-flag-badge">🇶🇦 Oxford Adventure Tourism • Doha, Qatar</span>
-        <a href="tel:+97472001133" style="color: #FFFFFF; text-decoration: none; opacity: 0.95; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 4px;">
+        <a href="tel:+97472001133"
+          style="color: #FFFFFF; text-decoration: none; opacity: 0.95; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 4px;">
           📞 +974 7200 1133
         </a>
       </div>
@@ -34,7 +45,7 @@
 
     <!-- Main Canvas Card (Soft Warm Linen Background) -->
     <main class="main-canvas">
-      
+
       <!-- Top Site Header / Navigation -->
       <nav class="site-header">
         <a href="#" class="header-brand" aria-label="Oxford Adventure Home">
@@ -67,31 +78,57 @@
            HERO SECTION: Find Your Next Great Adventure
            ===================================================================== -->
       <section class="hero-container" id="hero">
-        
-        <!-- Left Hero Column -->
+
+        <!-- Left Hero Column with Writing Animation -->
         <div class="hero-left">
+          <!-- Live Status Badge -->
+          <div class="hero-live-badge">
+            <span class="live-pulse-dot"></span>
+            <span class="hero-live-text">Doha, Qatar • Luxury Guided Expeditions</span>
+          </div>
+
           <h1 class="hero-title">
             Find Your<br>
             Next Great<br>
-            Adventure
+            <span class="animated-text-slot">
+              <span class="writing-accent-wrapper">
+                <span class="writing-dynamic-text" id="typewriterText">Bedouin Odyssey</span><span
+                  class="writing-cursor">|</span>
+                <svg class="writing-underline-svg" id="writingUnderline" viewBox="0 0 320 28" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="writing-underline-path" d="M 6,18 C 80,6 200,8 308,16 C 318,17 288,24 240,24"
+                    stroke="url(#goldGradient)" stroke-width="4.5" stroke-linecap="round" />
+                  <defs>
+                    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#AA7E3A" />
+                      <stop offset="50%" stop-color="#E5BA75" />
+                      <stop offset="100%" stop-color="#C19147" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </span>
+            </span>
           </h1>
           <p class="hero-subtitle">
-            From hiking mountains to tandem skydiving, find your next adrenaline rush here.
+            From thrilling dune bashing across the Inland Sea to 15,000-ft tandem skydiving over the Arabian Gulf,
+            discover Qatar's most extraordinary adrenaline journeys.
           </p>
-          <a href="#adventures" class="btn-pill hero-cta-btn smooth-scroll-btn">
-            Explore Now
-          </a>
+          <div class="hero-cta-group">
+            <a href="#adventures" class="btn-pill hero-cta-btn smooth-scroll-btn">
+              Explore Adventures
+            </a>
+            <a href="#qatar-specials" class="btn-pill-outline smooth-scroll-btn">
+              Qatar Specials ↗
+            </a>
+          </div>
         </div>
 
         <!-- Right Hero Column: Skydivers Visual + Badge + Giant ADVENTURE Typography -->
         <div class="hero-right">
           <div class="hero-visual-card">
-            <img 
-              src="images/hero_skydiving.jpg" 
-              alt="Two happy adventurers tandem skydiving over scenic landscape" 
-              class="hero-skydive-img"
-            >
-            
+            <img src="images/hero_skydiving.jpg" alt="Two happy adventurers tandem skydiving over scenic landscape"
+              class="hero-skydive-img">
+
             <!-- Glass Floating Badge -->
             <div class="floating-badge">
               <span class="floating-badge-number">37+</span>
@@ -99,7 +136,7 @@
             </div>
           </div>
 
-          <!-- Stylized ADVENTURE Typography -->
+          <!-- Stylized ADVENTURE Typography with Parallax -->
           <div class="hero-bottom-typography">
             <span class="huge-adventure-text">ADVENTURE</span>
           </div>
@@ -117,7 +154,7 @@
            SECTION: CHOOSE YOUR KIND OF ADVENTURE
            ===================================================================== -->
       <section class="canvas-section section-choose-adventure" id="adventures">
-        
+
         <!-- Section Header Split -->
         <div class="section-header-split">
           <h2 class="section-serif-title">
@@ -125,7 +162,8 @@
             of Adventure
           </h2>
           <p class="section-desc-right">
-            Explore the world through adrenaline — discover top-rated adventure activities tailored to your thrill level.
+            Explore the world through adrenaline — discover top-rated adventure activities tailored to your thrill
+            level.
           </p>
         </div>
 
@@ -143,21 +181,23 @@
               <h3 class="cat-heading">Air-Based Adventures</h3>
             </div>
             <ul class="activity-list">
-              <li><button class="activity-item-btn" type="button">Tandem Skydiving</button></li>
-              <li><button class="activity-item-btn" type="button">Paragliding</button></li>
-              <li><button class="activity-item-btn" type="button">Hot Air Balloon Ride</button></li>
-              <li><button class="activity-item-btn" type="button">Helicopter Tours</button></li>
-              <li><button class="activity-item-btn" type="button">Bungee Jumping</button></li>
-              <li><button class="activity-item-btn" type="button">Zip Lining</button></li>
-              <li><button class="activity-item-btn" type="button">Paramotoring</button></li>
-              <li><button class="activity-item-btn" type="button">Wingsuit Flying</button></li>
+              <li style="--item-i: 1;"><button class="activity-item-btn" type="button">Tandem Skydiving</button></li>
+              <li style="--item-i: 2;"><button class="activity-item-btn" type="button">Paragliding</button></li>
+              <li style="--item-i: 3;"><button class="activity-item-btn" type="button">Hot Air Balloon Ride</button>
+              </li>
+              <li style="--item-i: 4;"><button class="activity-item-btn" type="button">Helicopter Tours</button></li>
+              <li style="--item-i: 5;"><button class="activity-item-btn" type="button">Bungee Jumping</button></li>
+              <li style="--item-i: 6;"><button class="activity-item-btn" type="button">Zip Lining</button></li>
+              <li style="--item-i: 7;"><button class="activity-item-btn" type="button">Paramotoring</button></li>
+              <li style="--item-i: 8;"><button class="activity-item-btn" type="button">Wingsuit Flying</button></li>
             </ul>
           </div>
 
           <!-- Right Large Card: Paraglider over Mountain Peak with Corner Arrow -->
           <div class="featured-adventure-card">
             <img src="images/paraglider_mountain.jpg" alt="Paraglider with bright canopy soaring over mountain valley">
-            <a href="#water-adventures" class="card-corner-arrow smooth-scroll-btn" aria-label="Next Adventure Category">
+            <a href="#water-adventures" class="card-corner-arrow smooth-scroll-btn"
+              aria-label="Next Adventure Category">
               ↓
             </a>
           </div>
@@ -168,7 +208,8 @@
           <!-- Left Large Card: Kayaker on Turquoise Ocean -->
           <div class="featured-adventure-card">
             <img src="images/kayaker_adventure.jpg" alt="Kayaker navigating azure coastal waters in yellow kayak">
-            <a href="#land-adventures" class="card-corner-arrow left-corner smooth-scroll-btn" aria-label="Next Adventure Category">
+            <a href="#land-adventures" class="card-corner-arrow left-corner smooth-scroll-btn"
+              aria-label="Next Adventure Category">
               ↓
             </a>
           </div>
@@ -180,15 +221,16 @@
               <h3 class="cat-heading">Water-Based Adventures</h3>
             </div>
             <ul class="activity-list">
-              <li><button class="activity-item-btn" type="button">Scuba Diving</button></li>
-              <li><button class="activity-item-btn" type="button">Snorkeling</button></li>
-              <li><button class="activity-item-btn" type="button">White Water Rafting</button></li>
-              <li><button class="activity-item-btn" type="button">Jet Skiing</button></li>
-              <li><button class="activity-item-btn" type="button">Kayaking</button></li>
-              <li><button class="activity-item-btn" type="button">Surfing</button></li>
-              <li><button class="activity-item-btn" type="button">Wakeboarding</button></li>
-              <li><button class="activity-item-btn" type="button">Swimming with Dolphins</button></li>
-              <li><button class="activity-item-btn" type="button">Canyoneering</button></li>
+              <li style="--item-i: 1;"><button class="activity-item-btn" type="button">Scuba Diving</button></li>
+              <li style="--item-i: 2;"><button class="activity-item-btn" type="button">Snorkeling</button></li>
+              <li style="--item-i: 3;"><button class="activity-item-btn" type="button">White Water Rafting</button></li>
+              <li style="--item-i: 4;"><button class="activity-item-btn" type="button">Jet Skiing</button></li>
+              <li style="--item-i: 5;"><button class="activity-item-btn" type="button">Kayaking</button></li>
+              <li style="--item-i: 6;"><button class="activity-item-btn" type="button">Surfing</button></li>
+              <li style="--item-i: 7;"><button class="activity-item-btn" type="button">Wakeboarding</button></li>
+              <li style="--item-i: 8;"><button class="activity-item-btn" type="button">Swimming with Dolphins</button>
+              </li>
+              <li style="--item-i: 9;"><button class="activity-item-btn" type="button">Canyoneering</button></li>
             </ul>
           </div>
 
@@ -212,14 +254,17 @@
               <h3 class="cat-heading">Land-Based Adventures</h3>
             </div>
             <ul class="activity-list">
-              <li><button class="activity-item-btn" type="button">Mountain Hiking / Trekking</button></li>
-              <li><button class="activity-item-btn" type="button">Camping</button></li>
-              <li><button class="activity-item-btn" type="button">Rock Climbing</button></li>
-              <li><button class="activity-item-btn" type="button">Caving + Spelunking</button></li>
-              <li><button class="activity-item-btn" type="button">Mountain Biking</button></li>
-              <li><button class="activity-item-btn" type="button">Volcano Boarding</button></li>
-              <li><button class="activity-item-btn" type="button">Desert Safari (Qatar Dunes)</button></li>
-              <li><button class="activity-item-btn" type="button">Quad Biking & Dune Buggy</button></li>
+              <li style="--item-i: 1;"><button class="activity-item-btn" type="button">Mountain Hiking /
+                  Trekking</button></li>
+              <li style="--item-i: 2;"><button class="activity-item-btn" type="button">Camping</button></li>
+              <li style="--item-i: 3;"><button class="activity-item-btn" type="button">Rock Climbing</button></li>
+              <li style="--item-i: 4;"><button class="activity-item-btn" type="button">Caving + Spelunking</button></li>
+              <li style="--item-i: 5;"><button class="activity-item-btn" type="button">Mountain Biking</button></li>
+              <li style="--item-i: 6;"><button class="activity-item-btn" type="button">Volcano Boarding</button></li>
+              <li style="--item-i: 7;"><button class="activity-item-btn" type="button">Desert Safari (Qatar
+                  Dunes)</button></li>
+              <li style="--item-i: 8;"><button class="activity-item-btn" type="button">Quad Biking & Dune Buggy</button>
+              </li>
             </ul>
           </div>
 
@@ -239,7 +284,7 @@
            SECTION: TANDEM SKYDIVING ADVENTURES AROUND THE GLOBE
            ===================================================================== -->
       <section class="canvas-section section-skydiving" id="skydiving">
-        
+
         <!-- Header -->
         <div class="skydiving-header">
           <div>
@@ -258,7 +303,7 @@
 
         <!-- 3 Cards Grid -->
         <div class="skydiving-cards-grid">
-          
+
           <!-- Card 1: Interlaken, Switzerland -->
           <div class="skydiving-card">
             <div class="skydive-card-visual">
@@ -321,7 +366,7 @@
            ===================================================================== -->
       <section class="canvas-section section-destinations" id="destinations">
         <div class="destinations-grid">
-          
+
           <!-- Left Destination Card: Morocco & Coastal Wonders -->
           <div class="destination-image-card">
             <img src="images/destination_coastal.jpg" alt="Coastal historic fort ramparts and harbor">
@@ -356,7 +401,8 @@
 
           <!-- Right Destination Card: Qatar & United Arab Emirates -->
           <div class="destination-image-card">
-            <img src="images/destination_desert_balloon.jpg" alt="Hot air balloon rising above endless golden desert sand dunes">
+            <img src="images/destination_desert_balloon.jpg"
+              alt="Hot air balloon rising above endless golden desert sand dunes">
             <div class="dest-card-gradient"></div>
             <div class="dest-card-content">
               <h3 class="dest-name">Qatar & United Arab Emirates</h3>
@@ -381,7 +427,8 @@
         <div class="qatar-banner-header">
           <div>
             <span class="qatar-tagline">🇶🇦 Official Qatar Expeditions</span>
-            <h3 style="font-family: var(--font-serif); font-size: 2rem; margin-top: 4px;">Discover the Soul of Qatar</h3>
+            <h3 style="font-family: var(--font-serif); font-size: 2rem; margin-top: 4px;">Discover the Soul of Qatar
+            </h3>
             <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 6px; max-width: 600px;">
               Premium guided adventures combining luxury, comfort, desert adrenaline, and authentic Qatari culture.
             </p>
@@ -404,14 +451,16 @@
            ===================================================================== -->
       <footer class="site-footer" id="about">
         <div class="footer-top-grid">
-          
+
           <!-- Column 1: Brand & About -->
           <div>
             <div class="footer-logo-box">
               <img src="logos/oxford logo.png" alt="Oxford Adventure Tourism">
             </div>
             <p class="footer-bio">
-              Oxford Adventure Tourism specializes in premium guided tours that combine luxury, comfort, adventure, and authentic Qatari culture. We believe every traveller deserves more than sightseeing—they deserve immersive experiences that reveal the true beauty of Qatar.
+              Oxford Adventure Tourism specializes in premium guided tours that combine luxury, comfort, adventure, and
+              authentic Qatari culture. We believe every traveller deserves more than sightseeing—they deserve immersive
+              experiences that reveal the true beauty of Qatar.
             </p>
           </div>
 
@@ -445,14 +494,13 @@
             <p style="color: #9C9A9E; font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">
               📍 Doha - Qatar<br>
               📞 <a href="tel:+97472001133" style="color: #FFFFFF; text-decoration: none;">+974 7200 1133</a><br>
-              ✉️ <a href="mailto:info@oxfordadventuretourism.com" style="color: #9C9A9E; text-decoration: none;">info@oxfordadventuretourism.com</a><br>
+              ✉️ <a href="mailto:info@oxfordadventuretourism.com"
+                style="color: #9C9A9E; text-decoration: none;">info@oxfordadventuretourism.com</a><br>
               💬 WhatsApp: +974 7200 1133
             </p>
-            <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20inquire%20about%20your%20Qatar%20tours" 
-               class="btn-pill" 
-               style="padding: 10px 22px; font-size: 0.88rem; display: inline-flex;" 
-               target="_blank" 
-               rel="noopener noreferrer">
+            <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20inquire%20about%20your%20Qatar%20tours"
+              class="btn-pill" style="padding: 10px 22px; font-size: 0.88rem; display: inline-flex;" target="_blank"
+              rel="noopener noreferrer">
               WhatsApp Concierge
             </a>
           </div>
@@ -468,15 +516,23 @@
     </main>
   </div>
 
+  <!-- Floating Scroll To Top with Circular Progress Indicator -->
+  <button class="floating-scroll-top" id="scrollTopBtn" aria-label="Scroll to top of page" title="Back to top">
+    <svg class="progress-ring" width="54" height="54" viewBox="0 0 54 54">
+      <circle class="progress-ring-bg" cx="27" cy="27" r="23" />
+      <circle class="progress-ring-circle" id="progressRingCircle" cx="27" cy="27" r="23" />
+    </svg>
+    <span class="scroll-top-arrow">↑</span>
+  </button>
+
   <!-- Floating WhatsApp & Direct Concierge Button -->
-  <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20inquire%20about%20your%20tours%20in%20Qatar" 
-     class="floating-concierge-btn" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     title="Chat with Oxford Tourism on WhatsApp">
+  <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20inquire%20about%20your%20tours%20in%20Qatar"
+    class="floating-concierge-btn" target="_blank" rel="noopener noreferrer"
+    title="Chat with Oxford Tourism on WhatsApp">
     💬
   </a>
 
   <script src="script.js"></script>
 </body>
+
 </html>
