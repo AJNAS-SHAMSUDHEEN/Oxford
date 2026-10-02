@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tandem Skydiving — 15,000 Ft Jump over Desert & Sea | Oxford Adventure</title>
+  <meta name="description" content="Experience 15,000 ft tandem skydiving over Qatar's Arabian Gulf and golden desert dunes. Certified USPA master instructors, 60-second freefall, and 4K video packages.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress-line" id="scrollProgressLine"></div>
+
+  <!-- Top Utility Bar -->
+  <header class="top-utility-bar">
+    <div class="top-bar-left">
+      <div class="qatar-license-badge">
+        <span class="license-flag">🇶🇦</span>
+        <span>Licensed by Qatar Tourism • Doha, Qatar</span>
+      </div>
+      <a href="tel:+97472001133" class="top-phone-link">
+        <span>📞 +974 7200 1133</span>
+      </a>
+    </div>
+    <div class="currency-switcher">
+      <button class="currency-btn active" data-currency="USD">USD ($)</button>
+      <button class="currency-btn" data-currency="QAR">QAR (QR)</button>
+    </div>
+  </header>
+
+  <!-- Sticky Glass Navbar -->
+  <header class="main-glass-header">
+    <div class="header-glass-container">
+      <a href="index.html" class="header-brand" aria-label="Oxford Adventure Home">
+        <div class="logo-glass-frame">
+          <img src="logos/oxford logo.png" alt="Oxford Adventure Tourism" width="38" height="38">
+        </div>
+        <div class="brand-name-group">
+          <span class="brand-main">OXFORD</span>
+          <span class="brand-tagline">Adventure Tourism</span>
+        </div>
+      </a>
+
+      <nav class="header-nav-links" id="headerNavLinks">
+        <a href="index.html" class="nav-item-link">Home</a>
+        <a href="adventures.html" class="nav-item-link">Adventures</a>
+        <a href="destinations.html" class="nav-item-link">Destinations</a>
+        <a href="skydiving.html" class="nav-item-link active">Skydiving</a>
+        <a href="about.html" class="nav-item-link">About Us</a>
+        <a href="contact.html" class="nav-item-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20inquire%20about%20your%20tours" target="_blank" rel="noopener noreferrer" class="btn-glass-primary btn-header-cta"><span>WhatsApp</span><span class="cta-concierge-word">&nbsp;Concierge</span>&nbsp;💬</a>
+        <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="page-hero-banner reveal">
+      <div class="section-tag" style="justify-content: center; display: inline-flex;">🪂 The Ultimate Adrenaline</div>
+      <h1 class="page-hero-title">15,000 Ft Tandem Skydiving</h1>
+      <p class="page-hero-subtitle">
+        Freefall at 200 km/h over the meeting point of turquoise ocean and towering desert dunes. No prior training needed.
+      </p>
+
+      <!-- Altitude Selector Interactive Widget -->
+      <div class="altitude-toggle-box reveal delay-1">
+        <button class="altitude-btn" data-height="12,000 Ft" data-freefall="45 Seconds" data-price-usd="260">12,000 Ft</button>
+        <button class="altitude-btn" data-height="14,000 Ft" data-freefall="55 Seconds" data-price-usd="295">14,000 Ft</button>
+        <button class="altitude-btn active" data-height="15,000 Ft" data-freefall="60+ Seconds" data-price-usd="320">15,000 Ft (Recommended)</button>
+      </div>
+
+      <!-- Live Altitude Stat Box -->
+      <div class="glass-card reveal delay-2" style="max-width: 600px; margin: 24px auto 0; padding: 24px; display: grid; grid-template-columns: repeat(3, 1fr); text-align: center;">
+        <div>
+          <div style="font-size: 0.76rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Drop Altitude</div>
+          <div id="skydiveHeightDisplay" style="font-size: 1.4rem; font-weight: 800; color: var(--water-cyan-dark); margin-top: 4px;">15,000 Ft</div>
+        </div>
+        <div>
+          <div style="font-size: 0.76rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Pure Freefall</div>
+          <div id="skydiveFreefallDisplay" style="font-size: 1.4rem; font-weight: 800; color: var(--gold-primary); margin-top: 4px;">60+ Seconds</div>
+        </div>
+        <div>
+          <div style="font-size: 0.76rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Package Price</div>
+          <div id="skydivePriceDisplay" class="slide-price-val" data-usd-amount="320" style="font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-top: 4px;">$320</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dropzones Worldwide Comparison -->
+    <section class="slider-section-container" style="padding-top: 20px;">
+      <div class="section-header-row reveal">
+        <div>
+          <div class="section-tag">📍 Premier Dropzones</div>
+          <h2 class="section-title">World's Most Scenic Dropzones</h2>
+          <p class="section-subtitle">Choose from verified dropzones operated with world-class safety protocols.</p>
+        </div>
+      </div>
+
+      <div class="signature-grid">
+        <!-- Dropzone 1: Qatar Coast -->
+        <div class="glass-card reveal">
+          <div class="slide-card-visual">
+            <span class="slide-badge-category">Flagship Dropzone</span>
+            <span class="slide-badge-rating">★ 5.0</span>
+            <img src="images/skydive_qatar_desert.jpg" alt="Qatar Desert Skydiving">
+          </div>
+          <div class="slide-card-body">
+            <div class="slide-card-location">📍 Khor Al Adaid Coast, Qatar</div>
+            <h3 class="slide-card-title">Arabian Gulf & Desert Dropzone</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Jump from 15,000 feet directly over the Inland Sea. Experience golden desert dunes blending into the turquoise Persian Gulf waters.
+            </p>
+            <ul style="list-style: none; font-size: 0.84rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 6px; margin: 12px 0;">
+              <li>✓ 15,000 Ft Maximum Altitude</li>
+              <li>✓ 4K Cinematic Video & Drone Footage</li>
+              <li>✓ VIP Desert Lounge & Chilled Refreshments</li>
+            </ul>
+            <div class="slide-card-footer">
+              <div class="slide-price-box">
+                <span class="slide-price-label">All-Inclusive</span>
+                <span class="slide-price-val" data-usd-amount="320">$320</span>
+              </div>
+              <button class="btn-glass-primary slide-book-btn open-modal-trigger"
+                data-title="Qatar Desert & Coast 15,000 Ft Skydiving"
+                data-price="320"
+                data-duration="3 Hours Total"
+                data-desc="15,000 Ft Tandem Skydiving over Qatar's coastline. Includes complete safety briefing, harness fitting, scenic flight, 60s freefall, and 4K camera package."
+                data-inclusions="15,000 Ft Jump,USPA Master Instructor,Full 4K Video & Drone Photos,VIP Lounge Access">
+                Book Jump
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dropzone 2: Interlaken Switzerland -->
+        <div class="glass-card reveal delay-1">
+          <div class="slide-card-visual">
+            <span class="slide-badge-category">Swiss Alps</span>
+            <span class="slide-badge-rating">★ 4.9</span>
+            <img src="images/skydive_interlaken.jpg" alt="Interlaken Skydiving">
+          </div>
+          <div class="slide-card-body">
+            <div class="slide-card-location">📍 Interlaken, Switzerland</div>
+            <h3 class="slide-card-title">Swiss Alps Jungfrau Dropzone</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Soar with views of the snow-capped Eiger, Mönch, and Jungfrau summits before gliding smoothly towards Lake Brienz.
+            </p>
+            <ul style="list-style: none; font-size: 0.84rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 6px; margin: 12px 0;">
+              <li>✓ 14,000–15,000 Ft Drop</li>
+              <li>✓ Glacial Lake & Peak Panorama</li>
+              <li>✓ Free Video & Photo Package</li>
+            </ul>
+            <div class="slide-card-footer">
+              <div class="slide-price-box">
+                <span class="slide-price-label">Starting From</span>
+                <span class="slide-price-val" data-usd-amount="349">$349</span>
+              </div>
+              <button class="btn-glass-primary slide-book-btn open-modal-trigger"
+                data-title="Swiss Alps Interlaken Tandem Skydiving"
+                data-price="349"
+                data-duration="3.5 Hours"
+                data-desc="Helicopter or airplane tandem drop over the iconic Swiss Alps with certified European parachuting champions."
+                data-inclusions="14000 Ft Drop,Licensed Swiss Pilot,Video and Photos,Alpine Transport">
+                Book Jump
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dropzone 3: Queenstown NZ -->
+        <div class="glass-card reveal delay-2">
+          <div class="slide-card-visual">
+            <span class="slide-badge-category">Southern Lakes</span>
+            <span class="slide-badge-rating">★ 4.8</span>
+            <img src="images/skydive_queenstown.jpg" alt="Queenstown Skydiving">
+          </div>
+          <div class="slide-card-body">
+            <div class="slide-card-location">📍 Queenstown, New Zealand</div>
+            <h3 class="slide-card-title">Lake Wakatipu Dropzone</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Jump above the birthplace of extreme adventure sports. Spectacular glacial waters and jagged mountain peaks.
+            </p>
+            <ul style="list-style: none; font-size: 0.84rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 6px; margin: 12px 0;">
+              <li>✓ 12,000–15,000 Ft Drop</li>
+              <li>✓ Lake Wakatipu Panorama</li>
+              <li>✓ NZPIA Master Jumpers</li>
+            </ul>
+            <div class="slide-card-footer">
+              <div class="slide-price-box">
+                <span class="slide-price-label">Starting From</span>
+                <span class="slide-price-val" data-usd-amount="299">$299</span>
+              </div>
+              <button class="btn-glass-primary slide-book-btn open-modal-trigger"
+                data-title="Queenstown New Zealand Skydiving"
+                data-price="299"
+                data-duration="3 Hours"
+                data-desc="World-famous dropzone over Lake Wakatipu with NZPIA certified tandem masters."
+                data-inclusions="12000 Ft Drop,NZPIA Master,Photo Pack,Return Shuttle">
+                Book Jump
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What to Expect on Jump Day Timeline -->
+    <section class="slider-section-container">
+      <div class="glass-panel reveal" style="padding: 48px;">
+        <h2 style="font-family: var(--font-serif); font-size: 2.2rem; text-align: center; margin-bottom: 12px; color: var(--text-primary);">
+          What to Expect on Your Jump Day
+        </h2>
+        <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 40px;">
+          Here is how your tandem skydiving experience unfolds from check-in to landing.
+        </p>
+
+        <div class="features-grid">
+          <div style="background: rgba(255, 255, 255, 0.8); padding: 24px; border-radius: var(--radius-md); border: 1px solid rgba(15, 23, 42, 0.06);">
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--water-cyan-dark); margin-bottom: 8px;">01. Check-In & Suit Up</div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              Arrive at the VIP dropzone. Complete safety waivers, meet your dedicated tandem master, and get fitted with a precision harness.
+            </p>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.8); padding: 24px; border-radius: var(--radius-md); border: 1px solid rgba(15, 23, 42, 0.06);">
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--water-cyan-dark); margin-bottom: 8px;">02. Scenic Ascent</div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              Enjoy a 15-minute panoramic flight in our turbine aircraft climbing up to 15,000 feet above the Arabian Gulf and dunes.
+            </p>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.8); padding: 24px; border-radius: var(--radius-md); border: 1px solid rgba(15, 23, 42, 0.06);">
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--gold-primary); margin-bottom: 8px;">03. The 200 km/h Leap</div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              The aircraft door opens. Step into the sky for 60 seconds of pure, unrestrained adrenaline freefall over the desert coast!
+            </p>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.8); padding: 24px; border-radius: var(--radius-md); border: 1px solid rgba(15, 23, 42, 0.06);">
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--water-cyan-dark); margin-bottom: 8px;">04. Canopy & 4K Video</div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              Your parachute opens at 5,000 ft for a peaceful 5-minute canopy glide before a gentle landing and receiving your edited 4K video.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIP Skydiving Concierge Banner -->
+    <section class="vip-cta-section reveal">
+      <div class="vip-cta-banner">
+        <div>
+          <h2 class="vip-cta-title">Ready to Take the Leap?</h2>
+          <p class="vip-cta-desc">Book your 15,000 ft tandem jump today or chat with our flight marshals on WhatsApp.</p>
+        </div>
+        <div class="vip-cta-actions">
+          <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20book%20a%2015000%20ft%20Skydiving%20jump" target="_blank" rel="noopener noreferrer" class="btn-glass-primary">
+            💬 Reserve via WhatsApp
+          </a>
+          <a href="contact.html" class="btn-glass-outline">Contact Dropzone</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top-columns">
+        <div class="footer-brand-box">
+          <div class="header-brand">
+            <div class="logo-glass-frame">
+              <img src="logos/oxford logo.png" alt="Oxford Adventure Tourism" width="38" height="38">
+            </div>
+            <div class="brand-name-group">
+              <span class="brand-main">OXFORD</span>
+              <span class="brand-tagline">Adventure Tourism</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Certified USPA tandem skydiving experiences in Qatar and internationally renowned alpine and lake dropzones.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="adventures.html">All Adventures</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="skydiving.html">Tandem Skydiving</a></li>
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="contact.html">Contact & Booking</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Skydiving Packages</h4>
+          <ul class="footer-nav-list">
+            <li><a href="skydiving.html">15,000 Ft Qatar Coast Drop</a></li>
+            <li><a href="skydiving.html">14,000 Ft Swiss Alps Drop</a></li>
+            <li><a href="skydiving.html">12,000 Ft Queenstown Jump</a></li>
+            <li><a href="skydiving.html">4K Video & Drone Photography</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Doha Concierge</h4>
+          <div class="footer-contact-info">
+            <p>📍 Doha, State of Qatar</p>
+            <p>📞 Phone: <a href="tel:+97472001133">+974 7200 1133</a></p>
+            <p>✉️ Email: <a href="mailto:info@oxfordadventuretourism.com">info@oxfordadventuretourism.com</a></p>
+            <p>🕒 Open Daily: 07:00 AM – 10:00 PM AST</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 Oxford Adventure Tourism W.L.L. All rights reserved. Licensed in Qatar.</div>
+        <div>Crystalline White Glassmorphism with Liquid Water Physics.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp & Top -->
+  <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20inquire%20about%20your%20tours" 
+     class="floating-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+    💬
+  </a>
+  <button class="floating-top-btn" id="scrollTopBtn" aria-label="Back to Top">↑</button>
+
+  <!-- Booking Modal -->
+  <div class="glass-modal-backdrop" id="bookingModal">
+    <div class="glass-modal-card">
+      <button class="modal-close-btn" onclick="closeBookingModal()" aria-label="Close Modal">✕</button>
+      <span class="slide-badge-category" style="margin-bottom: 12px; display: inline-block;">Expedition Details</span>
+      <h3 id="modalTourTitle" style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 12px; color: var(--text-primary);">Tour Title</h3>
+      <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 16px; font-size: 0.92rem; color: var(--water-cyan-dark); font-weight: 600;">
+        <span id="modalTourDuration">⏱ 3 Hours</span>
+        <span>•</span>
+        <span id="modalTourPrice" style="font-size: 1.4rem; color: var(--text-primary); font-weight: 800;">$320</span>
+      </div>
+      <p id="modalTourDesc" style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; font-size: 0.95rem;">Tour description.</p>
+      <h4 style="font-size: 0.92rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 10px;">Included in Package</h4>
+      <ul id="modalInclusions" style="list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; font-size: 0.9rem; color: var(--text-secondary);">
+        <li>✓ Luxury Transport</li>
+      </ul>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+        <a id="modalWhatsappLink" href="#" target="_blank" class="btn-glass-primary" style="flex: 1;">Confirm via WhatsApp 💬</a>
+        <a href="contact.html" class="btn-glass-outline">Custom Inquiry</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

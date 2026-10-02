@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adventures & Expeditions — Oxford Adventure Tourism</title>
+  <meta name="description" content="Explore our complete catalog of Qatar & global adventures: desert safaris, skydiving, kayaking, scuba diving, and helicopter tours.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress-line" id="scrollProgressLine"></div>
+
+  <!-- Top Utility Bar -->
+  <header class="top-utility-bar">
+    <div class="top-bar-left">
+      <div class="qatar-license-badge">
+        <span class="license-flag">🇶🇦</span>
+        <span>Licensed by Qatar Tourism • Doha, Qatar</span>
+      </div>
+      <a href="tel:+97472001133" class="top-phone-link">
+        <span>📞 +974 7200 1133</span>
+      </a>
+    </div>
+    <div class="currency-switcher">
+      <button class="currency-btn active" data-currency="USD">USD ($)</button>
+      <button class="currency-btn" data-currency="QAR">QAR (QR)</button>
+    </div>
+  </header>
+
+  <!-- Sticky Glass Navbar -->
+  <header class="main-glass-header">
+    <div class="header-glass-container">
+      <a href="index.html" class="header-brand" aria-label="Oxford Adventure Home">
+        <div class="logo-glass-frame">
+          <img src="logos/oxford logo.png" alt="Oxford Adventure Tourism" width="38" height="38">
+        </div>
+        <div class="brand-name-group">
+          <span class="brand-main">OXFORD</span>
+          <span class="brand-tagline">Adventure Tourism</span>
+        </div>
+      </a>
+
+      <nav class="header-nav-links" id="headerNavLinks">
+        <a href="index.html" class="nav-item-link">Home</a>
+        <a href="adventures.html" class="nav-item-link active">Adventures</a>
+        <a href="destinations.html" class="nav-item-link">Destinations</a>
+        <a href="skydiving.html" class="nav-item-link">Skydiving</a>
+        <a href="about.html" class="nav-item-link">About Us</a>
+        <a href="contact.html" class="nav-item-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20inquire%20about%20your%20tours" target="_blank" rel="noopener noreferrer" class="btn-glass-primary btn-header-cta"><span>WhatsApp</span><span class="cta-concierge-word">&nbsp;Concierge</span>&nbsp;💬</a>
+        <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="page-hero-banner reveal">
+      <div class="section-tag" style="justify-content: center; display: inline-flex;">🌊 The Complete Catalog</div>
+      <h1 class="page-hero-title">Choose Your Kind of Thrill</h1>
+      <p class="page-hero-subtitle">
+        Tailor your journey across land, air, and sea with Qatar’s most decorated outdoor adventure captains.
+      </p>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs-row" style="justify-content: center; margin-top: 36px;">
+        <button class="filter-tab-btn active" data-filter="all">All Experiences (18)</button>
+        <button class="filter-tab-btn" data-filter="air">Air & Sky (6)</button>
+        <button class="filter-tab-btn" data-filter="water">Water & Ocean (6)</button>
+        <button class="filter-tab-btn" data-filter="land">Desert & Land (6)</button>
+      </div>
+    </section>
+
+    <!-- Adventures Grid -->
+    <section class="slider-section-container" style="padding-top: 10px;">
+      <div class="signature-grid" id="adventuresCatalogGrid">
+
+        <!-- Adventure 1: Inland Sea Dune Bashing -->
+        <div class="glass-card reveal" data-category="land">
+          <div class="slide-card-visual">
+            <span class="slide-badge-category">Desert & Land</span>
+            <span class="slide-badge-rating">★ 4.9</span>
+            <img src="images/qatar_desert_safari.jpg" alt="Inland Sea Dune Bashing">
+          </div>
+          <div class="slide-card-body">
+            <div class="slide-card-location">📍 Khor Al Adaid, Qatar</div>
+            <h3 class="slide-card-title">Inland Sea 4x4 Dune Bashing & Camel Trek</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Climb 50-meter slipface dunes with licensed safari marshals. Includes camel photo stops and sandboarding.
+            </p>
+            <div class="slide-features-row">
+              <span class="slide-feature-item">⏱ 5 Hours</span>
+              <span class="slide-feature-item">🔥 Moderate</span>
+              <span class="slide-feature-item">☕ Traditional Tea</span>
+            </div>
+            <div class="slide-card-footer">
+              <div class="slide-price-box">
+                <span class="slide-price-label">Per Vehicle</span>
+                <span class="slide-price-val" data-usd-amount="179">$179</span>
+              </div>
+              <button class="btn-glass-primary slide-book-btn open-modal-trigger"
+                data-title="Inland Sea 4x4 Dune Bashing & Camel Trek"
+                data-price="179"
+                data-duration="5 Hours"
+                data-desc="Traverse soaring golden sand dunes where the ocean meets the desert. Includes adrenaline-fueled dune bashing in a private Land Cruiser."
+                data-inclusions="Private Luxury Land Cruiser,Certified Desert Captain,Camel Riding,Sandboarding,Camp Refreshments">
+                Quick View
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Adventure 2: 15,000 Ft Skydiving -->
+        <div class="glass-card reveal delay-1" data-category="air">
+          <div class="slide-card-visual">
+            <span class="slide-badge-category">Air & Sky</span>
+            <span class="slide-badge-rating">★ 5.0</span>
+            <img src="images/skydive_qatar_desert.jpg" alt="Skydiving Qatar Coast">
+          </div>
+          <div class="slide-card-body">
+            <div class="slide-card-location">📍 Doha Coast Dropzone</div>
+            <h3 class="slide-card-title">15,000 Ft Tandem Skydiving over Arabian Gulf</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Freefall at 200 km/h with panoramic views of the Inland Sea and the turquoise Arabian Gulf.
+            </p>
+            <div class="slide-features-row">
+              <span class="slide-feature-item">⏱ 3 Hours</span>
+              <span class="slide-feature-item">⚡ Extreme Thrill</span>
+              <span class="slide-feature-item">🎥 4K Video</span>
+            </div>
+            <div class="slide-card-footer">
+              <div class="slide-price-box">
+                <span class="slide-price-label">Per Jumper</span>
+                <span class="slide-price-val" data-usd-amount="320">$320</span>
+              </div>
+              <button class="btn-glass-primary slide-book-btn open-modal-trigger"
+                data-title="15,000 Ft Tandem Skydiving over Arabian Gulf"
+                data-price="320"
+                data-duration="3 Hours"
+                data-desc="Tandem jump with USPA certified master, full briefing, gear fitting, 60 seconds of exhilarating freefall, and 4K footage."
+                data-inclusions="15,000 Ft Tandem Jump,USPA Master Instructor,Full 4K Video & Drone Photos,VIP Lounge Access">
+                Quick View
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Adventure 3: Luxury Yacht Charter -->
+        <div class="glass-card reveal delay-2" data-category="water">
+          <div class="slide-card-visual">
+            <span class="slide-badge-category">Water & Ocean</span>
+            <span class="slide-badge-rating">★ 4.9</span>
+            <img src="images/qatar_luxury_yacht.jpg" alt="Luxury Yacht Charter">
+          </div>
+          <div class="slide-card-body">
+            <div class="slide-card-location">📍 Doha Corniche & Pearl</div>
+            <h3 class="slide-card-title">Private 55ft Luxury Yacht Corniche Cruise</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Sail past the futuristic West Bay skyline with private sundeck, swimming anchor stops, and gourmet snacks.
+            </p>
+            <div class="slide-features-row">
+              <span class="slide-feature-item">⏱ 3 Hours</span>
+              <span class="slide-feature-item">🛥 12 Guests Max</span>
+              <span class="slide-feature-item">🍹 Catering</span>
+            </div>
+            <div class="slide-card-footer">
+              <div class="slide-price-box">
+                <span class="slide-price-label">Charter Rate</span>
+                <span class="slide-price-val" data-usd-amount="245">$245</span>
+              </div>
+              <button class="btn-glass-primary slide-book-btn open-modal-trigger"
+                data-title="Private 55ft Luxury Yacht Corniche Cruise"
+                data-price="245"
+                data-duration="3 Hours"
+                data-desc="Sailing across the crystal clear Arabian Gulf waters with open deck loungers and swimming anchor stops."
+                data-inclusions="Private Yacht Charter,Professional Captain & Crew,Fresh Mocktails & Refreshments,Sound System & Sun Deck">
+                Quick View
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Adventure 4: Purple Island Kayaking -->
+        <div class="glass-card reveal" data-category="water">
+          <div class="slide-card-visual">
+            <span class="slide-badge-category">Water & Ocean</span>
+            <span class="slide-badge-rating">★ 4.8</span>
+            <img src="images/kayaker_adventure.jpg" alt="Purple Island Mangroves">
+          </div>
+          <div class="slide-card-body">
+            <div class="slide-card-location">📍 Al Thakira Mangroves</div>
+            <h3 class="slide-card-title">Purple Island Mangroves Eco Kayak Safari</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Glide through natural mangrove waterways, spot flamingos, and discover ancient Qatari ecological heritage.
+            </p>
+            <div class="slide-features-row">
+              <span class="slide-feature-item">⏱ 4 Hours</span>
+              <span class="slide-feature-item">🌱 Eco Gentle</span>
+              <span class="slide-feature-item">🛶 Gear Incl.</span>
+            </div>
+            <div class="slide-card-footer">
+              <div class="slide-price-box">
+                <span class="slide-price-label">Per Adventurer</span>
+                <span class="slide-price-val" data-usd-amount="135">$135</span>
+              </div>
+              <button class="btn-glass-primary slide-book-btn open-modal-trigger"
+                data-title="Purple Island Mangroves Eco Kayak Safari"
+                data-price="135"
+                data-duration="4 Hours"
+                data-desc="Paddle through Qatar's ancient natural mangrove forests at Al Thakira. Witness flamingos, herons, and crystal shallow waterways."
+                data-inclusions="Kayak & Safety Gear,Certified Eco Guide,Transfer from Doha,Camp Refreshments">
+                Quick View
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Adventure 5: Hot Air Balloon -->
+        <div class="glass-card reveal delay-1" data-category="air">
+          <div class="slide-card-visual">
+            <span class="slide-badge-category">Air & Sky</span>
+            <span class="slide-badge-rating">★ 4.9</span>
+            <img src="images/hot_air_balloon.jpg" alt="Sunrise Hot Air Balloon">
+          </div>
+          <div class="slide-card-body">
+            <div class="slide-card-location">📍 Desert Skies, Qatar</div>
+            <h3 class="slide-card-title">Sunrise Hot Air Balloon Flight over Desert Dunes</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Float silently at 3,000 feet as golden morning rays illuminate the boundless Arabian dunes.
+            </p>
+            <div class="slide-features-row">
+              <span class="slide-feature-item">⏱ 4 Hours</span>
+              <span class="slide-feature-item">🌅 Sunrise</span>
+              <span class="slide-feature-item">🥐 Breakfast</span>
+            </div>
+            <div class="slide-card-footer">
+              <div class="slide-price-box">
+                <span class="slide-price-label">Per Passenger</span>
+                <span class="slide-price-val" data-usd-amount="285">$285</span>
+              </div>
+              <button class="btn-glass-primary slide-book-btn open-modal-trigger"
+                data-title="Sunrise Hot Air Balloon Flight over Desert Dunes"
+                data-price="285"
+                data-duration="4 Hours"
+                data-desc="Soar above the desert dunes during magical golden hour. Includes gourmet champagne breakfast and flight certificate."
+                data-inclusions="1-Hour Flight Time,Licensed Commercial Aeronaut,Buffet Breakfast,Roundtrip Hotel Pick-up">
+                Quick View
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Adventure 6: Coral Reef Scuba Diving -->
+        <div class="glass-card reveal delay-2" data-category="water">
+          <div class="slide-card-visual">
+            <span class="slide-badge-category">Water & Ocean</span>
+            <span class="slide-badge-rating">★ 4.9</span>
+            <img src="images/scuba_coral_reef.jpg" alt="Scuba Diving Coral Reef">
+          </div>
+          <div class="slide-card-body">
+            <div class="slide-card-location">📍 Mesaieed Offshore Reefs</div>
+            <h3 class="slide-card-title">Arabian Gulf Scuba & Coral Reef Exploration</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Dive crystal coastal waters with certified PADI dive masters. Discover sea turtles, rays, and corals.
+            </p>
+            <div class="slide-features-row">
+              <span class="slide-feature-item">⏱ 5 Hours</span>
+              <span class="slide-feature-item">🤿 2 Dives</span>
+              <span class="slide-feature-item">📜 PADI Masters</span>
+            </div>
+            <div class="slide-card-footer">
+              <div class="slide-price-box">
+                <span class="slide-price-label">Starting From</span>
+                <span class="slide-price-val" data-usd-amount="195">$195</span>
+              </div>
+              <button class="btn-glass-primary slide-book-btn open-modal-trigger"
+                data-title="Arabian Gulf Scuba & Coral Reef Exploration"
+                data-price="195"
+                data-duration="5 Hours"
+                data-desc="Explore vibrant underwater ecosystems off the Qatar coastline. Includes two guided tank dives with full SCUBAPRO equipment."
+                data-inclusions="Complete Diving Gear,PADI Divemaster Guide,Boat Transfer,Underwater Photography">
+                Quick View
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Adventure 7: Paragliding Mountain Flight -->
+        <div class="glass-card reveal" data-category="air">
+          <div class="slide-card-visual">
+            <span class="slide-badge-category">Air & Sky</span>
+            <span class="slide-badge-rating">★ 4.8</span>
+            <img src="images/paraglider_mountain.jpg" alt="Tandem Paragliding">
+          </div>
+          <div class="slide-card-body">
+            <div class="slide-card-location">📍 Coastal Ridges & Highlands</div>
+            <h3 class="slide-card-title">Tandem Paragliding & Thermals Soaring</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Soar with the thermal currents along coastal winds. Peaceful gliding with certified aerodynamic pilots.
+            </p>
+            <div class="slide-features-row">
+              <span class="slide-feature-item">⏱ 2.5 Hours</span>
+              <span class="slide-feature-item">🪂 25m Air Time</span>
+              <span class="slide-feature-item">📷 HD Go-Pro</span>
+            </div>
+            <div class="slide-card-footer">
+              <div class="slide-price-box">
+                <span class="slide-price-label">Per Flight</span>
+                <span class="slide-price-val" data-usd-amount="210">$210</span>
+              </div>
+              <button class="btn-glass-primary slide-book-btn open-modal-trigger"
+                data-title="Tandem Paragliding & Thermals Soaring"
+                data-price="210"
+                data-duration="2.5 Hours"
+                data-desc="Smooth aerodynamic flight launching from cliff summits. Enjoy tranquil aerial views with licensed tandem gliders."
+                data-inclusions="Full Flight Equipment,Tandem Master Pilot,GoPro 4K Video,Safety Briefing">
+                Quick View
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Adventure 8: Desert Glamping Camp -->
+        <div class="glass-card reveal delay-1" data-category="land">
+          <div class="slide-card-visual">
+            <span class="slide-badge-category">Desert & Land</span>
+            <span class="slide-badge-rating">★ 5.0</span>
+            <img src="images/camping_mountains.jpg" alt="Bedouin Camp Luxury">
+          </div>
+          <div class="slide-card-body">
+            <div class="slide-card-location">📍 Inland Sea, Sealine</div>
+            <h3 class="slide-card-title">Overnight Luxury Bedouin Glamping & Stargazing</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Private air-conditioned royal tent, live culinary barbecue, night telescope viewing, and desert sunrise.
+            </p>
+            <div class="slide-features-row">
+              <span class="slide-feature-item">⏱ Overnight</span>
+              <span class="slide-feature-item">⛺ 5-Star Tent</span>
+              <span class="slide-feature-item">🍖 BBQ Feast</span>
+            </div>
+            <div class="slide-card-footer">
+              <div class="slide-price-box">
+                <span class="slide-price-label">Per Couple</span>
+                <span class="slide-price-val" data-usd-amount="385">$385</span>
+              </div>
+              <button class="btn-glass-primary slide-book-btn open-modal-trigger"
+                data-title="Overnight Luxury Bedouin Glamping & Stargazing"
+                data-price="385"
+                data-duration="18 Hours (Overnight)"
+                data-desc="Sleep under the Arabian desert stars in a private air-conditioned luxury tent with traditional carpets, live barbecue dinner, bonfire shisha, and sunrise breakfast."
+                data-inclusions="VIP Air-conditioned Tent,Live BBQ Dinner & Breakfast,Bonfire & Telescopic Stargazing,Roundtrip Chauffeur">
+                Quick View
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Adventure 9: Highland Trekking -->
+        <div class="glass-card reveal delay-2" data-category="land">
+          <div class="slide-card-visual">
+            <span class="slide-badge-category">Desert & Land</span>
+            <span class="slide-badge-rating">★ 4.8</span>
+            <img src="images/hiker_stairs.jpg" alt="Plateau Hiking">
+          </div>
+          <div class="slide-card-body">
+            <div class="slide-card-location">📍 Zekreet & Western Escarpment</div>
+            <h3 class="slide-card-title">Zekreet Monoliths & Plateau Trekking Safari</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Hike the surreal limestone formations, Richard Serra's East-West monolith art installation, and Arabian oryx reserves.
+            </p>
+            <div class="slide-features-row">
+              <span class="slide-feature-item">⏱ 5 Hours</span>
+              <span class="slide-feature-item">🥾 Moderate Trek</span>
+              <span class="slide-feature-item">🦌 Wildlife</span>
+            </div>
+            <div class="slide-card-footer">
+              <div class="slide-price-box">
+                <span class="slide-price-label">Per Person</span>
+                <span class="slide-price-val" data-usd-amount="165">$165</span>
+              </div>
+              <button class="btn-glass-primary slide-book-btn open-modal-trigger"
+                data-title="Zekreet Monoliths & Plateau Trekking Safari"
+                data-price="165"
+                data-duration="5 Hours"
+                data-desc="Discover Qatar's geological wonders and monumental public art installations in the Zekreet peninsula."
+                data-inclusions="Luxury 4x4 Transportation,Cultural Trekking Guide,Oryx Reserve Stop,Light Gourmet Snacks">
+                Quick View
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Custom Expedition Builder Banner -->
+    <section class="vip-cta-section reveal">
+      <div class="vip-cta-banner">
+        <div>
+          <h2 class="vip-cta-title">Looking for a Bespoke Adventure?</h2>
+          <p class="vip-cta-desc">
+            Combine helicopter transfers, private yacht charters, and VIP desert safaris into a personalized multi-day Qatar expedition.
+          </p>
+        </div>
+        <div class="vip-cta-actions">
+          <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20customize%20a%20private%20tour" target="_blank" rel="noopener noreferrer" class="btn-glass-primary">
+            💬 WhatsApp Concierge
+          </a>
+          <a href="contact.html" class="btn-glass-outline">
+            Build Itinerary
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top-columns">
+        <div class="footer-brand-box">
+          <div class="header-brand">
+            <div class="logo-glass-frame">
+              <img src="logos/oxford logo.png" alt="Oxford Adventure Tourism" width="38" height="38">
+            </div>
+            <div class="brand-name-group">
+              <span class="brand-main">OXFORD</span>
+              <span class="brand-tagline">Adventure Tourism</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Doha's certified adventure specialists delivering luxury desert journeys, airborne thrills, and Arabian Gulf marine charters.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="adventures.html">All Adventures</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="skydiving.html">Tandem Skydiving</a></li>
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="contact.html">Contact & Booking</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Adventure Categories</h4>
+          <ul class="footer-nav-list">
+            <li><a href="adventures.html#land">Inland Sea Desert Safari</a></li>
+            <li><a href="adventures.html#air">Tandem Skydiving (15k Ft)</a></li>
+            <li><a href="adventures.html#water">Purple Island Kayaking</a></li>
+            <li><a href="adventures.html#water">Private Yacht Charter</a></li>
+            <li><a href="adventures.html#land">Overnight Bedouin Camp</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Doha Concierge</h4>
+          <div class="footer-contact-info">
+            <p>📍 Doha, State of Qatar</p>
+            <p>📞 Phone: <a href="tel:+97472001133">+974 7200 1133</a></p>
+            <p>✉️ Email: <a href="mailto:info@oxfordadventuretourism.com">info@oxfordadventuretourism.com</a></p>
+            <p>🕒 Open Daily: 07:00 AM – 10:00 PM AST</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 Oxford Adventure Tourism W.L.L. All rights reserved. Licensed in Qatar.</div>
+        <div>Crystalline White Glassmorphism with Live USD/QAR Conversion.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp & Top -->
+  <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20inquire%20about%20your%20tours" 
+     class="floating-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+    💬
+  </a>
+  <button class="floating-top-btn" id="scrollTopBtn" aria-label="Back to Top">↑</button>
+
+  <!-- Booking Modal -->
+  <div class="glass-modal-backdrop" id="bookingModal">
+    <div class="glass-modal-card">
+      <button class="modal-close-btn" onclick="closeBookingModal()" aria-label="Close Modal">✕</button>
+      <span class="slide-badge-category" style="margin-bottom: 12px; display: inline-block;">Expedition Details</span>
+      <h3 id="modalTourTitle" style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 12px; color: var(--text-primary);">Tour Title</h3>
+      <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 16px; font-size: 0.92rem; color: var(--water-cyan-dark); font-weight: 600;">
+        <span id="modalTourDuration">⏱ 5 Hours</span>
+        <span>•</span>
+        <span id="modalTourPrice" style="font-size: 1.4rem; color: var(--text-primary); font-weight: 800;">$180</span>
+      </div>
+      <p id="modalTourDesc" style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; font-size: 0.95rem;">Tour description.</p>
+      <h4 style="font-size: 0.92rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 10px;">Included in Package</h4>
+      <ul id="modalInclusions" style="list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; font-size: 0.9rem; color: var(--text-secondary);">
+        <li>✓ Luxury Transport</li>
+      </ul>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+        <a id="modalWhatsappLink" href="#" target="_blank" class="btn-glass-primary" style="flex: 1;">Confirm via WhatsApp 💬</a>
+        <a href="contact.html" class="btn-glass-outline">Custom Inquiry</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

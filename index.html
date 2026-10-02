@@ -1,538 +1,804 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oxford Adventure Tourism – Discover the Soul of Qatar</title>
-  <meta name="description"
-    content="Your Gateway to Extraordinary Qatar Experiences. Discover luxury desert safaris, skydiving, kayaking, and authentic cultural tours with Oxford Adventure Tourism.">
+  <title>Oxford Adventure Tourism — Luxury Desert Safaris, Skydiving & Ocean Expeditions</title>
+  <meta name="description" content="Discover Oxford Adventure Tourism in Doha, Qatar. Luxury 4x4 desert safaris to the Inland Sea, 15,000 ft tandem skydiving, Purple Island kayaking, and private yacht charters.">
 
-  <!-- Google Fonts: Playfair Display for Editorial Serifs & Plus Jakarta Sans for UI -->
+  <!-- Google Fonts: Playfair Display for Serifs & Plus Jakarta Sans for UI -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-  <!-- Top Scroll Progress Bar -->
-  <div class="scroll-progress-container">
-    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
-  </div>
+  <!-- Top Scroll Progress Line -->
+  <div class="scroll-progress-line" id="scrollProgressLine"></div>
 
-  <!-- Page Wrapper Framed in Vibrant Coral -->
-  <div class="page-wrapper">
-
-    <!-- Top Utility & Currency Bar -->
-    <header class="frame-control-bar">
-      <div class="frame-control-left">
-        <span class="qatar-flag-badge">🇶🇦 Oxford Adventure Tourism • Doha, Qatar</span>
-        <a href="tel:+97472001133"
-          style="color: #FFFFFF; text-decoration: none; opacity: 0.95; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 4px;">
-          📞 +974 7200 1133
-        </a>
+  <!-- Top Utility Bar (White Glass) -->
+  <header class="top-utility-bar">
+    <div class="top-bar-left">
+      <div class="qatar-license-badge">
+        <span class="license-flag">🇶🇦</span>
+        <span>Licensed by Qatar Tourism • Doha, Qatar</span>
       </div>
-      <div class="currency-toggle" title="Switch Currency">
-        <button class="currency-btn active" data-currency="USD">USD ($)</button>
-        <button class="currency-btn" data-currency="QAR">QAR (ر.ق)</button>
-      </div>
-    </header>
+      <a href="tel:+97472001133" class="top-phone-link">
+        <span>📞 +974 7200 1133</span>
+      </a>
+    </div>
+    <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">
+      ✨ Discover the Soul of Qatar with Oxford Adventure
+    </div>
+  </header>
 
-    <!-- Main Canvas Card (Soft Warm Linen Background) -->
-    <main class="main-canvas">
-
-      <!-- Top Site Header / Navigation -->
-      <nav class="site-header">
-        <a href="#" class="header-brand" aria-label="Oxford Adventure Home">
-          <div class="logo-img-wrapper">
-            <img src="logos/oxford logo.png" alt="Oxford Adventure Tourism Logo" class="logo-img">
-          </div>
-          <div class="brand-text-label">
-            <span class="brand-title">OXFORD</span>
-            <span class="brand-sub">Adventure Tourism</span>
-          </div>
-        </a>
-
-        <!-- Capsule Navigation Menu -->
-        <div class="header-nav" id="headerNav">
-          <a href="#adventures" class="nav-link active">Adventures</a>
-          <a href="#destinations" class="nav-link">Destinations</a>
-          <a href="#skydiving" class="nav-link">Skydiving</a>
-          <a href="#qatar-specials" class="nav-link">Qatar Specials</a>
-          <a href="#about" class="nav-link">About Us</a>
+  <!-- Sticky Glass Navbar -->
+  <header class="main-glass-header">
+    <div class="header-glass-container">
+      <a href="index.html" class="header-brand" aria-label="Oxford Adventure Home">
+        <div class="logo-glass-frame">
+          <img src="logos/oxford logo.png" alt="Oxford Adventure Tourism" width="38" height="38">
         </div>
-
-        <!-- Action / CTA Button -->
-        <div class="header-action">
-          <a href="#about" class="btn-pill">Contact Us</a>
-          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">☰</button>
+        <div class="brand-name-group">
+          <span class="brand-main">OXFORD</span>
+          <span class="brand-tagline">Adventure Tourism</span>
         </div>
+      </a>
+
+      <!-- Single Line Multi-page Navigation with Water Bubble Hover -->
+      <nav class="header-nav-links" id="headerNavLinks">
+        <a href="index.html" class="nav-item-link active">Home</a>
+        <a href="adventures.html" class="nav-item-link">Adventures</a>
+        <a href="destinations.html" class="nav-item-link">Destinations</a>
+        <a href="skydiving.html" class="nav-item-link">Skydiving</a>
+        <a href="about.html" class="nav-item-link">About Us</a>
+        <a href="contact.html" class="nav-item-link">Contact</a>
       </nav>
 
-      <!-- =====================================================================
-           HERO SECTION: Find Your Next Great Adventure
-           ===================================================================== -->
-      <section class="hero-container" id="hero">
+      <div class="header-actions">
+        <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20inquire%20about%20your%20tours" 
+           target="_blank" rel="noopener noreferrer" class="btn-glass-primary btn-header-cta">
+          <span>WhatsApp</span><span class="cta-concierge-word">&nbsp;Concierge</span>&nbsp;💬
+        </a>
+        <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
 
-        <!-- Left Hero Column with Writing Animation -->
-        <div class="hero-left">
-          <!-- Live Status Badge -->
-          <div class="hero-live-badge">
-            <span class="live-pulse-dot"></span>
-            <span class="hero-live-text">Doha, Qatar • Luxury Guided Expeditions</span>
+  <main>
+    <!-- =====================================================================
+         HERO SECTION: Water Ripple Canvas & Animated Headline (Pure Landing)
+         ===================================================================== -->
+    <section class="hero-water-section" id="hero">
+      <!-- Interactive Water Canvas -->
+      <canvas id="waterCanvas" class="water-canvas-bg"></canvas>
+
+      <div class="hero-content-wrapper">
+        <!-- Left Hero Column -->
+        <div class="hero-text-col reveal">
+          <div class="hero-status-pill">
+            <span class="status-dot-pulse"></span>
+            <span>Qatar's Premier Luxury Adventure Fleet</span>
           </div>
 
-          <h1 class="hero-title">
-            Find Your<br>
-            Next Great<br>
-            <span class="animated-text-slot">
-              <span class="writing-accent-wrapper">
-                <span class="writing-dynamic-text" id="typewriterText">Bedouin Odyssey</span><span
-                  class="writing-cursor">|</span>
-                <svg class="writing-underline-svg" id="writingUnderline" viewBox="0 0 320 28" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path class="writing-underline-path" d="M 6,18 C 80,6 200,8 308,16 C 318,17 288,24 240,24"
-                    stroke="url(#goldGradient)" stroke-width="4.5" stroke-linecap="round" />
-                  <defs>
-                    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stop-color="#AA7E3A" />
-                      <stop offset="50%" stop-color="#E5BA75" />
-                      <stop offset="100%" stop-color="#C19147" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </span>
+          <h1 class="hero-headline">
+            Experience the<br>
+            Soul of Qatar with<br>
+            <span class="hero-highlight-word">
+              <span id="typewriterText">Inland Sea Safaris</span>
+              <span class="typewriter-cursor">|</span>
             </span>
           </h1>
-          <p class="hero-subtitle">
-            From thrilling dune bashing across the Inland Sea to 15,000-ft tandem skydiving over the Arabian Gulf,
-            discover Qatar's most extraordinary adrenaline journeys.
+
+          <p class="hero-subparagraph">
+            From exhilarating 4x4 dune bashing across the UNESCO Inland Sea to 15,000-ft tandem skydiving over the Arabian Gulf and serene mangrove kayaking at Purple Island.
           </p>
-          <div class="hero-cta-group">
-            <a href="#adventures" class="btn-pill hero-cta-btn smooth-scroll-btn">
-              Explore Adventures
+
+          <div class="hero-cta-bar">
+            <a href="#adventures" class="btn-glass-primary">
+              Explore Adventures 🌊
             </a>
-            <a href="#qatar-specials" class="btn-pill-outline smooth-scroll-btn">
+            <a href="#qatar-specials" class="btn-glass-white">
               Qatar Specials ↗
             </a>
           </div>
         </div>
 
-        <!-- Right Hero Column: Skydivers Visual + Badge + Giant ADVENTURE Typography -->
-        <div class="hero-right">
-          <div class="hero-visual-card">
-            <img src="images/hero_skydiving.jpg" alt="Two happy adventurers tandem skydiving over scenic landscape"
-              class="hero-skydive-img">
+        <!-- Right Hero Visual Column -->
+        <div class="hero-visual-col reveal-right delay-1">
+          <div class="hero-main-card">
+            <img src="images/qatar_desert_safari.jpg" alt="Luxury 4x4 desert safari over Khor Al Adaid sand dunes in Qatar">
+          </div>
 
-            <!-- Glass Floating Badge -->
-            <div class="floating-badge">
-              <span class="floating-badge-number">37+</span>
-              <span class="floating-badge-text">Thrilling<br>Adventure Activities</span>
+          <!-- Floating Glass Badges -->
+          <div class="floating-glass-badge badge-top-right">
+            <div class="badge-icon-box">🪂</div>
+            <div>
+              <div class="badge-number">15,000 Ft</div>
+              <div class="badge-text">Highest Dropzone in Qatar</div>
             </div>
           </div>
 
-          <!-- Stylized ADVENTURE Typography with Parallax -->
-          <div class="hero-bottom-typography">
-            <span class="huge-adventure-text">ADVENTURE</span>
+          <div class="floating-glass-badge badge-bottom-left">
+            <div class="badge-icon-box">⭐</div>
+            <div>
+              <div class="badge-number">4.9 / 5.0</div>
+              <div class="badge-text">From 500+ Luxury Travelers</div>
+            </div>
           </div>
         </div>
-      </section>
-
-      <!-- Centered Bottom Notch Down Arrow Button -->
-      <div class="hero-scroll-notch">
-        <a href="#adventures" class="circle-arrow-btn smooth-scroll-btn" aria-label="Scroll down to adventures">
-          ↓
-        </a>
       </div>
 
-      <!-- =====================================================================
-           SECTION: CHOOSE YOUR KIND OF ADVENTURE
-           ===================================================================== -->
-      <section class="canvas-section section-choose-adventure" id="adventures">
+      <!-- Water Wave Bottom Transition -->
+      <div class="water-wave-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0 C150,90 350,-40 500,45 C650,130 900,10 1200,60 L1200,120 L0,120 Z" class="wave-fill"></path>
+        </svg>
+      </div>
+    </section>
 
-        <!-- Section Header Split -->
-        <div class="section-header-split">
-          <h2 class="section-serif-title">
-            Choose Your Kind<br>
-            of Adventure
-          </h2>
-          <p class="section-desc-right">
-            Explore the world through adrenaline — discover top-rated adventure activities tailored to your thrill
-            level.
+    <!-- =====================================================================
+         SLIDING CARDS SECTION: CHOOSE YOUR KIND OF ADVENTURE
+         ===================================================================== -->
+    <section class="slider-section-container" id="adventures">
+      <div class="section-header-row reveal">
+        <div>
+          <div class="section-tag">🌊 Thrills on Demand</div>
+          <h2 class="section-title">Choose Your Kind of Adventure</h2>
+          <p class="section-subtitle">Swipe through Qatar's most iconic outdoor adrenaline experiences.</p>
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-arrow-btn" data-slider-target="featuredTrack" data-direction="prev" aria-label="Previous Adventure">←</button>
+          <button class="slider-arrow-btn" data-slider-target="featuredTrack" data-direction="next" aria-label="Next Adventure">→</button>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs-row reveal">
+        <button class="filter-tab-btn active" data-filter="all">All Experiences</button>
+        <button class="filter-tab-btn" data-filter="air">Air & Sky</button>
+        <button class="filter-tab-btn" data-filter="water">Water & Ocean</button>
+        <button class="filter-tab-btn" data-filter="land">Desert & Land</button>
+      </div>
+
+      <!-- Sliding Track Wrapper -->
+      <div class="sliding-track-wrapper" id="featuredTrack">
+        <div class="sliding-cards-track">
+
+          <!-- Slide Card 1: Desert Safari & Inland Sea -->
+          <div class="slide-card" data-category="land">
+            <div class="slide-card-visual">
+              <span class="slide-badge-category">Desert & Land</span>
+              <span class="slide-badge-rating">★ 4.9</span>
+              <img src="images/qatar_desert_safari.jpg" alt="Inland Sea Desert Safari Qatar">
+            </div>
+            <div class="slide-card-body">
+              <div class="slide-card-location">📍 Khor Al Adaid, Qatar</div>
+              <h3 class="slide-card-title">Inland Sea 4x4 Dune Bashing & Sunset Safari</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                Traverse towering sand dunes where the ocean meets the desert. Includes camel rides, sandboarding, and traditional camp hospitality.
+              </p>
+              <div class="slide-features-row">
+                <span class="slide-feature-item">⏱ 5–6 Hours</span>
+                <span class="slide-feature-item">🚙 Luxury 4x4</span>
+                <span class="slide-feature-item">☕ Bedouin Tea</span>
+              </div>
+              <div class="slide-card-footer">
+                <span class="showcase-pill-tag">✦ 50m Slipface Dunes</span>
+                <span class="showcase-gold-tag">★ Flagship Safari</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide Card 2: Tandem Skydiving Qatar -->
+          <div class="slide-card" data-category="air">
+            <div class="slide-card-visual">
+              <span class="slide-badge-category">Skies & Air</span>
+              <span class="slide-badge-rating">★ 5.0</span>
+              <img src="images/skydive_qatar_desert.jpg" alt="Tandem Skydiving Khor Al Adaid Qatar">
+            </div>
+            <div class="slide-card-body">
+              <div class="slide-card-location">📍 Arabian Gulf Dropzone</div>
+              <h3 class="slide-card-title">15,000 Ft Tandem Skydiving over Desert & Sea</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                Freefall at 200 km/h with panoramic views of the Inland Sea and the turquoise Arabian Gulf alongside certified USPA masters.
+              </p>
+              <div class="slide-features-row">
+                <span class="slide-feature-item">⏱ 3 Hours</span>
+                <span class="slide-feature-item">🎥 4K Video</span>
+                <span class="slide-feature-item">🪂 USPA Master</span>
+              </div>
+              <div class="slide-card-footer">
+                <span class="showcase-pill-tag">✦ 60s Freefall</span>
+                <span class="showcase-gold-tag">🪂 USPA Certified</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide Card 3: Luxury Yacht Cruise -->
+          <div class="slide-card" data-category="water">
+            <div class="slide-card-visual">
+              <span class="slide-badge-category">Ocean & Water</span>
+              <span class="slide-badge-rating">★ 4.9</span>
+              <img src="images/qatar_luxury_yacht.jpg" alt="Private Luxury Yacht Charter Doha">
+            </div>
+            <div class="slide-card-body">
+              <div class="slide-card-location">📍 Doha Corniche & Pearl</div>
+              <h3 class="slide-card-title">Private Luxury Yacht & Sunset Corniche Cruise</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                Sail past the futuristic West Bay skyline with private sundeck, swimming anchor stops, and gourmet catering.
+              </p>
+              <div class="slide-features-row">
+                <span class="slide-feature-item">⏱ 3 Hours</span>
+                <span class="slide-feature-item">🛥 55ft Yacht</span>
+                <span class="slide-feature-item">🍹 Gourmet Drinks</span>
+              </div>
+              <div class="slide-card-footer">
+                <span class="showcase-pill-tag">✦ West Bay Skyline</span>
+                <span class="showcase-gold-tag">🛥 55ft Luxury Yacht</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide Card 4: Purple Island Mangrove Kayaking -->
+          <div class="slide-card" data-category="water">
+            <div class="slide-card-visual">
+              <span class="slide-badge-category">Eco & Water</span>
+              <span class="slide-badge-rating">★ 4.8</span>
+              <img src="images/kayaker_adventure.jpg" alt="Purple Island Mangroves Kayaking Qatar">
+            </div>
+            <div class="slide-card-body">
+              <div class="slide-card-location">📍 Al Thakira, Qatar</div>
+              <h3 class="slide-card-title">Purple Island Guided Mangrove Kayak Tour</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                Paddle through Qatar's ancient natural mangrove forests at Al Thakira. Witness flamingos, herons, and crystal shallow waterways.
+              </p>
+              <div class="slide-features-row">
+                <span class="slide-feature-item">⏱ 4 Hours</span>
+                <span class="slide-feature-item">🛶 Single/Double Kayak</span>
+                <span class="slide-feature-item">🦩 Bird Watching</span>
+              </div>
+              <div class="slide-card-footer">
+                <span class="showcase-pill-tag">✦ Eco Mangroves</span>
+                <span class="showcase-gold-tag">🦩 Migratory Flamingos</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide Card 5: Sunrise Hot Air Balloon -->
+          <div class="slide-card" data-category="air">
+            <div class="slide-card-visual">
+              <span class="slide-badge-category">Air & Sky</span>
+              <span class="slide-badge-rating">★ 4.9</span>
+              <img src="images/hot_air_balloon.jpg" alt="Sunrise Hot Air Balloon">
+            </div>
+            <div class="slide-card-body">
+              <div class="slide-card-location">📍 Desert Skies, Qatar</div>
+              <h3 class="slide-card-title">Sunrise Hot Air Balloon Flight over Desert Dunes</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                Float silently at 3,000 feet as golden morning rays illuminate the boundless Arabian dunes. Includes breakfast feast.
+              </p>
+              <div class="slide-features-row">
+                <span class="slide-feature-item">⏱ 4 Hours</span>
+                <span class="slide-feature-item">🌅 Golden Hour</span>
+                <span class="slide-feature-item">🥐 Breakfast</span>
+              </div>
+              <div class="slide-card-footer">
+                <span class="showcase-pill-tag">✦ 3,000 Ft Flight</span>
+                <span class="showcase-gold-tag">🌅 Golden Hour</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide Card 6: Overnight Bedouin Camp -->
+          <div class="slide-card" data-category="land">
+            <div class="slide-card-visual">
+              <span class="slide-badge-category">Overnight Luxury</span>
+              <span class="slide-badge-rating">★ 4.9</span>
+              <img src="images/camping_mountains.jpg" alt="Overnight Desert Camp under Stars">
+            </div>
+            <div class="slide-card-body">
+              <div class="slide-card-location">📍 Sealine Desert, Qatar</div>
+              <h3 class="slide-card-title">VIP Bedouin Desert Glamping & Stargazing</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                Sleep under the Arabian desert stars in a private air-conditioned tent with traditional carpets, live barbecue, and campfire.
+              </p>
+              <div class="slide-features-row">
+                <span class="slide-feature-item">⏱ 18 Hours</span>
+                <span class="slide-feature-item">⛺ Luxury Tent</span>
+                <span class="slide-feature-item">🍖 BBQ Feast</span>
+              </div>
+              <div class="slide-card-footer">
+                <span class="showcase-pill-tag">✦ Stargazing Bonfire</span>
+                <span class="showcase-gold-tag">⛺ Luxury Glamping</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         QATAR SIGNATURE EXPEDITIONS SHOWCASE
+         ===================================================================== -->
+    <section class="qatar-signature-section" id="qatar-specials">
+      <div class="slider-section-container" style="padding-top: 0; padding-bottom: 0;">
+        <div class="section-header-row reveal">
+          <div>
+            <div class="section-tag">🇶🇦 Handcrafted in Doha</div>
+            <h2 class="section-title">Official Qatar Signatures</h2>
+            <p class="section-subtitle">Exclusively curated journeys by Oxford Adventure Tourism.</p>
+          </div>
+          <a href="#contact" class="btn-glass-white">Contact Specialists ↗</a>
+        </div>
+
+        <div class="signature-grid">
+          <!-- Signature Card 1 -->
+          <div class="signature-card-wide reveal">
+            <div class="signature-visual">
+              <img src="images/qatar_desert_safari.jpg" alt="Inland Sea Expedition">
+            </div>
+            <div class="signature-content">
+              <div>
+                <span class="slide-badge-category" style="position: static; margin-bottom: 12px; display: inline-block;">Signature Safari</span>
+                <h3 class="slide-card-title" style="margin-top: 8px;">Khor Al Adaid UNESCO Inland Sea</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px; line-height: 1.6;">
+                  One of only two places on Earth where deep sea water floods into the heart of towering desert sand dunes.
+                </p>
+                <ul style="list-style: none; font-size: 0.85rem; color: var(--text-secondary); margin-top: 14px; display: flex; flex-direction: column; gap: 6px;">
+                  <li>✓ Private High-Performance 4x4 Land Cruiser</li>
+                  <li>✓ Professional Desert Captain & Guide</li>
+                  <li>✓ Sunset Dune Halt & Bedouin Camp Hospitality</li>
+                </ul>
+              </div>
+              <div class="slide-card-footer" style="margin-top: 20px;">
+                <span class="showcase-gold-tag">★ UNESCO Natural Reserve</span>
+                <span class="showcase-pill-tag">✦ High-Performance 4x4</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Signature Card 2 -->
+          <div class="signature-card-wide reveal delay-1">
+            <div class="signature-visual">
+              <img src="images/qatar_luxury_yacht.jpg" alt="Doha Dhow Cruise & Water Sports">
+            </div>
+            <div class="signature-content">
+              <div>
+                <span class="slide-badge-category" style="position: static; margin-bottom: 12px; display: inline-block;">Marine Luxury</span>
+                <h3 class="slide-card-title" style="margin-top: 8px;">Traditional Wooden Dhow & Jet Skiing</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px; line-height: 1.6;">
+                  Step aboard a handcrafted Qatari dhow boat with optional high-speed Yamaha jet ski rentals around Safliya Island.
+                </p>
+                <ul style="list-style: none; font-size: 0.85rem; color: var(--text-secondary); margin-top: 14px; display: flex; flex-direction: column; gap: 6px;">
+                  <li>✓ Panoramic Views of Doha West Bay Skyline</li>
+                  <li>✓ Open-Deck Loungers & Swimming Anchor Halt</li>
+                  <li>✓ Fresh Arabian Tea, Qahwa & Music System</li>
+                </ul>
+              </div>
+              <div class="slide-card-footer" style="margin-top: 20px;">
+                <span class="showcase-gold-tag">★ Arabian Gulf Waters</span>
+                <span class="showcase-pill-tag">✦ Open Deck & Jet Ski</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         TANDEM SKYDIVING SHOWCASE
+         ===================================================================== -->
+    <section class="slider-section-container" id="skydiving">
+      <div class="section-header-row reveal">
+        <div>
+          <div class="section-tag">🪂 The Ultimate Adrenaline</div>
+          <h2 class="section-title">15,000 Ft Tandem Skydiving</h2>
+          <p class="section-subtitle">Jump with certified USPA masters — no prior training needed.</p>
+        </div>
+      </div>
+
+      <!-- Altitude Selector Interactive Widget -->
+      <div class="altitude-toggle-box reveal">
+        <button class="altitude-btn" data-height="12,000 Ft" data-freefall="45 Seconds">12,000 Ft</button>
+        <button class="altitude-btn" data-height="14,000 Ft" data-freefall="55 Seconds">14,000 Ft</button>
+        <button class="altitude-btn active" data-height="15,000 Ft" data-freefall="60+ Seconds">15,000 Ft (Qatar Coast Drop)</button>
+      </div>
+
+      <!-- Live Altitude Stat Box -->
+      <div class="glass-card reveal delay-1" style="max-width: 600px; margin: 20px auto 40px; padding: 24px; display: grid; grid-template-columns: repeat(2, 1fr); text-align: center;">
+        <div>
+          <div style="font-size: 0.76rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Drop Altitude</div>
+          <div id="skydiveHeightDisplay" style="font-size: 1.5rem; font-weight: 800; color: var(--water-cyan-dark); margin-top: 4px;">15,000 Ft</div>
+        </div>
+        <div>
+          <div style="font-size: 0.76rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Pure Freefall</div>
+          <div id="skydiveFreefallDisplay" style="font-size: 1.5rem; font-weight: 800; color: var(--gold-primary); margin-top: 4px;">60+ Seconds</div>
+        </div>
+      </div>
+
+      <!-- Dropzones Comparison Grid -->
+      <div class="signature-grid">
+        <div class="glass-card reveal">
+          <div class="slide-card-visual">
+            <span class="slide-badge-category">Flagship Dropzone</span>
+            <span class="slide-badge-rating">★ 5.0</span>
+            <img src="images/skydive_qatar_desert.jpg" alt="Qatar Desert Skydiving">
+          </div>
+          <div class="slide-card-body">
+            <div class="slide-card-location">📍 Khor Al Adaid Coast, Qatar</div>
+            <h3 class="slide-card-title">Arabian Gulf & Desert Dropzone</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Jump from 15,000 feet directly over the Inland Sea. Experience golden desert dunes blending into the turquoise Persian Gulf waters.
+            </p>
+            <div class="slide-card-footer">
+              <span class="showcase-pill-tag">✦ Desert Meets Sea</span>
+              <span class="showcase-gold-tag">🪂 15,000 Ft Drop</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card reveal delay-1">
+          <div class="slide-card-visual">
+            <span class="slide-badge-category">Swiss Alps</span>
+            <span class="slide-badge-rating">★ 4.9</span>
+            <img src="images/skydive_interlaken.jpg" alt="Interlaken Skydiving">
+          </div>
+          <div class="slide-card-body">
+            <div class="slide-card-location">📍 Interlaken, Switzerland</div>
+            <h3 class="slide-card-title">Swiss Alps Jungfrau Dropzone</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Soar with views of the snow-capped Eiger, Mönch, and Jungfrau summits before gliding smoothly towards Lake Brienz.
+            </p>
+            <div class="slide-card-footer">
+              <span class="showcase-pill-tag">✦ Alpine Panorama</span>
+              <span class="showcase-gold-tag">🏔 Eiger & Jungfrau</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card reveal delay-2">
+          <div class="slide-card-visual">
+            <span class="slide-badge-category">Southern Lakes</span>
+            <span class="slide-badge-rating">★ 4.8</span>
+            <img src="images/skydive_queenstown.jpg" alt="Queenstown Skydiving">
+          </div>
+          <div class="slide-card-body">
+            <div class="slide-card-location">📍 Queenstown, New Zealand</div>
+            <h3 class="slide-card-title">Lake Wakatipu Dropzone</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Jump above the birthplace of extreme adventure sports. Spectacular glacial waters and jagged mountain peaks.
+            </p>
+            <div class="slide-card-footer">
+              <span class="showcase-pill-tag">✦ Glacial Waters</span>
+              <span class="showcase-gold-tag">🌊 Lake Wakatipu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         DESTINATIONS SECTION
+         ===================================================================== -->
+    <section class="slider-section-container" id="destinations">
+      <div class="section-header-row reveal">
+        <div>
+          <div class="section-tag">🌍 Scenic Landscapes</div>
+          <h2 class="section-title">Explore Adventures by Destination</h2>
+          <p class="section-subtitle">Discover top-rated outdoor territories in Qatar and globally.</p>
+        </div>
+      </div>
+
+      <div class="features-grid">
+        <div class="glass-card reveal">
+          <div class="slide-card-visual" style="height: 190px;">
+            <img src="images/qatar_desert_safari.jpg" alt="Qatar Dunes">
+          </div>
+          <div class="slide-card-body">
+            <h3 class="slide-card-title">Khor Al Adaid (Inland Sea)</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              A UNESCO natural reserve where the sea enters the desert sand dunes.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-card reveal delay-1">
+          <div class="slide-card-visual" style="height: 190px;">
+            <img src="images/kayaker_adventure.jpg" alt="Purple Island">
+          </div>
+          <div class="slide-card-body">
+            <h3 class="slide-card-title">Purple Island Mangroves</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Lush green mangrove channels teeming with bird species and flamingos.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-card reveal delay-2">
+          <div class="slide-card-visual" style="height: 190px;">
+            <img src="images/qatar_luxury_yacht.jpg" alt="Doha Corniche">
+          </div>
+          <div class="slide-card-body">
+            <h3 class="slide-card-title">Doha Corniche & Marina</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Skyscrapers meeting tranquil azure waters for yachting and water sports.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-card reveal delay-3">
+          <div class="slide-card-visual" style="height: 190px;">
+            <img src="images/destination_desert_balloon.jpg" alt="UAE & North Africa">
+          </div>
+          <div class="slide-card-body">
+            <h3 class="slide-card-title">Arabian & Sahara Dunes</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              Endless golden landscapes for hot air ballooning and Bedouin journeys.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         WHY CHOOSE OXFORD ADVENTURE
+         ===================================================================== -->
+    <section class="features-section" id="about">
+      <div class="section-header-row reveal" style="text-align: center; justify-content: center; flex-direction: column;">
+        <div class="section-tag">💎 The Oxford Standard</div>
+        <h2 class="section-title">Why Travel With Oxford Adventure</h2>
+        <p class="section-subtitle">Delivering the finest desert expeditions and airborne thrills in the State of Qatar.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-glass-box reveal">
+          <div class="feature-icon-circle">📜</div>
+          <h3 class="feature-box-title">Qatar Tourism Licensed</h3>
+          <p class="feature-box-desc">Fully registered, certified, and compliant with Qatar National Tourism Council standards for total peace of mind.</p>
+        </div>
+
+        <div class="feature-glass-box reveal delay-1">
+          <div class="feature-icon-circle">🚙</div>
+          <h3 class="feature-box-title">Luxury 4x4 Fleet</h3>
+          <p class="feature-box-desc">Immaculately maintained, air-conditioned Toyota Land Cruisers fitted with high-spec roll cages and desert telemetry.</p>
+        </div>
+
+        <div class="feature-glass-box reveal delay-2">
+          <div class="feature-icon-circle">🪂</div>
+          <h3 class="feature-box-title">Certified Instructors</h3>
+          <p class="feature-box-desc">USPA certified tandem masters, licensed dune marshals, and multi-lingual chauffeurs dedicated to your safety.</p>
+        </div>
+
+        <div class="feature-glass-box reveal delay-3">
+          <div class="feature-icon-circle">💬</div>
+          <h3 class="feature-box-title">24/7 VIP Concierge</h3>
+          <p class="feature-box-desc">Direct WhatsApp support and personalized itinerary planning tailored to your flight times and luxury hotel schedule.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         TESTIMONIALS SLIDING CAROUSEL
+         ===================================================================== -->
+    <section class="testimonials-section">
+      <div class="slider-section-container" style="padding-top: 0; padding-bottom: 0;">
+        <div class="section-header-row reveal">
+          <div>
+            <div class="section-tag">⭐ Real Experiences</div>
+            <h2 class="section-title">Adventurer Reviews</h2>
+            <p class="section-subtitle">Hear what world travelers say about Oxford Adventure Tourism.</p>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-arrow-btn" data-slider-target="testiTrack" data-direction="prev" aria-label="Previous Review">←</button>
+            <button class="slider-arrow-btn" data-slider-target="testiTrack" data-direction="next" aria-label="Next Review">→</button>
+          </div>
+        </div>
+
+        <div class="sliding-track-wrapper" id="testiTrack">
+          <div class="sliding-cards-track">
+
+            <div class="testimonial-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">“The Inland Sea desert safari was the absolute highlight of our trip to Qatar. Our driver Tariq handled the dunes like an artist. Seeing the sea meet the desert at sunset was unforgettable.”</p>
+              <div class="testi-user-row">
+                <div class="testi-avatar">ES</div>
+                <div>
+                  <div class="testi-name">Emma Sterling</div>
+                  <div class="testi-tour">United Kingdom • Inland Sea Safari</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">“Skydiving over the Qatar coastline was exhilarating! The instructors were ultra-professional and put us at complete ease. The 4K video footage is cinema grade.”</p>
+              <div class="testi-user-row">
+                <div class="testi-avatar">MA</div>
+                <div>
+                  <div class="testi-name">Mohammed Al-Kuwari</div>
+                  <div class="testi-tour">Qatar • 15,000 Ft Tandem Drop</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">“Kayaking through Purple Island mangroves was serene and magical. We saw flamingos up close and enjoyed tea by the water. Highly recommend Oxford Adventure!”</p>
+              <div class="testi-user-row">
+                <div class="testi-avatar">CH</div>
+                <div>
+                  <div class="testi-name">Claire & Henrik</div>
+                  <div class="testi-tour">Sweden • Purple Island Eco Tour</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">“The private yacht charter from Doha Port was flawless. White glove service, breathtaking views of West Bay skyline, and crystal waters. Top tier hospitality!”</p>
+              <div class="testi-user-row">
+                <div class="testi-avatar">DL</div>
+                <div>
+                  <div class="testi-name">David Laurent</div>
+                  <div class="testi-tour">France • Corniche Yacht Charter</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         CONTACT & CONCIERGE (Pure Landing Page - No Booking Forms)
+         ===================================================================== -->
+    <section class="slider-section-container" id="contact">
+      <div class="section-header-row reveal" style="text-align: center; justify-content: center; flex-direction: column;">
+        <div class="section-tag">💬 Direct Concierge</div>
+        <h2 class="section-title">Connect With Our Doha Specialists</h2>
+        <p class="section-subtitle">Reach out anytime via WhatsApp, phone, or email to discuss tours and itineraries.</p>
+      </div>
+
+      <div class="features-grid reveal">
+        <div class="glass-card" style="padding: 30px; text-align: center;">
+          <div class="badge-icon-box" style="margin: 0 auto 16px;">📞</div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 8px;">Direct Call</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">Speak directly with our reservation team.</p>
+          <a href="tel:+97472001133" style="font-weight: 700; color: var(--water-cyan-dark); font-size: 1.05rem;">+974 7200 1133</a>
+        </div>
+
+        <div class="glass-card" style="padding: 30px; text-align: center;">
+          <div class="badge-icon-box" style="margin: 0 auto 16px;">💬</div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 8px;">WhatsApp Concierge</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">Instant replies 7 days a week.</p>
+          <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20learn%20more" target="_blank" rel="noopener noreferrer" class="btn-glass-primary" style="padding: 8px 20px; font-size: 0.88rem;">
+            Chat on WhatsApp ↗
+          </a>
+        </div>
+
+        <div class="glass-card" style="padding: 30px; text-align: center;">
+          <div class="badge-icon-box" style="margin: 0 auto 16px;">✉️</div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 8px;">Email Inquiries</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">For bespoke itineraries & corporate events.</p>
+          <a href="mailto:info@oxfordadventuretourism.com" style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem;">info@oxfordadventuretourism.com</a>
+        </div>
+
+        <div class="glass-card" style="padding: 30px; text-align: center;">
+          <div class="badge-icon-box" style="margin: 0 auto 16px;">📍</div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 8px;">Doha Office</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 8px;">Doha, State of Qatar</p>
+          <span style="font-size: 0.82rem; color: var(--gold-primary); font-weight: 700;">Open Daily 07:00 – 22:00 AST</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="slider-section-container" style="padding-top: 0;">
+      <div class="glass-panel reveal" style="padding: 40px;">
+        <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 24px; color: var(--text-primary); text-align: center;">
+          Frequently Asked Questions
+        </h3>
+
+        <div style="display: flex; flex-direction: column; gap: 16px; max-width: 860px; margin: 0 auto;">
+          <div style="background: rgba(255, 255, 255, 0.7); padding: 20px; border-radius: var(--radius-sm); border: 1px solid rgba(15, 23, 42, 0.06);">
+            <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">What is included in the Inland Sea Desert Safari?</div>
+            <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">Includes private pick-up from anywhere in Doha in a luxury Land Cruiser, professional desert marshal, dune bashing, sandboarding, camel rides, and traditional Arabian tea or coffee.</div>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.7); padding: 20px; border-radius: var(--radius-sm); border: 1px solid rgba(15, 23, 42, 0.06);">
+            <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">Is prior training required for 15,000 ft tandem skydiving?</div>
+            <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">No prior experience is necessary. You will jump harnessed to a certified USPA tandem master after a straightforward 20-minute safety briefing.</div>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.7); padding: 20px; border-radius: var(--radius-sm); border: 1px solid rgba(15, 23, 42, 0.06);">
+            <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">What is the best season to explore Qatar?</div>
+            <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">October through April is ideal, with pleasant temperatures (20°C – 28°C), crystal clear skies, and calm sea conditions for water sports.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       FOOTER (Full White Crystal Glass Elegance)
+       ===================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top-columns">
+        <div class="footer-brand-box">
+          <div class="header-brand">
+            <div class="logo-glass-frame">
+              <img src="logos/oxford logo.png" alt="Oxford Adventure Tourism" width="38" height="38">
+            </div>
+            <div class="brand-name-group">
+              <span class="brand-main">OXFORD</span>
+              <span class="brand-tagline">Adventure Tourism</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Oxford Adventure Tourism W.L.L. is Doha’s premier operator for luxury desert safaris, 15,000-ft tandem skydiving, Arabian Gulf yacht charters, and authentic Bedouin expeditions.
           </p>
         </div>
 
-        <!-- Category 1: Air-Based Adventures -->
-        <div class="adventure-category-row air-adventure-grid">
-          <!-- Left Small Card: Hot Air Balloon -->
-          <div class="adventure-thumb-card">
-            <img src="images/hot_air_balloon.jpg" alt="Hot air balloon rising above clouds at sunrise">
-          </div>
-
-          <!-- Center Column: Title & 8 Air Activities -->
-          <div class="category-details-col">
-            <div class="category-title-header">
-              <span class="cat-arrow-icon">↗</span>
-              <h3 class="cat-heading">Air-Based Adventures</h3>
-            </div>
-            <ul class="activity-list">
-              <li style="--item-i: 1;"><button class="activity-item-btn" type="button">Tandem Skydiving</button></li>
-              <li style="--item-i: 2;"><button class="activity-item-btn" type="button">Paragliding</button></li>
-              <li style="--item-i: 3;"><button class="activity-item-btn" type="button">Hot Air Balloon Ride</button>
-              </li>
-              <li style="--item-i: 4;"><button class="activity-item-btn" type="button">Helicopter Tours</button></li>
-              <li style="--item-i: 5;"><button class="activity-item-btn" type="button">Bungee Jumping</button></li>
-              <li style="--item-i: 6;"><button class="activity-item-btn" type="button">Zip Lining</button></li>
-              <li style="--item-i: 7;"><button class="activity-item-btn" type="button">Paramotoring</button></li>
-              <li style="--item-i: 8;"><button class="activity-item-btn" type="button">Wingsuit Flying</button></li>
-            </ul>
-          </div>
-
-          <!-- Right Large Card: Paraglider over Mountain Peak with Corner Arrow -->
-          <div class="featured-adventure-card">
-            <img src="images/paraglider_mountain.jpg" alt="Paraglider with bright canopy soaring over mountain valley">
-            <a href="#water-adventures" class="card-corner-arrow smooth-scroll-btn"
-              aria-label="Next Adventure Category">
-              ↓
-            </a>
-          </div>
+        <div>
+          <h4 class="footer-col-title">Explore</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#adventures">Adventures</a></li>
+            <li><a href="#qatar-specials">Qatar Specials</a></li>
+            <li><a href="#skydiving">Skydiving</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
         </div>
 
-        <!-- Category 2: Water-Based Adventures -->
-        <div class="adventure-category-row water-adventure-grid" id="water-adventures">
-          <!-- Left Large Card: Kayaker on Turquoise Ocean -->
-          <div class="featured-adventure-card">
-            <img src="images/kayaker_adventure.jpg" alt="Kayaker navigating azure coastal waters in yellow kayak">
-            <a href="#land-adventures" class="card-corner-arrow left-corner smooth-scroll-btn"
-              aria-label="Next Adventure Category">
-              ↓
-            </a>
-          </div>
-
-          <!-- Center Column: Title & 9 Water Activities -->
-          <div class="category-details-col">
-            <div class="category-title-header">
-              <span class="cat-arrow-icon">↗</span>
-              <h3 class="cat-heading">Water-Based Adventures</h3>
-            </div>
-            <ul class="activity-list">
-              <li style="--item-i: 1;"><button class="activity-item-btn" type="button">Scuba Diving</button></li>
-              <li style="--item-i: 2;"><button class="activity-item-btn" type="button">Snorkeling</button></li>
-              <li style="--item-i: 3;"><button class="activity-item-btn" type="button">White Water Rafting</button></li>
-              <li style="--item-i: 4;"><button class="activity-item-btn" type="button">Jet Skiing</button></li>
-              <li style="--item-i: 5;"><button class="activity-item-btn" type="button">Kayaking</button></li>
-              <li style="--item-i: 6;"><button class="activity-item-btn" type="button">Surfing</button></li>
-              <li style="--item-i: 7;"><button class="activity-item-btn" type="button">Wakeboarding</button></li>
-              <li style="--item-i: 8;"><button class="activity-item-btn" type="button">Swimming with Dolphins</button>
-              </li>
-              <li style="--item-i: 9;"><button class="activity-item-btn" type="button">Canyoneering</button></li>
-            </ul>
-          </div>
-
-          <!-- Right Small Card: Scuba Diver with Tropical Fish & Reef -->
-          <div class="adventure-thumb-card">
-            <img src="images/scuba_coral_reef.jpg" alt="Scuba diver swimming through coral reef">
-          </div>
+        <div>
+          <h4 class="footer-col-title">Adventures</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#adventures">Inland Sea Desert Safari</a></li>
+            <li><a href="#skydiving">15,000 Ft Skydiving</a></li>
+            <li><a href="#adventures">Purple Island Kayaking</a></li>
+            <li><a href="#qatar-specials">Private Yacht Charter</a></li>
+            <li><a href="#adventures">Overnight Bedouin Camp</a></li>
+          </ul>
         </div>
 
-        <!-- Category 3: Land-Based Adventures -->
-        <div class="adventure-category-row land-adventure-grid" id="land-adventures">
-          <!-- Left Small Card: Camping Tent in Twilight -->
-          <div class="adventure-thumb-card">
-            <img src="images/camping_mountains.jpg" alt="Glowing tent pitched under mountain twilight sky">
-          </div>
-
-          <!-- Center Column: Title & 8 Land Activities -->
-          <div class="category-details-col">
-            <div class="category-title-header">
-              <span class="cat-arrow-icon">↗</span>
-              <h3 class="cat-heading">Land-Based Adventures</h3>
-            </div>
-            <ul class="activity-list">
-              <li style="--item-i: 1;"><button class="activity-item-btn" type="button">Mountain Hiking /
-                  Trekking</button></li>
-              <li style="--item-i: 2;"><button class="activity-item-btn" type="button">Camping</button></li>
-              <li style="--item-i: 3;"><button class="activity-item-btn" type="button">Rock Climbing</button></li>
-              <li style="--item-i: 4;"><button class="activity-item-btn" type="button">Caving + Spelunking</button></li>
-              <li style="--item-i: 5;"><button class="activity-item-btn" type="button">Mountain Biking</button></li>
-              <li style="--item-i: 6;"><button class="activity-item-btn" type="button">Volcano Boarding</button></li>
-              <li style="--item-i: 7;"><button class="activity-item-btn" type="button">Desert Safari (Qatar
-                  Dunes)</button></li>
-              <li style="--item-i: 8;"><button class="activity-item-btn" type="button">Quad Biking & Dune Buggy</button>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Right Large Card: Hiker on Mountain Stairs -->
-          <div class="featured-adventure-card">
-            <img src="images/hiker_stairs.jpg" alt="Adventurer hiking up wooden mountain pathway">
+        <div>
+          <h4 class="footer-col-title">Doha Concierge</h4>
+          <div class="footer-contact-info">
+            <p>📍 Doha, State of Qatar</p>
+            <p>📞 Phone: <a href="tel:+97472001133">+974 7200 1133</a></p>
+            <p>✉️ Email: <a href="mailto:info@oxfordadventuretourism.com">info@oxfordadventuretourism.com</a></p>
+            <p>🕒 Open Daily: 07:00 AM – 10:00 PM AST</p>
           </div>
         </div>
+      </div>
 
-        <!-- Explore All Pill CTA -->
-        <div class="explore-all-row">
-          <a href="#destinations" class="btn-pill smooth-scroll-btn">Explore All</a>
-        </div>
-      </section>
+      <div class="footer-bottom-bar">
+        <div>© 2026 Oxford Adventure Tourism W.L.L. All rights reserved. Licensed in Qatar.</div>
+        <div>Designed with Crystalline White Glassmorphism & Liquid Water Physics.</div>
+      </div>
+    </div>
+  </footer>
 
-      <!-- =====================================================================
-           SECTION: TANDEM SKYDIVING ADVENTURES AROUND THE GLOBE
-           ===================================================================== -->
-      <section class="canvas-section section-skydiving" id="skydiving">
-
-        <!-- Header -->
-        <div class="skydiving-header">
-          <div>
-            <h2 class="section-serif-title">
-              Tandem Skydiving Adventures<br>
-              Around the Globe
-            </h2>
-          </div>
-          <div class="skydiving-header-right">
-            <p class="section-desc-right" style="margin-bottom: 0;">
-              Jump with a certified pro — no training needed. Choose from the world's most scenic dropzones.
-            </p>
-            <a href="#destinations" class="btn-pill smooth-scroll-btn">View All</a>
-          </div>
-        </div>
-
-        <!-- 3 Cards Grid -->
-        <div class="skydiving-cards-grid">
-
-          <!-- Card 1: Interlaken, Switzerland -->
-          <div class="skydiving-card">
-            <div class="skydive-card-visual">
-              <span class="location-tag">📍 Switzerland</span>
-              <span class="rating-tag">★ 4.9</span>
-              <img src="images/skydive_interlaken.jpg" alt="Skydivers taking a selfie over Swiss Alps">
-            </div>
-            <div class="skydive-card-info">
-              <h4 class="skydive-location-title">Interlaken</h4>
-              <div class="skydive-price" data-usd="true" data-usd-min="299" data-usd-max="349">$299 – $349</div>
-              <ul class="skydive-features-list">
-                <li>15,000 Ft Drop</li>
-                <li>Free Video & Photo Package</li>
-                <li>Hostel & Food Support</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Card 2: Queenstown, New Zealand -->
-          <div class="skydiving-card">
-            <div class="skydive-card-visual">
-              <span class="location-tag">📍 New Zealand</span>
-              <span class="rating-tag">★ 4.8</span>
-              <img src="images/skydive_queenstown.jpg" alt="Skydivers leaping over Queenstown lakes">
-            </div>
-            <div class="skydive-card-info">
-              <h4 class="skydive-location-title">Queenstown</h4>
-              <div class="skydive-price" data-usd="true" data-usd-min="260" data-usd-max="320">$260 – $320</div>
-              <ul class="skydive-features-list">
-                <li>12,000 Ft Drop</li>
-                <li>Free Video & Photo Package</li>
-                <li>Hostel & Food Support</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Card 3: Khor Al Adaid & Coast, Qatar -->
-          <div class="skydiving-card">
-            <div class="skydive-card-visual">
-              <span class="location-tag">📍 Qatar Dropzone</span>
-              <span class="rating-tag">★ 4.9</span>
-              <img src="images/skydive_qatar_desert.jpg" alt="Skydivers over Arabian gulf and golden sand dunes">
-            </div>
-            <div class="skydive-card-info">
-              <h4 class="skydive-location-title">Khor Al Adaid Coast</h4>
-              <div class="skydive-price" data-usd="true" data-usd-min="300" data-usd-max="350">$300 – $350</div>
-              <ul class="skydive-features-list">
-                <li>14,000 Ft Drop Over Desert & Sea</li>
-                <li>Free 4K Video & Drone Footage</li>
-                <li>Desert Camp & VIP Lounge</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- =====================================================================
-           SECTION: EXPLORE ADVENTURES BY DESTINATION
-           ===================================================================== -->
-      <section class="canvas-section section-destinations" id="destinations">
-        <div class="destinations-grid">
-
-          <!-- Left Destination Card: Morocco & Coastal Wonders -->
-          <div class="destination-image-card">
-            <img src="images/destination_coastal.jpg" alt="Coastal historic fort ramparts and harbor">
-            <div class="dest-card-gradient"></div>
-            <div class="dest-card-content">
-              <h3 class="dest-name">Morocco & North Africa</h3>
-              <ul class="dest-list">
-                <li>Land & Desert Adventures</li>
-                <li>Water Based Adventures</li>
-                <li>Cultural & Dune Adventures</li>
-              </ul>
-              <a href="#adventures" class="btn-pill dest-explore-btn smooth-scroll-btn">
-                Explore
-              </a>
-            </div>
-          </div>
-
-          <!-- Center Editorial Card: Explore Adventures by Destination -->
-          <div class="destination-center-card">
-            <h2 class="dest-center-title">
-              Explore<br>
-              Adventures by<br>
-              Destination
-            </h2>
-            <p class="dest-center-subtitle">
-              Choose a country and discover the thrilling experiences waiting for you.
-            </p>
-            <a href="#adventures" class="btn-pill smooth-scroll-btn">
-              Explore All
-            </a>
-          </div>
-
-          <!-- Right Destination Card: Qatar & United Arab Emirates -->
-          <div class="destination-image-card">
-            <img src="images/destination_desert_balloon.jpg"
-              alt="Hot air balloon rising above endless golden desert sand dunes">
-            <div class="dest-card-gradient"></div>
-            <div class="dest-card-content">
-              <h3 class="dest-name">Qatar & United Arab Emirates</h3>
-              <ul class="dest-list">
-                <li>Land & Desert Safari Adventures</li>
-                <li>All Skies Adventures</li>
-                <li>Offshore Water Adventures</li>
-              </ul>
-              <a href="#adventures" class="btn-pill dest-explore-btn smooth-scroll-btn">
-                Explore
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- =====================================================================
-           QATAR SIGNATURE ADVENTURES (From oxfordadventuretourism.com)
-           ===================================================================== -->
-      <section class="section-qatar-showcase" id="qatar-specials">
-        <div class="qatar-banner-header">
-          <div>
-            <span class="qatar-tagline">🇶🇦 Official Qatar Expeditions</span>
-            <h3 style="font-family: var(--font-serif); font-size: 2rem; margin-top: 4px;">Discover the Soul of Qatar
-            </h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 6px; max-width: 600px;">
-              Premium guided adventures combining luxury, comfort, desert adrenaline, and authentic Qatari culture.
-            </p>
-          </div>
-        </div>
-        <div class="qatar-pills-row">
-          <button class="qatar-pill active" type="button">Desert Safari to Inland Sea (4–8 Hrs • QR 650+)</button>
-          <button class="qatar-pill" type="button">Kayaking Purple Island & Mangroves (5 Hrs • QR 650)</button>
-          <button class="qatar-pill" type="button">Traditional Dhow Cruise & Yacht (1 Hr • QR 450)</button>
-          <button class="qatar-pill" type="button">North Qatar & Al Zubarah UNESCO Fort (6 Hrs • QR 750)</button>
-          <button class="qatar-pill" type="button">Zekreet Desert & Richard Serra Monoliths (5 Hrs • QR 700)</button>
-          <button class="qatar-pill" type="button">Overnight Bedouin Desert Camping (8–12 Hrs • QR 1,400)</button>
-          <button class="qatar-pill" type="button">Falcon Training & Desert Heritage (3 Hrs • QR 650)</button>
-          <button class="qatar-pill" type="button">Doha Old Port Private Fishing Tour (4–6 Hrs • QR 850)</button>
-        </div>
-      </section>
-
-      <!-- =====================================================================
-           SITE FOOTER (Real Details from oxfordadventuretourism.com)
-           ===================================================================== -->
-      <footer class="site-footer" id="about">
-        <div class="footer-top-grid">
-
-          <!-- Column 1: Brand & About -->
-          <div>
-            <div class="footer-logo-box">
-              <img src="logos/oxford logo.png" alt="Oxford Adventure Tourism">
-            </div>
-            <p class="footer-bio">
-              Oxford Adventure Tourism specializes in premium guided tours that combine luxury, comfort, adventure, and
-              authentic Qatari culture. We believe every traveller deserves more than sightseeing—they deserve immersive
-              experiences that reveal the true beauty of Qatar.
-            </p>
-          </div>
-
-          <!-- Column 2: Adventure Categories -->
-          <div>
-            <h4 class="footer-heading">Adventure Types</h4>
-            <ul class="footer-links">
-              <li><a href="#adventures">Air-Based Adventures</a></li>
-              <li><a href="#water-adventures">Water & Ocean Thrills</a></li>
-              <li><a href="#land-adventures">Desert & Land Safaris</a></li>
-              <li><a href="#skydiving">Tandem Skydiving</a></li>
-              <li><a href="#qatar-specials">Qatar Signature Expeditions</a></li>
-            </ul>
-          </div>
-
-          <!-- Column 3: Trust & Company -->
-          <div>
-            <h4 class="footer-heading">Why Oxford Tourism</h4>
-            <ul class="footer-links">
-              <li><a href="#about">500+ Happy Travelers</a></li>
-              <li><a href="#about">100+ Successful Expeditions</a></li>
-              <li><a href="#about">25+ Years Tourism Experience</a></li>
-              <li><a href="#about">Licensed by Qatar Tourism</a></li>
-              <li><a href="#about">Certified Multilingual Chauffeurs</a></li>
-            </ul>
-          </div>
-
-          <!-- Column 4: Qatar Concierge & Direct Contact -->
-          <div>
-            <h4 class="footer-heading">Qatar Concierge</h4>
-            <p style="color: #9C9A9E; font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">
-              📍 Doha - Qatar<br>
-              📞 <a href="tel:+97472001133" style="color: #FFFFFF; text-decoration: none;">+974 7200 1133</a><br>
-              ✉️ <a href="mailto:info@oxfordadventuretourism.com"
-                style="color: #9C9A9E; text-decoration: none;">info@oxfordadventuretourism.com</a><br>
-              💬 WhatsApp: +974 7200 1133
-            </p>
-            <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20inquire%20about%20your%20Qatar%20tours"
-              class="btn-pill" style="padding: 10px 22px; font-size: 0.88rem; display: inline-flex;" target="_blank"
-              rel="noopener noreferrer">
-              WhatsApp Concierge
-            </a>
-          </div>
-
-        </div>
-
-        <div class="footer-bottom">
-          <p>© 2026 Oxford Adventure Tourism W.L.L. All rights reserved. Licensed in Doha, Qatar.</p>
-          <p>Discover the soul of Qatar with Oxford Adventure.</p>
-        </div>
-      </footer>
-
-    </main>
-  </div>
-
-  <!-- Floating Scroll To Top with Circular Progress Indicator -->
-  <button class="floating-scroll-top" id="scrollTopBtn" aria-label="Scroll to top of page" title="Back to top">
-    <svg class="progress-ring" width="54" height="54" viewBox="0 0 54 54">
-      <circle class="progress-ring-bg" cx="27" cy="27" r="23" />
-      <circle class="progress-ring-circle" id="progressRingCircle" cx="27" cy="27" r="23" />
-    </svg>
-    <span class="scroll-top-arrow">↑</span>
-  </button>
-
-  <!-- Floating WhatsApp & Direct Concierge Button -->
-  <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20inquire%20about%20your%20tours%20in%20Qatar"
-    class="floating-concierge-btn" target="_blank" rel="noopener noreferrer"
-    title="Chat with Oxford Tourism on WhatsApp">
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20inquire%20about%20your%20tours" 
+     class="floating-whatsapp-btn" target="_blank" rel="noopener noreferrer" title="Chat with Concierge on WhatsApp">
     💬
   </a>
 
+  <!-- Floating Scroll To Top Button -->
+  <button class="floating-top-btn" id="scrollTopBtn" aria-label="Back to Top">
+    ↑
+  </button>
+
   <script src="script.js"></script>
 </body>
-
 </html>
