@@ -54,13 +54,39 @@
   </header>
 
   <main>
-    <!-- Page Hero Banner -->
-    <section class="page-hero-banner reveal">
-      <span class="page-hero-tag">✦ The Complete Master Catalog</span>
-      <h1 class="page-hero-title">Curated Expeditions</h1>
-      <p class="page-hero-subtitle">
-        Immerse yourself in Qatar's most distinguished land, air, and marine outdoor odysseys, guided by elite captains and certified desert marshals.
-      </p>
+    <!-- Page Hero Banner with Video & Cinematic Vignette -->
+    <section class="page-hero-banner video-hero reveal">
+      <div class="banner-video-bg">
+        <video class="banner-video-elem" autoplay muted loop playsinline poster="images/poster_crater.jpg">
+          <source src="images/coverr-over-the-crater-3370-1080p.mp4" type="video/mp4">
+        </video>
+        <div class="cinematic-vignette-overlay" aria-hidden="true"></div>
+      </div>
+      <div class="hero-ocean-container">
+        <h1 class="hero-editorial-title">
+          <span class="hero-title-eyebrow">✦ Master Catalog</span>
+          <span class="hero-title-main">Curated</span>
+          <span class="hero-title-sub">Expeditions</span>
+        </h1>
+
+        <div class="hero-editorial-aside">
+          <p class="hero-editorial-caption">
+            Immerse yourself in Qatar's distinguished land, air, and marine outdoor odysseys, guided by elite captains and desert marshals.
+          </p>
+          <div class="hero-realm-nav">
+            <a href="#realm-land" class="realm-nav-pill">🏜️ Desert & Dunes</a>
+            <a href="#realm-water" class="realm-nav-pill">🌊 Ocean & Marine</a>
+            <a href="#realm-air" class="realm-nav-pill">🪂 Air & Sky</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Organic Crescent Dune Ridge Wave Divider (Unique to Adventures) -->
+      <div class="organic-dune-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,60 L0,40 C180,18 360,48 540,28 C740,8 920,44 1120,20 C1280,36 1380,14 1440,30 L1440,60 Z" fill="#FFFFFF"/>
+        </svg>
+      </div>
     </section>
 
     <!-- Catalog Section with Filter Tabs -->
@@ -74,271 +100,329 @@
 
       <!-- Filter Tabs -->
       <div class="filter-tabs-bar reveal">
-        <button class="filter-tab-pill active" data-filter="all">All Catalog (8)</button>
-        <button class="filter-tab-pill" data-filter="land">Desert & Land</button>
-        <button class="filter-tab-pill" data-filter="air">Air & Sky</button>
-        <button class="filter-tab-pill" data-filter="water">Ocean & Marine</button>
+        <button class="filter-tab-pill active" data-filter="all">All Realms (8)</button>
+        <button class="filter-tab-pill" data-filter="land">Desert & Land (2)</button>
+        <button class="filter-tab-pill" data-filter="water">Ocean & Marine (3)</button>
+        <button class="filter-tab-pill" data-filter="air">Air & Sky (3)</button>
       </div>
 
-      <!-- Adventures Grid (Tirol & Mobile Card Reference Layout) -->
-      <div class="adventures-luxury-grid">
-
-        <!-- Adventure 1 -->
-        <div class="luxury-card reveal" data-category="land">
-          <div class="luxury-card-media">
-            <img src="images/qatar_desert_safari.jpg" alt="Inland Sea Safari" class="luxury-card-img">
-            <span class="card-floating-badge">Desert & Dunes</span>
+      <!-- =====================================================================
+           REALM 1: DESERT & DUNES (With Desert Video Banner & Vignette)
+           ===================================================================== -->
+      <div class="realm-section" id="realm-land" data-realm="land">
+        <div class="realm-chapter-header reveal">
+          <div class="realm-video-wrap">
+            <video class="realm-video" autoplay muted loop playsinline poster="images/poster_desert.jpg">
+              <source src="images/coverr-driving-in-the-desert-8925-1080p.mp4" type="video/mp4">
+            </video>
+            <div class="cinematic-vignette-overlay" aria-hidden="true"></div>
           </div>
-          <div class="luxury-card-body">
-            <div class="card-social-row">
-              <span class="card-rating-wrap">★ 4.9</span>
-              <div class="card-joined-wrap">
-                <div class="avatar-stack">
-                  <span class="avatar-dot">ES</span>
-                  <span class="avatar-dot">MA</span>
-                  <span class="avatar-dot">DL</span>
-                </div>
-                <span class="avatar-joined-text">+500 joined</span>
-              </div>
-            </div>
-            <div class="card-title-price-row">
-              <h3 class="card-title-text">Inland Sea Safari</h3>
-              <span class="card-price-value">QAR 850 / $235</span>
-            </div>
-            <p class="card-desc-text">Traverse towering sand dunes where the ocean meets the desert. Includes camel rides, sandboarding, and traditional Bedouin tea hospitality.</p>
-            <div class="card-specs-row">
-              <span>⏱ 5–6 Hours</span> • <span>🚙 Luxury 4x4</span> • <span>📍 Khor Al Adaid</span>
-            </div>
-            <a href="https://wa.me/97472001133?text=Hello%20Oxford%2C%20book%20Inland%20Sea%20Safari" target="_blank" rel="noopener noreferrer" class="card-reserve-btn">
-              Reserve your booking ↗
-            </a>
+          <div class="realm-header-content">
+            <span class="realm-step-caps">Chapter 01 • The Great Arabian Desert</span>
+            <h3 class="realm-title">Desert & Dunes Realm</h3>
+            <p class="realm-desc">Conquer singing dunes, vast golden inland corridors, and secluded luxury encampments under star-studded skies.</p>
           </div>
         </div>
 
-        <!-- Adventure 2 -->
-        <div class="luxury-card reveal delay-1" data-category="air">
-          <div class="luxury-card-media">
-            <img src="images/skydive_qatar_desert.jpg" alt="15,000 Ft Tandem Skydiving" class="luxury-card-img">
-            <span class="card-floating-badge">Air & Sky</span>
-          </div>
-          <div class="luxury-card-body">
-            <div class="card-social-row">
-              <span class="card-rating-wrap">★ 5.0</span>
-              <div class="card-joined-wrap">
-                <div class="avatar-stack">
-                  <span class="avatar-dot">AK</span>
-                  <span class="avatar-dot">JR</span>
-                  <span class="avatar-dot">SM</span>
+        <div class="adventures-luxury-grid">
+          <!-- Adventure: Inland Sea Safari -->
+          <div class="luxury-card reveal" data-category="land">
+            <div class="luxury-card-media">
+              <img src="images/qatar_desert_safari.jpg" alt="Inland Sea Safari" class="luxury-card-img">
+              <span class="card-floating-badge">Desert & Dunes</span>
+            </div>
+            <div class="luxury-card-body">
+              <div class="card-social-row">
+                <span class="card-rating-wrap">★ 4.9</span>
+                <div class="card-joined-wrap">
+                  <div class="avatar-stack">
+                    <span class="avatar-dot">ES</span>
+                    <span class="avatar-dot">MA</span>
+                    <span class="avatar-dot">DL</span>
+                  </div>
+                  <span class="avatar-joined-text">+500 joined</span>
                 </div>
-                <span class="avatar-joined-text">+380 jumped</span>
               </div>
+              <div class="card-title-price-row">
+                <h3 class="card-title-text">Inland Sea Safari</h3>
+                <span class="card-price-value">QAR 850 / $235</span>
+              </div>
+              <p class="card-desc-text">Traverse towering sand dunes where the ocean meets the desert. Includes camel rides, sandboarding, and traditional Bedouin tea hospitality.</p>
+              <div class="card-specs-row">
+                <span>⏱ 5–6 Hours</span> • <span>🚙 Luxury 4x4</span> • <span>📍 Khor Al Adaid</span>
+              </div>
+              <a href="https://wa.me/97472001133?text=Hello%20Oxford%2C%20book%20Inland%20Sea%20Safari" target="_blank" rel="noopener noreferrer" class="card-reserve-btn">
+                Reserve your booking ↗
+              </a>
             </div>
-            <div class="card-title-price-row">
-              <h3 class="card-title-text">15,000 Ft Tandem Jump</h3>
-              <span class="card-price-value">QAR 1,950 / $535</span>
+          </div>
+
+          <!-- Adventure: VIP Bedouin Glamping -->
+          <div class="luxury-card reveal delay-1" data-category="land">
+            <div class="luxury-card-media">
+              <img src="images/camping_mountains.jpg" alt="Overnight Desert Glamping" class="luxury-card-img">
+              <span class="card-floating-badge">Overnight VIP</span>
             </div>
-            <p class="card-desc-text">Freefall at 200 km/h with panoramic views of the Inland Sea and turquoise Gulf alongside certified USPA master instructors.</p>
-            <div class="card-specs-row">
-              <span>⏱ 3 Hours</span> • <span>🪂 60s Freefall</span> • <span>🎥 4K Video</span>
+            <div class="luxury-card-body">
+              <div class="card-social-row">
+                <span class="card-rating-wrap">★ 4.9</span>
+                <div class="card-joined-wrap">
+                  <div class="avatar-stack">
+                    <span class="avatar-dot">ST</span>
+                    <span class="avatar-dot">RV</span>
+                    <span class="avatar-dot">BL</span>
+                  </div>
+                  <span class="avatar-joined-text">+350 glamped</span>
+                </div>
+              </div>
+              <div class="card-title-price-row">
+                <h3 class="card-title-text">VIP Bedouin Glamping</h3>
+                <span class="card-price-value">QAR 1,600 / $440</span>
+              </div>
+              <p class="card-desc-text">Rest under the celestial desert sky in a fully air-conditioned luxury tent with artisanal carpets, live campfire barbecue, and astronomy guidance.</p>
+              <div class="card-specs-row">
+                <span>⏱ 18 Hours</span> • <span>⛺ Luxury Tent</span> • <span>✨ Stargazing</span>
+              </div>
+              <a href="https://wa.me/97472001133?text=Hello%20Oxford%2C%20book%20Bedouin%20Glamping" target="_blank" rel="noopener noreferrer" class="card-reserve-btn">
+                Reserve your booking ↗
+              </a>
             </div>
-            <a href="skydiving.html" class="card-reserve-btn">
-              Reserve your booking ↗
-            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- =====================================================================
+           REALM 2: OCEAN & MARINE (With Cruising Boat Video Banner & Vignette)
+           ===================================================================== -->
+      <div class="realm-section" id="realm-water" data-realm="water">
+        <div class="realm-chapter-header reveal">
+          <div class="realm-video-wrap">
+            <video class="realm-video" autoplay muted loop playsinline poster="images/poster_boat.jpg">
+              <source src="images/coverr-cruising-boat-3834-1080p.mp4" type="video/mp4">
+            </video>
+            <div class="cinematic-vignette-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="realm-header-content">
+            <span class="realm-step-caps">Chapter 02 • The Arabian Gulf Waters</span>
+            <h3 class="realm-title">Ocean & Marine Realm</h3>
+            <p class="realm-desc">Cruise the Doha skyline aboard private luxury yachts, paddle through ancient mangrove channels, and explore thriving coral reefs.</p>
           </div>
         </div>
 
-        <!-- Adventure 3 -->
-        <div class="luxury-card reveal delay-2" data-category="water">
-          <div class="luxury-card-media">
-            <img src="images/qatar_luxury_yacht.jpg" alt="Private Luxury Yacht" class="luxury-card-img">
-            <span class="card-floating-badge">Ocean & Marine</span>
-          </div>
-          <div class="luxury-card-body">
-            <div class="card-social-row">
-              <span class="card-rating-wrap">★ 4.9</span>
-              <div class="card-joined-wrap">
-                <div class="avatar-stack">
-                  <span class="avatar-dot">FD</span>
-                  <span class="avatar-dot">NO</span>
-                  <span class="avatar-dot">QA</span>
+        <div class="adventures-luxury-grid">
+          <!-- Adventure: Private 55ft Yacht Cruise -->
+          <div class="luxury-card reveal" data-category="water">
+            <div class="luxury-card-media">
+              <img src="images/qatar_luxury_yacht.jpg" alt="Private Luxury Yacht" class="luxury-card-img">
+              <span class="card-floating-badge">Ocean & Marine</span>
+            </div>
+            <div class="luxury-card-body">
+              <div class="card-social-row">
+                <span class="card-rating-wrap">★ 4.9</span>
+                <div class="card-joined-wrap">
+                  <div class="avatar-stack">
+                    <span class="avatar-dot">FD</span>
+                    <span class="avatar-dot">NO</span>
+                    <span class="avatar-dot">QA</span>
+                  </div>
+                  <span class="avatar-joined-text">+620 chartered</span>
                 </div>
-                <span class="avatar-joined-text">+620 chartered</span>
               </div>
+              <div class="card-title-price-row">
+                <h3 class="card-title-text">Private 55ft Yacht Cruise</h3>
+                <span class="card-price-value">QAR 2,400 / $660</span>
+              </div>
+              <p class="card-desc-text">Sail past the illuminated West Bay skyline on a private motor yacht with sundeck lounge, swimming anchor stops, and gourmet catering.</p>
+              <div class="card-specs-row">
+                <span>⏱ 3–4 Hours</span> • <span>🛥 55ft Yacht</span> • <span>🥂 Gourmet Bar</span>
+              </div>
+              <a href="https://wa.me/97472001133?text=Hello%20Oxford%2C%20book%20Private%20Yacht%20Charter" target="_blank" rel="noopener noreferrer" class="card-reserve-btn">
+                Reserve your booking ↗
+              </a>
             </div>
-            <div class="card-title-price-row">
-              <h3 class="card-title-text">Private 55ft Yacht Cruise</h3>
-              <span class="card-price-value">QAR 2,400 / $660</span>
+          </div>
+
+          <!-- Adventure: Mangrove Kayak Tour -->
+          <div class="luxury-card reveal delay-1" data-category="water">
+            <div class="luxury-card-media">
+              <img src="images/kayaker_adventure.jpg" alt="Purple Island Mangroves" class="luxury-card-img">
+              <span class="card-floating-badge">Eco & Marine</span>
             </div>
-            <p class="card-desc-text">Sail past the illuminated West Bay skyline on a private motor yacht with sundeck lounge, swimming anchor stops, and gourmet catering.</p>
-            <div class="card-specs-row">
-              <span>⏱ 3–4 Hours</span> • <span>🛥 55ft Yacht</span> • <span>🥂 Gourmet Bar</span>
+            <div class="luxury-card-body">
+              <div class="card-social-row">
+                <span class="card-rating-wrap">★ 4.8</span>
+                <div class="card-joined-wrap">
+                  <div class="avatar-stack">
+                    <span class="avatar-dot">PL</span>
+                    <span class="avatar-dot">TN</span>
+                    <span class="avatar-dot">RH</span>
+                  </div>
+                  <span class="avatar-joined-text">+410 paddled</span>
+                </div>
+              </div>
+              <div class="card-title-price-row">
+                <h3 class="card-title-text">Mangrove Kayak Tour</h3>
+                <span class="card-price-value">QAR 350 / $95</span>
+              </div>
+              <p class="card-desc-text">Paddle through Qatar’s ancient natural mangrove forests at Al Thakira. Witness flamingos, herons, and crystal shallow tidal channels.</p>
+              <div class="card-specs-row">
+                <span>⏱ 4 Hours</span> • <span>🛶 Single/Double</span> • <span>🦩 Flamingos</span>
+              </div>
+              <a href="https://wa.me/97472001133?text=Hello%20Oxford%2C%20book%20Purple%20Island%20Kayak" target="_blank" rel="noopener noreferrer" class="card-reserve-btn">
+                Reserve your booking ↗
+              </a>
             </div>
-            <a href="https://wa.me/97472001133?text=Hello%20Oxford%2C%20book%20Private%20Yacht%20Charter" target="_blank" rel="noopener noreferrer" class="card-reserve-btn">
-              Reserve your booking ↗
-            </a>
+          </div>
+
+          <!-- Adventure: PADI Coral Reef Safari -->
+          <div class="luxury-card reveal delay-2" data-category="water">
+            <div class="luxury-card-media">
+              <img src="images/scuba_coral_reef.jpg" alt="Scuba Diving Coral Reefs" class="luxury-card-img">
+              <span class="card-floating-badge">Ocean & Marine</span>
+            </div>
+            <div class="luxury-card-body">
+              <div class="card-social-row">
+                <span class="card-rating-wrap">★ 4.8</span>
+                <div class="card-joined-wrap">
+                  <div class="avatar-stack">
+                    <span class="avatar-dot">CR</span>
+                    <span class="avatar-dot">MO</span>
+                    <span class="avatar-dot">NT</span>
+                  </div>
+                  <span class="avatar-joined-text">+480 dived</span>
+                </div>
+              </div>
+              <div class="card-title-price-row">
+                <h3 class="card-title-text">PADI Coral Reef Safari</h3>
+                <span class="card-price-value">QAR 750 / $205</span>
+              </div>
+              <p class="card-desc-text">Discover thriving marine life in the Arabian Gulf. Swim alongside sea turtles, rays, and tropical clownfish with full PADI certified master gear.</p>
+              <div class="card-specs-row">
+                <span>⏱ 5 Hours</span> • <span>🤿 PADI Master</span> • <span>🐠 Coral Reefs</span>
+              </div>
+              <a href="https://wa.me/97472001133?text=Hello%20Oxford%2C%20book%20Scuba%20Diving" target="_blank" rel="noopener noreferrer" class="card-reserve-btn">
+                Reserve your booking ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =====================================================================
+           REALM 3: AIR & SKY (With Paragliding Video Banner & Vignette)
+           ===================================================================== -->
+      <div class="realm-section" id="realm-air" data-realm="air">
+        <div class="realm-chapter-header reveal">
+          <div class="realm-video-wrap">
+            <video class="realm-video" autoplay muted loop playsinline poster="images/poster_paragliding.jpg">
+              <source src="images/coverr-paragliding-over-the-hills-6172-1080p.mp4" type="video/mp4">
+            </video>
+            <div class="cinematic-vignette-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="realm-header-content">
+            <span class="realm-step-caps">Chapter 03 • The Boundless Skies</span>
+            <h3 class="realm-title">Air & Sky Realm</h3>
+            <p class="realm-desc">Freefall from 15,000 feet over the Inland Sea, float in sunrise hot air balloons, and glide peacefully along coastal thermal currents.</p>
           </div>
         </div>
 
-        <!-- Adventure 4 -->
-        <div class="luxury-card reveal" data-category="water">
-          <div class="luxury-card-media">
-            <img src="images/kayaker_adventure.jpg" alt="Purple Island Mangroves" class="luxury-card-img">
-            <span class="card-floating-badge">Eco & Marine</span>
-          </div>
-          <div class="luxury-card-body">
-            <div class="card-social-row">
-              <span class="card-rating-wrap">★ 4.8</span>
-              <div class="card-joined-wrap">
-                <div class="avatar-stack">
-                  <span class="avatar-dot">PL</span>
-                  <span class="avatar-dot">TN</span>
-                  <span class="avatar-dot">RH</span>
+        <div class="adventures-luxury-grid">
+          <!-- Adventure: 15,000 Ft Tandem Jump -->
+          <div class="luxury-card reveal" data-category="air">
+            <div class="luxury-card-media">
+              <img src="images/skydive_qatar_desert.jpg" alt="15,000 Ft Tandem Skydiving" class="luxury-card-img">
+              <span class="card-floating-badge">Air & Sky</span>
+            </div>
+            <div class="luxury-card-body">
+              <div class="card-social-row">
+                <span class="card-rating-wrap">★ 5.0</span>
+                <div class="card-joined-wrap">
+                  <div class="avatar-stack">
+                    <span class="avatar-dot">AK</span>
+                    <span class="avatar-dot">JR</span>
+                    <span class="avatar-dot">SM</span>
+                  </div>
+                  <span class="avatar-joined-text">+380 jumped</span>
                 </div>
-                <span class="avatar-joined-text">+410 paddled</span>
               </div>
+              <div class="card-title-price-row">
+                <h3 class="card-title-text">15,000 Ft Tandem Jump</h3>
+                <span class="card-price-value">QAR 1,950 / $535</span>
+              </div>
+              <p class="card-desc-text">Freefall at 200 km/h with panoramic views of the Inland Sea and turquoise Gulf alongside certified USPA master instructors.</p>
+              <div class="card-specs-row">
+                <span>⏱ 3 Hours</span> • <span>🪂 60s Freefall</span> • <span>🎥 4K Video</span>
+              </div>
+              <a href="skydiving.html" class="card-reserve-btn">
+                Reserve your booking ↗
+              </a>
             </div>
-            <div class="card-title-price-row">
-              <h3 class="card-title-text">Mangrove Kayak Tour</h3>
-              <span class="card-price-value">QAR 350 / $95</span>
+          </div>
+
+          <!-- Adventure: Sunrise Hot Air Balloon -->
+          <div class="luxury-card reveal delay-1" data-category="air">
+            <div class="luxury-card-media">
+              <img src="images/hot_air_balloon.jpg" alt="Sunrise Hot Air Balloon" class="luxury-card-img">
+              <span class="card-floating-badge">Air & Sky</span>
             </div>
-            <p class="card-desc-text">Paddle through Qatar’s ancient natural mangrove forests at Al Thakira. Witness flamingos, herons, and crystal shallow tidal channels.</p>
-            <div class="card-specs-row">
-              <span>⏱ 4 Hours</span> • <span>🛶 Single/Double</span> • <span>🦩 Flamingos</span>
+            <div class="luxury-card-body">
+              <div class="card-social-row">
+                <span class="card-rating-wrap">★ 4.9</span>
+                <div class="card-joined-wrap">
+                  <div class="avatar-stack">
+                    <span class="avatar-dot">GB</span>
+                    <span class="avatar-dot">LC</span>
+                    <span class="avatar-dot">HM</span>
+                  </div>
+                  <span class="avatar-joined-text">+290 flown</span>
+                </div>
+              </div>
+              <div class="card-title-price-row">
+                <h3 class="card-title-text">Sunrise Hot Air Balloon</h3>
+                <span class="card-price-value">QAR 1,200 / $330</span>
+              </div>
+              <p class="card-desc-text">Float silently at 3,500 feet as golden morning rays illuminate boundless Arabian dunes. Includes breakfast feast and champagne toast.</p>
+              <div class="card-specs-row">
+                <span>⏱ 4 Hours</span> • <span>🌅 3,500 Ft</span> • <span>🥐 Breakfast</span>
+              </div>
+              <a href="https://wa.me/97472001133?text=Hello%20Oxford%2C%20book%20Hot%20Air%20Balloon" target="_blank" rel="noopener noreferrer" class="card-reserve-btn">
+                Reserve your booking ↗
+              </a>
             </div>
-            <a href="https://wa.me/97472001133?text=Hello%20Oxford%2C%20book%20Purple%20Island%20Kayak" target="_blank" rel="noopener noreferrer" class="card-reserve-btn">
-              Reserve your booking ↗
-            </a>
+          </div>
+
+          <!-- Adventure: Coastal Tandem Paraglide -->
+          <div class="luxury-card reveal delay-2" data-category="air">
+            <div class="luxury-card-media">
+              <img src="images/paraglider_mountain.jpg" alt="Tandem Paragliding" class="luxury-card-img">
+              <span class="card-floating-badge">Air & Sky</span>
+            </div>
+            <div class="luxury-card-body">
+              <div class="card-social-row">
+                <span class="card-rating-wrap">★ 4.9</span>
+                <div class="card-joined-wrap">
+                  <div class="avatar-stack">
+                    <span class="avatar-dot">PG</span>
+                    <span class="avatar-dot">SY</span>
+                    <span class="avatar-dot">WR</span>
+                  </div>
+                  <span class="avatar-joined-text">+220 soared</span>
+                </div>
+              </div>
+              <div class="card-title-price-row">
+                <h3 class="card-title-text">Coastal Tandem Paraglide</h3>
+                <span class="card-price-value">QAR 900 / $250</span>
+              </div>
+              <p class="card-desc-text">Soar effortlessly on thermal sea breezes along Qatar's natural coastal ridges. Unobstructed panoramic views of where the turquoise sea meets the dunes.</p>
+              <div class="card-specs-row">
+                <span>⏱ 2.5 Hours</span> • <span>🪂 Tandem Pilot</span> • <span>📸 HD Video</span>
+              </div>
+              <a href="https://wa.me/97472001133?text=Hello%20Oxford%2C%20book%20Paragliding" target="_blank" rel="noopener noreferrer" class="card-reserve-btn">
+                Reserve your booking ↗
+              </a>
+            </div>
           </div>
         </div>
-
-        <!-- Adventure 5 -->
-        <div class="luxury-card reveal delay-1" data-category="air">
-          <div class="luxury-card-media">
-            <img src="images/hot_air_balloon.jpg" alt="Sunrise Hot Air Balloon" class="luxury-card-img">
-            <span class="card-floating-badge">Air & Sky</span>
-          </div>
-          <div class="luxury-card-body">
-            <div class="card-social-row">
-              <span class="card-rating-wrap">★ 4.9</span>
-              <div class="card-joined-wrap">
-                <div class="avatar-stack">
-                  <span class="avatar-dot">GB</span>
-                  <span class="avatar-dot">LC</span>
-                  <span class="avatar-dot">HM</span>
-                </div>
-                <span class="avatar-joined-text">+290 flown</span>
-              </div>
-            </div>
-            <div class="card-title-price-row">
-              <h3 class="card-title-text">Sunrise Hot Air Balloon</h3>
-              <span class="card-price-value">QAR 1,200 / $330</span>
-            </div>
-            <p class="card-desc-text">Float silently at 3,500 feet as golden morning rays illuminate boundless Arabian dunes. Includes breakfast feast and champagne toast.</p>
-            <div class="card-specs-row">
-              <span>⏱ 4 Hours</span> • <span>🌅 3,500 Ft</span> • <span>🥐 Breakfast</span>
-            </div>
-            <a href="https://wa.me/97472001133?text=Hello%20Oxford%2C%20book%20Hot%20Air%20Balloon" target="_blank" rel="noopener noreferrer" class="card-reserve-btn">
-              Reserve your booking ↗
-            </a>
-          </div>
-        </div>
-
-        <!-- Adventure 6 -->
-        <div class="luxury-card reveal delay-2" data-category="land">
-          <div class="luxury-card-media">
-            <img src="images/camping_mountains.jpg" alt="Overnight Desert Glamping" class="luxury-card-img">
-            <span class="card-floating-badge">Overnight VIP</span>
-          </div>
-          <div class="luxury-card-body">
-            <div class="card-social-row">
-              <span class="card-rating-wrap">★ 4.9</span>
-              <div class="card-joined-wrap">
-                <div class="avatar-stack">
-                  <span class="avatar-dot">ST</span>
-                  <span class="avatar-dot">RV</span>
-                  <span class="avatar-dot">BL</span>
-                </div>
-                <span class="avatar-joined-text">+350 glamped</span>
-              </div>
-            </div>
-            <div class="card-title-price-row">
-              <h3 class="card-title-text">VIP Bedouin Glamping</h3>
-              <span class="card-price-value">QAR 1,600 / $440</span>
-            </div>
-            <p class="card-desc-text">Rest under the celestial desert sky in a fully air-conditioned luxury tent with artisanal carpets, live campfire barbecue, and astronomy guidance.</p>
-            <div class="card-specs-row">
-              <span>⏱ 18 Hours</span> • <span>⛺ Luxury Tent</span> • <span>✨ Stargazing</span>
-            </div>
-            <a href="https://wa.me/97472001133?text=Hello%20Oxford%2C%20book%20Bedouin%20Glamping" target="_blank" rel="noopener noreferrer" class="card-reserve-btn">
-              Reserve your booking ↗
-            </a>
-          </div>
-        </div>
-
-        <!-- Adventure 7 -->
-        <div class="luxury-card reveal" data-category="water">
-          <div class="luxury-card-media">
-            <img src="images/scuba_coral_reef.jpg" alt="Scuba Diving Coral Reefs" class="luxury-card-img">
-            <span class="card-floating-badge">Ocean & Marine</span>
-          </div>
-          <div class="luxury-card-body">
-            <div class="card-social-row">
-              <span class="card-rating-wrap">★ 4.8</span>
-              <div class="card-joined-wrap">
-                <div class="avatar-stack">
-                  <span class="avatar-dot">CR</span>
-                  <span class="avatar-dot">MO</span>
-                  <span class="avatar-dot">NT</span>
-                </div>
-                <span class="avatar-joined-text">+480 dived</span>
-              </div>
-            </div>
-            <div class="card-title-price-row">
-              <h3 class="card-title-text">PADI Coral Reef Safari</h3>
-              <span class="card-price-value">QAR 750 / $205</span>
-            </div>
-            <p class="card-desc-text">Discover thriving marine life in the Arabian Gulf. Swim alongside sea turtles, rays, and tropical clownfish with full PADI certified master gear.</p>
-            <div class="card-specs-row">
-              <span>⏱ 5 Hours</span> • <span>🤿 PADI Master</span> • <span>🐠 Coral Reefs</span>
-            </div>
-            <a href="https://wa.me/97472001133?text=Hello%20Oxford%2C%20book%20Scuba%20Diving" target="_blank" rel="noopener noreferrer" class="card-reserve-btn">
-              Reserve your booking ↗
-            </a>
-          </div>
-        </div>
-
-        <!-- Adventure 8 -->
-        <div class="luxury-card reveal delay-1" data-category="air">
-          <div class="luxury-card-media">
-            <img src="images/paraglider_mountain.jpg" alt="Tandem Paragliding" class="luxury-card-img">
-            <span class="card-floating-badge">Air & Sky</span>
-          </div>
-          <div class="luxury-card-body">
-            <div class="card-social-row">
-              <span class="card-rating-wrap">★ 4.9</span>
-              <div class="card-joined-wrap">
-                <div class="avatar-stack">
-                  <span class="avatar-dot">PG</span>
-                  <span class="avatar-dot">SY</span>
-                  <span class="avatar-dot">WR</span>
-                </div>
-                <span class="avatar-joined-text">+220 soared</span>
-              </div>
-            </div>
-            <div class="card-title-price-row">
-              <h3 class="card-title-text">Coastal Tandem Paraglide</h3>
-              <span class="card-price-value">QAR 900 / $250</span>
-            </div>
-            <p class="card-desc-text">Soar effortlessly on thermal sea breezes along Qatar's natural coastal ridges. Unobstructed panoramic views of where the turquoise sea meets the dunes.</p>
-            <div class="card-specs-row">
-              <span>⏱ 2.5 Hours</span> • <span>🪂 Tandem Pilot</span> • <span>📸 HD Video</span>
-            </div>
-            <a href="https://wa.me/97472001133?text=Hello%20Oxford%2C%20book%20Paragliding" target="_blank" rel="noopener noreferrer" class="card-reserve-btn">
-              Reserve your booking ↗
-            </a>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -355,7 +439,7 @@
             Chat with Tour Director on WhatsApp 💬
           </a>
         </div>
-        <div class="quick-card-item" style="padding: 36px; background: rgba(6,10,18,0.7);">
+        <div class="quick-card-item concierge-guarantee-card">
           <span class="quick-card-label">VIP Guarantee</span>
           <h4 style="font-family: var(--font-display); font-size: 1.4rem; color: #FFFFFF; margin: 8px 0 14px;">Private & Exclusive</h4>
           <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">

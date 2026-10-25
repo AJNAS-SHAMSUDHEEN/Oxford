@@ -54,17 +54,42 @@
   </header>
 
   <main>
-    <!-- Page Hero Banner -->
-    <section class="page-hero-banner reveal">
-      <span class="page-hero-tag">🌍 Iconic Landscapes & Terrains</span>
-      <h1 class="page-hero-title">Adventures by Destination</h1>
-      <p class="page-hero-subtitle">
-        From Qatar’s turquoise Inland Sea to Switzerland’s alpine glaciers, explore the world’s most pristine adventure environments.
-      </p>
+    <!-- Page Hero Banner (Full Screen Visual Showcase with Mountain Ridge Curve) -->
+    <section class="page-hero-banner video-hero reveal">
+      <div class="banner-video-bg">
+        <video class="banner-video-elem" autoplay muted loop playsinline poster="images/poster_desert.jpg">
+          <source src="images/coverr-driving-in-the-desert-8925-1080p.mp4" type="video/mp4">
+        </video>
+        <div class="cinematic-vignette-overlay" aria-hidden="true"></div>
+      </div>
+      <div class="hero-ocean-container">
+        <h1 class="hero-editorial-title">
+          <span class="hero-title-eyebrow">🌍 Iconic Terrains</span>
+          <span class="hero-title-main">Adventures by</span>
+          <span class="hero-title-sub">Destination</span>
+        </h1>
+
+        <div class="hero-editorial-aside">
+          <p class="hero-editorial-caption">
+            From Qatar’s turquoise Inland Sea to Switzerland’s alpine glaciers, explore the world’s most pristine adventure environments.
+          </p>
+          <a href="#destinations-grid" class="btn-pill-glass">
+            <span>Explore destinations</span>
+            <span class="arrow">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Organic Mountain Ridge Curve Divider (Unique to Destinations) -->
+      <div class="organic-dune-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,60 L0,22 C160,44 340,12 520,34 C700,52 880,18 1060,38 C1220,20 1340,42 1440,24 L1440,60 Z" fill="#FFFFFF"/>
+        </svg>
+      </div>
     </section>
 
     <!-- Qatar Flagship Destinations -->
-    <section class="luxury-section">
+    <section class="luxury-section" id="destinations-grid">
       <div class="section-head-editorial reveal">
         <div>
           <span class="section-tag-caps">🇶🇦 Flagship Frontier</span>
@@ -190,7 +215,7 @@
           </a>
         </div>
 
-        <div class="quick-card-item" style="padding: 36px; background: rgba(6,10,18,0.7);">
+        <div class="quick-card-item concierge-guarantee-card">
           <span class="quick-card-label">VIP Private Transfers</span>
           <h4 style="font-family: var(--font-display); font-size: 1.4rem; color: #FFFFFF; margin: 8px 0 14px;">Door-to-Desert Pickup</h4>
           <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">

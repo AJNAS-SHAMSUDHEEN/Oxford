@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const introOverlay = document.getElementById('openingVideoIntro');
   const introVideo = document.getElementById('introVideoElement');
   const replayBtn = document.getElementById('replayIntroBtn');
+  const heroOceanVideo = document.getElementById('heroOceanVideo');
 
   let introAudioActive = false;
   let introDismissed = false;
@@ -27,6 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
     introDismissed = true;
     introOverlay.classList.add('fade-out');
     document.body.classList.remove('intro-active');
+    if (heroOceanVideo) {
+      heroOceanVideo.play().catch(() => {});
+    }
     if (introVideo) {
       setTimeout(() => {
         try {
@@ -78,8 +82,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (introOverlay && introVideo) {
-    document.body.classList.add('intro-active');
-    startIntro();
+    // Only show intro when refreshing the page or on first open of the site
+    const navEntries = (window.performance && performance.getEntriesByType) ? performance.getEntriesByType('navigation') : [];
+    const isReload = navEntries.length > 0 && navEntries[0].type === 'reload';
+    const isFirstOpen = !sessionStorage.getItem('oxford_intro_shown');
+
+    if (isReload || isFirstOpen) {
+      sessionStorage.setItem('oxford_intro_shown', 'true');
+      document.body.classList.add('intro-active');
+      startIntro();
+    } else {
+      // Normal navigation (e.g. clicked Home from menu) -> skip intro
+      introOverlay.classList.add('fade-out');
+      introOverlay.style.display = 'none';
+      document.body.classList.remove('intro-active');
+      introDismissed = true;
+      if (heroOceanVideo) {
+        heroOceanVideo.play().catch(() => {});
+      }
+    }
 
     // Auto dismiss as soon as the video animation ends
     introVideo.addEventListener('ended', () => {
@@ -244,12 +265,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // 6. CATEGORY FILTER TABS (Adventures & Offerings)
+  // 6. CATEGORY FILTER TABS & REALM SECTIONS (Adventures & Offerings)
   // =========================================================================
   const filterTabs = document.querySelectorAll('.filter-tab-pill');
   const adventureCards = document.querySelectorAll('.luxury-card');
+  const realmSections = document.querySelectorAll('.realm-section');
 
-  if (filterTabs.length > 0 && adventureCards.length > 0) {
+  if (filterTabs.length > 0) {
     filterTabs.forEach(tab => {
       tab.addEventListener('click', () => {
         filterTabs.forEach(t => t.classList.remove('active'));
@@ -257,15 +279,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const filter = tab.getAttribute('data-filter') || 'all';
 
-        adventureCards.forEach(card => {
-          const cat = card.getAttribute('data-category');
-          if (filter === 'all' || cat === filter) {
-            card.style.display = '';
-            setTimeout(() => card.classList.add('active'), 50);
-          } else {
-            card.style.display = 'none';
+        // Filter realm sections if present
+        if (realmSections.length > 0) {
+          realmSections.forEach(section => {
+            const realm = section.getAttribute('data-realm');
+            if (filter === 'all' || realm === filter) {
+              section.style.display = '';
+              setTimeout(() => {
+                section.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
+              }, 50);
+            } else {
+              section.style.display = 'none';
+            }
+          });
+        }
+
+        // Filter cards in flat grids if no realm sections exist
+        if (realmSections.length === 0 && adventureCards.length > 0) {
+          adventureCards.forEach(card => {
+            const cat = card.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              card.style.display = '';
+              setTimeout(() => card.classList.add('active'), 50);
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        }
+      });
+    });
+  }
+
+  // Hero Realm Nav Smooth Scrolling & Unhiding
+  const realmNavPills = document.querySelectorAll('.hero-realm-nav .realm-nav-pill');
+  if (realmNavPills.length > 0) {
+    realmNavPills.forEach(pill => {
+      pill.addEventListener('click', (e) => {
+        const targetId = pill.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            e.preventDefault();
+            // Ensure target section is visible by activating 'all' or that realm
+            const realm = targetSection.getAttribute('data-realm');
+            const matchingTab = document.querySelector(`.filter-tab-pill[data-filter="${realm}"]`) || document.querySelector('.filter-tab-pill[data-filter="all"]');
+            if (matchingTab) {
+              matchingTab.click();
+            }
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
-        });
+        }
       });
     });
   }

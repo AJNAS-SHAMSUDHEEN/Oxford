@@ -78,7 +78,10 @@
     <section class="hero-ocean-immersive" id="hero">
       <!-- Full Bleed Luxury Ocean Visual Background -->
       <div class="hero-ocean-bg-layer">
-        <img src="images/hero_luxury_ocean.jpg" alt="Luxury yacht boat cruising across crystal turquoise ocean waters" class="hero-ocean-img">
+        <video class="hero-ocean-video" autoplay muted loop playsinline preload="auto" poster="images/hero_luxury_ocean_poster.jpg" id="heroOceanVideo">
+          <source src="images/4115726-uhd_3840_2160_25fps.mp4" type="video/mp4">
+          <img src="images/hero_luxury_ocean_poster.jpg" alt="Luxury yacht boat cruising across crystal turquoise ocean waters" class="hero-ocean-img">
+        </video>
       </div>
       <div class="hero-gradient-overlay"></div>
 
@@ -761,7 +764,7 @@
             </select>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-row-duo">
             <div class="form-group-field">
               <label class="form-field-label" for="bookingGuests">Party Size</label>
               <select id="bookingGuests" class="form-select-element">

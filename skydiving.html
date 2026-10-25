@@ -54,17 +54,42 @@
   </header>
 
   <main>
-    <!-- Page Hero Banner with Skydiving Visual -->
-    <section class="page-hero-banner reveal">
-      <span class="page-hero-tag">🪂 The Ultimate Adrenaline</span>
-      <h1 class="page-hero-title">15,000 Ft Tandem Skydiving</h1>
-      <p class="page-hero-subtitle">
-        Freefall at 200 km/h where the turquoise Arabian Gulf meets soaring desert dunes. Jump harnessed to certified USPA master instructors — no prior experience required.
-      </p>
+    <!-- Page Hero Banner with Skydiving Video (Full Screen Visual Showcase) -->
+    <section class="page-hero-banner video-hero reveal">
+      <div class="banner-video-bg">
+        <video class="banner-video-elem" autoplay muted loop playsinline poster="images/poster_paragliding.jpg">
+          <source src="images/coverr-paragliding-over-the-hills-6172-1080p.mp4" type="video/mp4">
+        </video>
+        <div class="cinematic-vignette-overlay" aria-hidden="true"></div>
+      </div>
+      <div class="hero-ocean-container">
+        <h1 class="hero-editorial-title">
+          <span class="hero-title-eyebrow">🪂 Pure Adrenaline</span>
+          <span class="hero-title-main">15,000 Ft</span>
+          <span class="hero-title-sub">Tandem Skydiving</span>
+        </h1>
+
+        <div class="hero-editorial-aside">
+          <p class="hero-editorial-caption">
+            Freefall at 200 km/h where the turquoise Arabian Gulf meets soaring desert dunes alongside USPA master instructors.
+          </p>
+          <a href="#calculator" class="btn-pill-glass">
+            <span>Calculate drop stats</span>
+            <span class="arrow">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Organic Aerodynamic Cloud Wave Curve Divider (Unique to Skydiving) -->
+      <div class="organic-dune-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,60 L0,48 C200,10 440,50 680,24 C920,-2 1160,38 1440,16 L1440,60 Z" fill="#FFFFFF"/>
+        </svg>
+      </div>
     </section>
 
     <!-- Interactive Altitude Selector -->
-    <section class="luxury-section">
+    <section class="luxury-section" id="calculator">
       <div class="skydive-interactive-card reveal">
         <div class="skydive-selector-header">
           <span class="section-tag-caps">✦ Interactive Drop Profile</span>
@@ -229,7 +254,7 @@
           </a>
         </div>
 
-        <div class="quick-card-item" style="padding: 36px; background: rgba(6,10,18,0.7);">
+        <div class="quick-card-item concierge-guarantee-card">
           <span class="quick-card-label">USPA Certification</span>
           <h4 style="font-family: var(--font-display); font-size: 1.4rem; color: #FFFFFF; margin: 8px 0 14px;">Master Flight Crew</h4>
           <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">

@@ -54,17 +54,42 @@
   </header>
 
   <main>
-    <!-- Page Hero Banner -->
-    <section class="page-hero-banner reveal">
-      <span class="page-hero-tag">💬 Doha Concierge Desk</span>
-      <h1 class="page-hero-title">Plan Your Qatar Odyssey</h1>
-      <p class="page-hero-subtitle">
-        Speak directly with our Doha adventure coordinators to reserve dates, customize group safaris, or arrange private luxury yacht charters.
-      </p>
+    <!-- Page Hero Banner (Full Screen Video Showcase with Coastal Ripple Curve) -->
+    <section class="page-hero-banner video-hero reveal">
+      <div class="banner-video-bg">
+        <video class="banner-video-elem" autoplay muted loop playsinline poster="images/poster_boat.jpg">
+          <source src="images/coverr-cruising-boat-3834-1080p.mp4" type="video/mp4">
+        </video>
+        <div class="cinematic-vignette-overlay" aria-hidden="true"></div>
+      </div>
+      <div class="hero-ocean-container">
+        <h1 class="hero-editorial-title">
+          <span class="hero-title-eyebrow">💬 VIP Concierge</span>
+          <span class="hero-title-main">Plan Your</span>
+          <span class="hero-title-sub">Qatar Odyssey</span>
+        </h1>
+
+        <div class="hero-editorial-aside">
+          <p class="hero-editorial-caption">
+            Speak directly with our Doha adventure coordinators to reserve dates, customize group safaris, or arrange private luxury yacht charters.
+          </p>
+          <a href="#booking-section" class="btn-pill-glass">
+            <span>Direct booking form</span>
+            <span class="arrow">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Organic Coastal Ripple Curve Divider (Unique to Contact) -->
+      <div class="organic-dune-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,60 L0,36 C280,12 560,46 840,22 C1100,42 1280,10 1440,26 L1440,60 Z" fill="#FFFFFF"/>
+        </svg>
+      </div>
     </section>
 
     <!-- Contact Channels & Interactive Form Section -->
-    <section class="luxury-section">
+    <section class="luxury-section" id="booking-section">
       <div class="concierge-booking-box reveal">
         <div class="concierge-info-col">
           <span class="section-tag-caps">✦ Direct Communication</span>
@@ -120,7 +145,7 @@
             </select>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-row-duo">
             <div class="form-group-field">
               <label class="form-field-label" for="bookingGuests">Party Size</label>
               <select id="bookingGuests" class="form-select-element">
