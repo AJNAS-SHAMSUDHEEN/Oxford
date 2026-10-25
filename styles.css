@@ -237,11 +237,9 @@ button {
 }
 
 .logo-glass-frame {
-  height: 48px;
+  height: 56px;
   width: auto;
-  min-width: 48px;
-  max-width: 160px;
-  flex-shrink: 0;
+  min-width: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -249,15 +247,26 @@ button {
 }
 
 .logo-glass-frame img {
+  height: 54px;
   width: auto;
-  height: 100%;
-  max-height: 48px;
+  max-height: 54px;
   object-fit: contain;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.18));
+  display: block;
+}
+
+.main-glass-header.scrolled .logo-glass-frame {
+  height: 48px;
+  min-width: 48px;
+}
+
+.main-glass-header.scrolled .logo-glass-frame img {
+  height: 46px;
+  max-height: 46px;
 }
 
 .header-brand:hover .logo-glass-frame {
-  transform: rotate(4deg) scale(1.04);
+  transform: rotate(3deg) scale(1.05);
 }
 
 .brand-name-group {
@@ -1319,6 +1328,7 @@ button {
   align-items: baseline;
   justify-content: space-between;
   gap: 8px;
+  margin-bottom: 4px;
 }
 
 .card-title-text {
@@ -1330,11 +1340,7 @@ button {
 }
 
 .card-price-value {
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--palette-dark-cyan);
-  white-space: nowrap;
+  display: none !important;
 }
 
 .card-desc-text {
@@ -1361,9 +1367,9 @@ button {
 .card-reserve-btn {
   display: block;
   width: 100%;
-  border-radius: var(--radius-pill);
-  padding: 10px 14px;
-  font-size: 0.82rem;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.8rem;
   font-weight: 600;
   text-align: center;
   background: #0B1E26;
@@ -1378,70 +1384,70 @@ button {
   background: var(--palette-dark-cyan);
   border-color: var(--palette-dark-cyan);
   color: #FFFFFF;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-btn-hover);
+  transform: translateY(-1px);
 }
 
-/* Duo Booking Action Buttons (WhatsApp & Mail) */
+/* Duo Booking Action Buttons (WhatsApp & Mail) - Standard Compact Style */
 .card-booking-actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 8px;
   margin-top: auto;
   width: 100%;
 }
 
-.card-btn-whatsapp {
+.card-btn-whatsapp,
+.card-btn-mail {
+  height: 35px;
+  padding: 0 10px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 10px 14px;
-  border-radius: var(--radius-pill);
-  background: #25D366;
-  color: #FFFFFF;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-align: center;
-  border: 1px solid #1EBE5D;
-  transition: var(--transition-fast);
-  box-shadow: 0 3px 10px rgba(37, 211, 102, 0.28);
+  white-space: nowrap;
   text-decoration: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.card-btn-whatsapp svg,
+.card-btn-mail svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* Standard Dark Luxury Styling - No light/neon colors */
+.card-btn-whatsapp {
+  background: #102920;
+  color: #FFFFFF;
+  border: 1px solid #1C4637;
+  box-shadow: 0 2px 6px rgba(16, 41, 32, 0.2);
 }
 
 .card-btn-whatsapp:hover {
-  background: #1EBE5D;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.45);
+  background: #183D30;
+  border-color: #29614D;
   color: #FFFFFF;
+  transform: translateY(-1px);
 }
 
 .card-btn-mail {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 10px 14px;
-  border-radius: var(--radius-pill);
   background: #0B1E26;
   color: #FFFFFF;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-align: center;
-  border: 1px solid #0B1E26;
-  transition: var(--transition-fast);
-  box-shadow: var(--shadow-btn-subtle);
-  text-decoration: none;
+  border: 1px solid #1B3845;
+  box-shadow: 0 2px 6px rgba(11, 30, 38, 0.2);
 }
 
 .card-btn-mail:hover {
   background: var(--palette-dark-cyan);
   border-color: var(--palette-dark-cyan);
   color: #FFFFFF;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-btn-hover);
+  transform: translateY(-1px);
 }
 
 /* ==========================================================================
@@ -2485,10 +2491,15 @@ button {
     gap: 8px;
   }
   .logo-glass-frame {
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
+    width: auto;
+    height: 46px;
+    min-width: 46px;
     flex-shrink: 0;
+  }
+  .logo-glass-frame img {
+    height: 44px;
+    width: auto;
+    max-height: 44px;
   }
   .brand-main {
     font-size: 1.05rem;
