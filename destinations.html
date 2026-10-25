@@ -3,28 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Destinations — Oxford Adventure Tourism</title>
-  <meta name="description" content="Explore Qatar's legendary landscapes and global adventure hubs: Khor Al Adaid, Purple Island, Swiss Alps, Queenstown, and Moroccan Sahara.">
+  <title>Global & Qatar Destinations — Oxford Adventure Tourism</title>
+  <meta name="description" content="Discover extraordinary landscapes in Qatar and worldwide: Khor Al Adaid UNESCO Inland Sea, Purple Island Mangroves, Swiss Alps, and Queenstown.">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Scroll Progress -->
-  <div class="scroll-progress-line" id="scrollProgressLine"></div>
+  <!-- Background Watermark Texture (Subtle Opacity) -->
+  <div class="site-bg-overlay" aria-hidden="true"></div>
 
+  <!-- Top Scroll Progress Line -->
+  <div class="scroll-progress-line" id="scrollProgressLine"></div>
 
   <!-- Sticky Glass Navbar -->
   <header class="main-glass-header">
     <div class="header-glass-container">
       <a href="index.html" class="header-brand" aria-label="Oxford Adventure Home">
         <div class="logo-glass-frame">
-          <img src="logos/oxford logo.png" alt="Oxford Adventure Tourism" width="38" height="38">
+          <img src="images/Vector-Smart-Object.png" alt="Oxford Adventure Tourism" width="42" height="42">
         </div>
         <div class="brand-name-group">
           <span class="brand-main">OXFORD</span>
@@ -42,7 +44,10 @@
       </nav>
 
       <div class="header-actions">
-        <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20inquire%20about%20your%20tours" target="_blank" rel="noopener noreferrer" class="btn-glass-primary btn-header-cta"><span>WhatsApp</span><span class="cta-concierge-word">&nbsp;Concierge</span>&nbsp;💬</a>
+        <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20inquire%20about%20destinations" 
+           target="_blank" rel="noopener noreferrer" class="btn-pill-solid">
+          <span>WhatsApp Concierge</span>
+        </a>
         <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Navigation">☰</button>
       </div>
     </div>
@@ -51,304 +56,219 @@
   <main>
     <!-- Page Hero Banner -->
     <section class="page-hero-banner reveal">
-      <div class="section-tag" style="justify-content: center; display: inline-flex;">🌍 Global & Local Landscapes</div>
+      <span class="page-hero-tag">🌍 Iconic Landscapes & Terrains</span>
       <h1 class="page-hero-title">Adventures by Destination</h1>
       <p class="page-hero-subtitle">
-        From Qatar's turquoise Inland Sea to Switzerland's alpine summits, choose your next frontier.
+        From Qatar’s turquoise Inland Sea to Switzerland’s alpine glaciers, explore the world’s most pristine adventure environments.
       </p>
     </section>
 
-    <!-- Qatar In-Depth Featured Section -->
-    <section class="slider-section-container" style="padding-top: 10px;">
-      <div class="section-header-row reveal">
+    <!-- Qatar Flagship Destinations -->
+    <section class="luxury-section">
+      <div class="section-head-editorial reveal">
         <div>
-          <div class="section-tag">🇶🇦 Flagship Destination</div>
-          <h2 class="section-title">The Wonders of Qatar</h2>
-          <p class="section-subtitle">Discover diverse terrains packed into this extraordinary Arabian peninsula.</p>
+          <span class="section-tag-caps">🇶🇦 Flagship Frontier</span>
+          <h2 class="section-title-large">The Wonders of Qatar</h2>
+          <p class="section-desc-lead">A peninsula of striking contrasts where ancient Bedouin desert merges directly with turquoise marine ecosystems.</p>
         </div>
-        <a href="adventures.html" class="btn-glass-primary">Book Qatar Tour ↗</a>
+        <a href="https://wa.me/97472001133?text=Hello%20Oxford%2C%20I%20want%20to%20book%20a%20Qatar%20Destination%20Tour" target="_blank" rel="noopener noreferrer" class="btn-pill-solid">Book Qatar Tour ↗</a>
       </div>
 
-      <div class="features-grid">
-        <!-- Region 1 -->
-        <div class="glass-card reveal">
-          <div class="slide-card-visual" style="height: 200px;">
-            <img src="images/qatar_desert_safari.jpg" alt="Khor Al Adaid Qatar">
-          </div>
-          <div class="slide-card-body">
-            <h3 class="slide-card-title">Khor Al Adaid (Inland Sea)</h3>
-            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
-              A recognized UNESCO nature reserve where desert dunes dramatically plunge into emerald marine lagoons.
-            </p>
-            <ul style="list-style: none; font-size: 0.84rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 6px;">
-              <li>✓ 4x4 Dune Bashing & Sandboarding</li>
-              <li>✓ Sunset Over Arabian Gulf</li>
-              <li>✓ Traditional Bedouin Camps</li>
-            </ul>
+      <div class="destinations-panoramic-grid">
+
+        <!-- Qatar Destination 1 -->
+        <div class="panoramic-card reveal">
+          <img src="images/qatar_desert_safari.jpg" alt="Khor Al Adaid Qatar" class="panoramic-card-bg">
+          <div class="panoramic-card-overlay">
+            <span class="panoramic-top-tag">UNESCO Natural Reserve</span>
+            <div>
+              <h3 class="panoramic-title">Khor Al Adaid (Inland Sea)</h3>
+              <p class="panoramic-desc">Dramatic 50m sand dunes meeting deep tidal oceanic waters. Home to Arabian gazelles, flamingos, and osprey.</p>
+              <a href="adventures.html" class="btn-pill-glass" style="padding: 8px 18px; font-size: 0.8rem;">Explore Safaris ↗</a>
+            </div>
           </div>
         </div>
 
-        <!-- Region 2 -->
-        <div class="glass-card reveal delay-1">
-          <div class="slide-card-visual" style="height: 200px;">
-            <img src="images/kayaker_adventure.jpg" alt="Purple Island Mangroves">
-          </div>
-          <div class="slide-card-body">
-            <h3 class="slide-card-title">Purple Island & Al Thakira</h3>
-            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
-              Lush green mangrove channels teeming with bird species, migratory flamingos, and calm coastal waters.
-            </p>
-            <ul style="list-style: none; font-size: 0.84rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 6px;">
-              <li>✓ Guided Mangrove Kayaking</li>
-              <li>✓ Flamingo Watching in Winter</li>
-              <li>✓ Peaceful Sunset Paddling</li>
-            </ul>
+        <!-- Qatar Destination 2 -->
+        <div class="panoramic-card reveal delay-1">
+          <img src="images/kayaker_adventure.jpg" alt="Purple Island Mangroves" class="panoramic-card-bg">
+          <div class="panoramic-card-overlay">
+            <span class="panoramic-top-tag">Al Thakira Eco Sanctuary</span>
+            <div>
+              <h3 class="panoramic-title">Purple Island Mangroves</h3>
+              <p class="panoramic-desc">One of Qatar’s oldest natural wonders. Lush green avicennia mangrove waterways ideal for sunrise kayaking and bird watching.</p>
+              <a href="adventures.html" class="btn-pill-glass" style="padding: 8px 18px; font-size: 0.8rem;">Explore Kayaking ↗</a>
+            </div>
           </div>
         </div>
 
-        <!-- Region 3 -->
-        <div class="glass-card reveal delay-2">
-          <div class="slide-card-visual" style="height: 200px;">
-            <img src="images/skydive_qatar_desert.jpg" alt="Doha Coast Dropzone">
-          </div>
-          <div class="slide-card-body">
-            <h3 class="slide-card-title">Arabian Gulf Coast Dropzone</h3>
-            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
-              One of the world's most photogenic skydiving dropzones offering 360-degree views of dunes and ocean.
-            </p>
-            <ul style="list-style: none; font-size: 0.84rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 6px;">
-              <li>✓ 15,000 Ft Tandem Drops</li>
-              <li>✓ 60-Second Freefall</li>
-              <li>✓ 4K Cinematic Camera Team</li>
-            </ul>
+        <!-- Qatar Destination 3 -->
+        <div class="panoramic-card reveal delay-2">
+          <img src="images/qatar_luxury_yacht.jpg" alt="Doha Bay & Marina" class="panoramic-card-bg">
+          <div class="panoramic-card-overlay">
+            <span class="panoramic-top-tag">West Bay & The Pearl</span>
+            <div>
+              <h3 class="panoramic-title">Doha Bay & Marina</h3>
+              <p class="panoramic-desc">Futuristic skyline views framing azure warm waters. The ultimate playground for private yachts, dhow charters, and jet skis.</p>
+              <a href="adventures.html" class="btn-pill-glass" style="padding: 8px 18px; font-size: 0.8rem;">Explore Yachting ↗</a>
+            </div>
           </div>
         </div>
 
-        <!-- Region 4 -->
-        <div class="glass-card reveal delay-3">
-          <div class="slide-card-visual" style="height: 200px;">
-            <img src="images/qatar_luxury_yacht.jpg" alt="Doha Corniche Skyline">
-          </div>
-          <div class="slide-card-body">
-            <h3 class="slide-card-title">Doha Corniche & Pearl Marina</h3>
-            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
-              Gleaming skyscrapers meeting tranquil azure waters. Ideal for private luxury yachts, dhow boats, and jet skiing.
-            </p>
-            <ul style="list-style: none; font-size: 0.84rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 6px;">
-              <li>✓ Private VIP Yacht Charters</li>
-              <li>✓ Sunset Dhow Dinner Cruises</li>
-              <li>✓ Island Swimming & Snorkeling</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- Global Dropzones & Expedition Destinations -->
-    <section class="slider-section-container">
-      <div class="section-header-row reveal">
+    <!-- Global Sister Dropzones -->
+    <section class="luxury-section" style="padding-top: 0;">
+      <div class="section-head-editorial reveal">
         <div>
-          <div class="section-tag">✈️ Worldwide Partner Networks</div>
-          <h2 class="section-title">International Expedition Hubs</h2>
-          <p class="section-subtitle">Experience global thrill destinations managed through Oxford Adventure's accredited partners.</p>
+          <span class="section-tag-caps">✈ Global Partner Destinations</span>
+          <h2 class="section-title-large">World-Renowned Frontiers</h2>
+          <p class="section-desc-lead">Our international skydiving and expedition bases across Europe, Australasia, and North Africa.</p>
         </div>
       </div>
 
-      <div class="signature-grid">
-        <!-- Destination 1: Switzerland -->
-        <div class="glass-card reveal">
-          <div class="slide-card-visual">
-            <span class="slide-badge-category">Alps Hub</span>
-            <span class="slide-badge-rating">★ 4.9</span>
-            <img src="images/skydive_interlaken.jpg" alt="Interlaken Switzerland">
-          </div>
-          <div class="slide-card-body">
-            <div class="slide-card-location">📍 Interlaken, Switzerland</div>
-            <h3 class="slide-card-title">Swiss Alpine Skydiving & Paragliding</h3>
-            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
-              Leap directly over the snow-capped Eiger, Mönch, and Jungfrau peaks with landing next to Lake Brienz.
-            </p>
-            <div class="slide-features-row">
-              <span class="slide-feature-item">🪂 15,000 Ft</span>
-              <span class="slide-feature-item">🏔 Alpine Scenery</span>
-              <span class="slide-feature-item">🎥 4K Video</span>
-            </div>
-            <div class="slide-card-footer">
-              <div class="slide-price-box">
-                <span class="slide-price-label">Starting From</span>
-                <span class="slide-price-val" data-usd-amount="340">$340</span>
-              </div>
-              <a href="skydiving.html" class="btn-glass-primary slide-book-btn">Explore Jumps</a>
+      <div class="destinations-panoramic-grid">
+
+        <!-- Global 1 -->
+        <div class="panoramic-card reveal">
+          <img src="images/skydive_interlaken.jpg" alt="Swiss Alps Jungfrau" class="panoramic-card-bg">
+          <div class="panoramic-card-overlay">
+            <span class="panoramic-top-tag">Switzerland</span>
+            <div>
+              <h3 class="panoramic-title">Interlaken & Jungfrau</h3>
+              <p class="panoramic-desc">The European skydiving capital nestled between Lake Thun and Lake Brienz beneath snow-capped 4,000m peaks.</p>
+              <a href="skydiving.html" class="btn-pill-glass" style="padding: 8px 18px; font-size: 0.8rem;">View Dropzone ↗</a>
             </div>
           </div>
         </div>
 
-        <!-- Destination 2: New Zealand -->
-        <div class="glass-card reveal delay-1">
-          <div class="slide-card-visual">
-            <span class="slide-badge-category">Southern Lakes</span>
-            <span class="slide-badge-rating">★ 4.9</span>
-            <img src="images/skydive_queenstown.jpg" alt="Queenstown New Zealand">
-          </div>
-          <div class="slide-card-body">
-            <div class="slide-card-location">📍 Queenstown, New Zealand</div>
-            <h3 class="slide-card-title">Queenstown Skydiving & Jet Boating</h3>
-            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
-              Known as the adventure capital of the world. Freefall over Lake Wakatipu and the Remarkables mountain range.
-            </p>
-            <div class="slide-features-row">
-              <span class="slide-feature-item">🪂 12,000–15,000 Ft</span>
-              <span class="slide-feature-item">🌊 Glacial Lakes</span>
-              <span class="slide-feature-item">⚡ High Thrill</span>
-            </div>
-            <div class="slide-card-footer">
-              <div class="slide-price-box">
-                <span class="slide-price-label">Starting From</span>
-                <span class="slide-price-val" data-usd-amount="295">$295</span>
-              </div>
-              <a href="skydiving.html" class="btn-glass-primary slide-book-btn">Explore Jumps</a>
+        <!-- Global 2 -->
+        <div class="panoramic-card reveal delay-1">
+          <img src="images/skydive_queenstown.jpg" alt="Queenstown New Zealand" class="panoramic-card-bg">
+          <div class="panoramic-card-overlay">
+            <span class="panoramic-top-tag">New Zealand</span>
+            <div>
+              <h3 class="panoramic-title">Queenstown & Southern Lakes</h3>
+              <p class="panoramic-desc">Birthplace of extreme outdoor sports with dramatic glacial alpine valleys, fjord canyons, and emerald waters.</p>
+              <a href="skydiving.html" class="btn-pill-glass" style="padding: 8px 18px; font-size: 0.8rem;">View Dropzone ↗</a>
             </div>
           </div>
         </div>
 
-        <!-- Destination 3: Morocco & North Africa -->
-        <div class="glass-card reveal delay-2">
-          <div class="slide-card-visual">
-            <span class="slide-badge-category">North Africa</span>
-            <span class="slide-badge-rating">★ 4.8</span>
-            <img src="images/destination_coastal.jpg" alt="Morocco Atlantic & Desert">
-          </div>
-          <div class="slide-card-body">
-            <div class="slide-card-location">📍 Essaouira & Merzouga, Morocco</div>
-            <h3 class="slide-card-title">Sahara Erg Chebbi & Atlantic Surfing</h3>
-            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
-              Trek the majestic red sand dunes of Merzouga on camelback followed by coastal kitesurfing in Essaouira.
-            </p>
-            <div class="slide-features-row">
-              <span class="slide-feature-item">🐪 Camel Trek</span>
-              <span class="slide-feature-item">🏄 Coastal Surfing</span>
-              <span class="slide-feature-item">⛺ Sahara Camps</span>
-            </div>
-            <div class="slide-card-footer">
-              <div class="slide-price-box">
-                <span class="slide-price-label">Starting From</span>
-                <span class="slide-price-val" data-usd-amount="230">$230</span>
-              </div>
-              <a href="contact.html" class="btn-glass-primary slide-book-btn">Custom Plan</a>
+        <!-- Global 3 -->
+        <div class="panoramic-card reveal delay-2">
+          <img src="images/destination_desert_balloon.jpg" alt="Moroccan Sahara Dunes" class="panoramic-card-bg">
+          <div class="panoramic-card-overlay">
+            <span class="panoramic-top-tag">North Africa</span>
+            <div>
+              <h3 class="panoramic-title">Sahara Erg Chebbi</h3>
+              <p class="panoramic-desc">Vast golden sand sea reaching 150m in height. A celestial realm for hot air ballooning and historic camel caravans.</p>
+              <a href="adventures.html" class="btn-pill-glass" style="padding: 8px 18px; font-size: 0.8rem;">View Journeys ↗</a>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- Travel Planning Guide Widget -->
-    <section class="slider-section-container" style="padding-top: 0;">
-      <div class="glass-panel reveal" style="padding: 40px;">
-        <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 12px; color: var(--text-primary);">
-          🌤 Best Season to Visit Qatar
-        </h3>
-        <p style="color: var(--text-secondary); margin-bottom: 24px; line-height: 1.7;">
-          Qatar enjoys pleasant, crisp outdoor weather between <strong>October and April</strong>, with average daytime temperatures between 20°C and 28°C (68°F – 82°F) — ideal for desert safaris, skydiving, overnight camping, and mangrove kayaking.
-        </p>
-        <div class="features-grid">
-          <div style="background: rgba(255, 255, 255, 0.7); padding: 18px; border-radius: var(--radius-sm); border: 1px solid rgba(15, 23, 42, 0.06);">
-            <div style="font-weight: 700; color: var(--water-cyan-dark); margin-bottom: 4px;">Oct – Dec (Golden Season)</div>
-            <div style="font-size: 0.88rem; color: var(--text-muted);">Crisp breezes, perfect for desert safaris, skydiving, and luxury yachting.</div>
+    <!-- Travel Advisory & Seasons -->
+    <section class="luxury-section" style="padding-top: 0;">
+      <div class="concierge-booking-box reveal">
+        <div class="concierge-info-col">
+          <span class="section-tag-caps">✦ Seasonal Travel Intelligence</span>
+          <h3>Best Time to Visit Qatar</h3>
+          <p>
+            Qatar boasts glorious sunshine year-round. For desert safaris, skydiving, and outdoor adventures, the prime season is October through April when daytime temperatures average a pleasant 22°C – 28°C.
+          </p>
+          <div class="signature-features-list">
+            <li><strong>Oct – Apr:</strong> Perfect safari & skydiving weather with gentle sea breezes.</li>
+            <li><strong>May – Sep:</strong> Ideal for luxury air-conditioned yachting, sunset cruises & night safaris.</li>
           </div>
-          <div style="background: rgba(255, 255, 255, 0.7); padding: 18px; border-radius: var(--radius-sm); border: 1px solid rgba(15, 23, 42, 0.06);">
-            <div style="font-weight: 700; color: var(--gold-primary); margin-bottom: 4px;">Jan – Mar (Peak Camping)</div>
-            <div style="font-size: 0.88rem; color: var(--text-muted);">Cool evenings, stargazing, falconry festivals, and mangrove flamingo season.</div>
-          </div>
-          <div style="background: rgba(255, 255, 255, 0.7); padding: 18px; border-radius: var(--radius-sm); border: 1px solid rgba(15, 23, 42, 0.06);">
-            <div style="font-weight: 700; color: var(--water-cyan-dark); margin-bottom: 4px;">Apr – May (Marine Thrills)</div>
-            <div style="font-size: 0.88rem; color: var(--text-muted);">Warm ocean waters, coral reef scuba diving, wakeboarding, and jet skiing.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- VIP Banner -->
-    <section class="vip-cta-section reveal">
-      <div class="vip-cta-banner">
-        <div>
-          <h2 class="vip-cta-title">Need Destination Advice?</h2>
-          <p class="vip-cta-desc">Our Doha destination managers will craft the ideal schedule based on your travel dates.</p>
-        </div>
-        <div class="vip-cta-actions">
-          <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20destination%20advice" target="_blank" rel="noopener noreferrer" class="btn-glass-primary">
-            💬 WhatsApp Concierge
+          <a href="https://wa.me/97472001133?text=Hello%20Oxford%2C%20what%20are%20the%20best%20dates%20for%20my%20trip%3F" target="_blank" rel="noopener noreferrer" class="btn-pill-solid">
+            Ask Our Destination Specialist 💬
           </a>
+        </div>
+
+        <div class="quick-card-item" style="padding: 36px; background: rgba(6,10,18,0.7);">
+          <span class="quick-card-label">VIP Private Transfers</span>
+          <h4 style="font-family: var(--font-display); font-size: 1.4rem; color: #FFFFFF; margin: 8px 0 14px;">Door-to-Desert Pickup</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+            All destination journeys include complimentary VIP pick-up from Hamad International Airport (DOH) or any 5-star hotel in Doha in our executive 4x4 fleet.
+          </p>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-top-columns">
-        <div class="footer-brand-box">
-          <div class="header-brand">
-            <div class="logo-glass-frame">
-              <img src="logos/oxford logo.png" alt="Oxford Adventure Tourism" width="38" height="38">
-            </div>
+  <!-- Luxury Editorial Footer -->
+  <footer class="luxury-editorial-footer">
+    <div class="footer-inner-max">
+      <div class="footer-top-grid">
+
+        <div class="footer-brand-summary">
+          <div class="footer-brand-logo-wrap">
+            <img src="images/Vector-Smart-Object.png" alt="Oxford Adventure Tourism Logo">
             <div class="brand-name-group">
               <span class="brand-main">OXFORD</span>
               <span class="brand-tagline">Adventure Tourism</span>
             </div>
           </div>
-          <p class="footer-desc">
-            Oxford Adventure Tourism connects travelers with extraordinary desert and airborne expeditions in Qatar and premier partner dropzones worldwide.
+          <p class="footer-desc-text">
+            Oxford Adventure Tourism W.L.L. is Doha’s premier luxury adventure operator. Licensed by Qatar Tourism, delivering extraordinary desert safaris, 15,000 ft skydiving, and private yacht charters.
           </p>
         </div>
 
         <div>
-          <h4 class="footer-col-title">Navigation</h4>
-          <ul class="footer-nav-list">
+          <h4 class="footer-col-header">Navigation</h4>
+          <ul class="footer-nav-links-list">
             <li><a href="index.html">Home</a></li>
             <li><a href="adventures.html">All Adventures</a></li>
             <li><a href="destinations.html">Destinations</a></li>
-            <li><a href="skydiving.html">Tandem Skydiving</a></li>
-            <li><a href="about.html">About Company</a></li>
-            <li><a href="contact.html">Contact & Booking</a></li>
+            <li><a href="skydiving.html">15,000 Ft Skydiving</a></li>
+            <li><a href="about.html">About Our Fleet</a></li>
+            <li><a href="contact.html">Concierge Desk</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-col-title">Adventure Categories</h4>
-          <ul class="footer-nav-list">
-            <li><a href="adventures.html#land">Inland Sea Desert Safari</a></li>
-            <li><a href="adventures.html#air">Tandem Skydiving (15k Ft)</a></li>
-            <li><a href="adventures.html#water">Purple Island Kayaking</a></li>
-            <li><a href="adventures.html#water">Private Yacht Charter</a></li>
-            <li><a href="adventures.html#land">Overnight Bedouin Camp</a></li>
+          <h4 class="footer-col-header">Signatures</h4>
+          <ul class="footer-nav-links-list">
+            <li><a href="adventures.html">Inland Sea Safari</a></li>
+            <li><a href="skydiving.html">Arabian Gulf Skydive</a></li>
+            <li><a href="adventures.html">Private Yacht Cruise</a></li>
+            <li><a href="adventures.html">Purple Island Kayaks</a></li>
+            <li><a href="adventures.html">Sunrise Ballooning</a></li>
+            <li><a href="adventures.html">Bedouin Glamping</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-col-title">Doha Concierge</h4>
-          <div class="footer-contact-info">
+          <h4 class="footer-col-header">Doha Concierge</h4>
+          <div class="footer-contact-details">
             <p>📍 Doha, State of Qatar</p>
             <p>📞 Phone: <a href="tel:+97472001133">+974 7200 1133</a></p>
-            <p>✉️ Email: <a href="mailto:info@oxfordadventuretourism.com">info@oxfordadventuretourism.com</a></p>
-            <p>🕒 Open Daily: 07:00 AM – 10:00 PM AST</p>
+            <p>💬 WhatsApp: <a href="https://wa.me/97472001133" target="_blank" rel="noopener noreferrer">+974 7200 1133</a></p>
+            <p>✉️ Email: <a href="mailto:info@oxfordadventuretourism.com">info@oxfordadventure...</a></p>
+            <p style="color: #38BDF8; font-weight: 600;">🕒 Open Daily: 07:00 – 22:00 AST</p>
           </div>
         </div>
+
       </div>
 
-      <div class="footer-bottom-bar">
-        <div>© 2026 Oxford Adventure Tourism W.L.L. All rights reserved. Licensed in Qatar.</div>
-        <div>Crystalline White Glassmorphism with Liquid Water Physics.</div>
+      <div class="footer-bottom-row">
+        <div>© 2026 Oxford Adventure Tourism W.L.L. All rights reserved. Licensed in the State of Qatar.</div>
+        <div>Curated Luxury Adventures • Privé Journey Design System</div>
       </div>
     </div>
   </footer>
 
-  <!-- Floating WhatsApp & Top -->
   <a href="https://wa.me/97472001133?text=Hello%20Oxford%20Adventure%20Tourism%2C%20I%20would%20like%20to%20inquire%20about%20your%20tours" 
-     class="floating-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+     class="floating-whatsapp-action" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     💬
   </a>
-  <button class="floating-top-btn" id="scrollTopBtn" aria-label="Back to Top">↑</button>
+
+  <button class="floating-scroll-up-btn" id="scrollTopBtn" aria-label="Back to Top">↑</button>
 
   <script src="script.js"></script>
 </body>

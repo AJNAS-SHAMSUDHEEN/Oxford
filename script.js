@@ -1,289 +1,136 @@
 /**
- * Oxford Adventure Tourism - Premium White Glassmorphism Landing Page Engine
+ * Oxford Adventure Tourism - Pro-Level Luxury Travel Engine
  * Features:
- * 1. Interactive Liquid Water Ripple Canvas Engine (Dynamic Wave Propagation)
- * 2. IntersectionObserver Staggered Scroll-to-Reveal System
- * 3. Horizontal Sliding Cards Carousel with Drag & Inertia Navigation
- * 4. Dynamic Typewriter Typography Engine
- * 5. 3D Perspective Card Tilt on Mouse Move
- * 6. Interactive Category Filters & Smooth Anchor Navigation
- * 7. Mobile Navigation & Scroll Progress Indicator
+ * 1. Fullscreen Cinematic Opening Video Animation (with skip, mute, progress, and replay)
+ * 2. Sticky Glassmorphism Header with Scroll States
+ * 3. IntersectionObserver Scroll-to-Reveal Engine
+ * 4. Interactive Altitude Selector for Skydiving
+ * 5. Category Filtering for Curated Adventure Catalog
+ * 6. Mobile Navigation Drawer
+ * 7. Quick Concierge Booking WhatsApp Dispatcher
  */
 
 document.addEventListener('DOMContentLoaded', () => {
 
   // =========================================================================
-  // 1. LIQUID WATER RIPPLE ENGINE (Canvas Fluid Simulation)
+  // 1. CINEMATIC OPENING VIDEO ANIMATION (Pure Video with Sound)
   // =========================================================================
-  const canvas = document.getElementById('waterCanvas');
-  if (canvas) {
-    const ctx = canvas.getContext('2d');
-    let width = canvas.width = Math.min(window.innerWidth, document.documentElement.clientWidth || window.innerWidth);
-    let height = canvas.height = canvas.parentElement.offsetHeight || 650;
+  const introOverlay = document.getElementById('openingVideoIntro');
+  const introVideo = document.getElementById('introVideoElement');
+  const replayBtn = document.getElementById('replayIntroBtn');
 
-    window.addEventListener('resize', () => {
-      width = canvas.width = Math.min(window.innerWidth, document.documentElement.clientWidth || window.innerWidth);
-      height = canvas.height = canvas.parentElement.offsetHeight || 650;
-    });
+  let introAudioActive = false;
+  let introDismissed = false;
 
-    const ripples = [];
-
-    class Ripple {
-      constructor(x, y) {
-        this.x = x;
-        this.y = y;
-        this.radius = 2;
-        this.maxRadius = Math.random() * 85 + 75;
-        this.speed = 2.4;
-        this.alpha = 0.55;
-      }
-      update() {
-        this.radius += this.speed;
-        this.alpha -= 0.009;
-      }
-      draw(context) {
-        if (this.alpha <= 0) return;
-        context.save();
-        context.beginPath();
-        context.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        context.strokeStyle = `rgba(14, 165, 233, ${this.alpha * 0.4})`;
-        context.lineWidth = 2.5;
-        context.stroke();
-
-        // Inner specular caustic reflection
-        context.beginPath();
-        context.arc(this.x, this.y, Math.max(0, this.radius - 8), 0, Math.PI * 2, false);
-        context.strokeStyle = `rgba(255, 255, 255, ${this.alpha * 0.6})`;
-        context.lineWidth = 1.2;
-        context.stroke();
-        context.restore();
-      }
+  function closeIntro() {
+    if (!introOverlay || introDismissed) return;
+    introDismissed = true;
+    introOverlay.classList.add('fade-out');
+    document.body.classList.remove('intro-active');
+    if (introVideo) {
+      setTimeout(() => {
+        try {
+          introVideo.pause();
+          introVideo.currentTime = 0;
+        } catch (e) {}
+      }, 750);
     }
-
-    let lastTime = 0;
-    function addRipple(x, y) {
-      if (ripples.length < 25) {
-        ripples.push(new Ripple(x, y));
-      }
-    }
-
-    // Trigger ripples on mouse movement over the hero area
-    canvas.parentElement.addEventListener('mousemove', (e) => {
-      const rect = canvas.getBoundingClientRect();
-      const now = Date.now();
-      if (now - lastTime > 60) {
-        addRipple(e.clientX - rect.left, e.clientY - rect.top);
-        lastTime = now;
-      }
-    });
-
-    // Trigger a wave ripple burst on click
-    canvas.parentElement.addEventListener('click', (e) => {
-      const rect = canvas.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      for (let i = 0; i < 3; i++) {
-        setTimeout(() => addRipple(x, y), i * 90);
-      }
-    });
-
-    // Ambient water droplet ripples
-    setInterval(() => {
-      if (document.visibilityState === 'visible' && ripples.length < 8) {
-        addRipple(Math.random() * width, Math.random() * height);
-      }
-    }, 1800);
-
-    function animateWater() {
-      ctx.clearRect(0, 0, width, height);
-      for (let i = ripples.length - 1; i >= 0; i--) {
-        ripples[i].update();
-        ripples[i].draw(ctx);
-        if (ripples[i].alpha <= 0) {
-          ripples.splice(i, 1);
-        }
-      }
-      requestAnimationFrame(animateWater);
-    }
-    animateWater();
   }
 
-  // =========================================================================
-  // 2. SCROLL TO REVEAL SYSTEM (Intersection Observer)
-  // =========================================================================
-  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
-  
-  if ('IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          observer.unobserve(entry.target);
-        }
+  function activateSoundAndPlay() {
+    if (!introVideo || introDismissed) return;
+    try {
+      introVideo.muted = false;
+      introVideo.volume = 1.0;
+      // If the video already played in silence, rewind to second 0 so user hears opening music
+      if (introVideo.currentTime > 0.8) {
+        introVideo.currentTime = 0;
+      }
+      const p = introVideo.play();
+      if (p !== undefined) {
+        p.then(() => {
+          introAudioActive = true;
+        }).catch(() => {});
+      }
+    } catch (e) {}
+  }
+
+  function startIntro() {
+    if (!introOverlay || !introVideo) return;
+    introDismissed = false;
+    introAudioActive = false;
+    introOverlay.classList.remove('fade-out');
+    document.body.classList.add('intro-active');
+    introVideo.currentTime = 0;
+    introVideo.muted = false;
+    introVideo.volume = 1.0;
+
+    const playPromise = introVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        introAudioActive = true;
+      }).catch(() => {
+        // If initial unmuted autoplay blocked by browser, play muted cleanly
+        introVideo.muted = true;
+        introVideo.play().catch(() => {});
       });
-    }, {
-      root: null,
-      threshold: 0.1,
-      rootMargin: '0px 0px -40px 0px'
-    });
-
-    revealElements.forEach(el => revealObserver.observe(el));
-  } else {
-    revealElements.forEach(el => el.classList.add('active'));
+    }
   }
 
-  // =========================================================================
-  // 3. SLIDING CARDS TRACKS (Smooth Scroll & Navigation Arrows)
-  // =========================================================================
-  const sliderTracks = document.querySelectorAll('.sliding-track-wrapper');
+  if (introOverlay && introVideo) {
+    document.body.classList.add('intro-active');
+    startIntro();
 
-  sliderTracks.forEach(wrapper => {
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    wrapper.addEventListener('mousedown', (e) => {
-      isDown = true;
-      startX = e.pageX - wrapper.offsetLeft;
-      scrollLeft = wrapper.scrollLeft;
+    // Auto dismiss as soon as the video animation ends
+    introVideo.addEventListener('ended', () => {
+      closeIntro();
     });
 
-    wrapper.addEventListener('mouseleave', () => { isDown = false; });
-    wrapper.addEventListener('mouseup', () => { isDown = false; });
+    // Clicking anywhere on the overlay/video:
+    // If not unmuted yet, unmute and play with sound!
+    // If already unmuted, clicking acts as skip.
+    introOverlay.addEventListener('click', (e) => {
+      if (!introAudioActive) {
+        activateSoundAndPlay();
+      } else {
+        closeIntro();
+      }
+    });
 
-    wrapper.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
+    // Any keydown or touch on the window un-mutes audio immediately
+    const globalUnmuteGesture = () => {
+      if (introOverlay && !introOverlay.classList.contains('fade-out') && !introAudioActive) {
+        activateSoundAndPlay();
+      }
+    };
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeIntro();
+      } else {
+        globalUnmuteGesture();
+      }
+    });
+    window.addEventListener('touchstart', globalUnmuteGesture, { passive: true });
+
+    // Fallback timer: dismiss if finished or stuck after 9s (video is 7.04s)
+    setTimeout(() => {
+      if (introOverlay && !introOverlay.classList.contains('fade-out')) {
+        closeIntro();
+      }
+    }, 9000);
+  }
+
+  // Replay intro trigger in footer
+  if (replayBtn) {
+    replayBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      const x = e.pageX - wrapper.offsetLeft;
-      const walk = (x - startX) * 1.8;
-      wrapper.scrollLeft = scrollLeft - walk;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      startIntro();
     });
-  });
-
-  // Next / Previous buttons for sliders
-  document.querySelectorAll('[data-slider-target]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const targetId = btn.getAttribute('data-slider-target');
-      const direction = btn.getAttribute('data-direction');
-      const targetTrack = document.getElementById(targetId);
-      if (!targetTrack) return;
-
-      const cardWidth = 384; // Card width + gap
-      if (direction === 'next') {
-        targetTrack.scrollBy({ left: cardWidth, behavior: 'smooth' });
-      } else {
-        targetTrack.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-      }
-    });
-  });
-
-  // =========================================================================
-  // 4. DYNAMIC TYPEWRITER ON HERO
-  // =========================================================================
-  const typewriterText = document.getElementById('typewriterText');
-  if (typewriterText) {
-    const phrases = [
-      'Inland Sea Safaris',
-      '15,000 Ft Skydiving',
-      'Purple Island Kayaking',
-      'Arabian Gulf Yachting',
-      'Bedouin Night Odysseys'
-    ];
-    let phraseIdx = 0;
-    let letterIdx = 0;
-    let isDeleting = false;
-
-    function typeLoop() {
-      const current = phrases[phraseIdx];
-      if (isDeleting) {
-        letterIdx--;
-        typewriterText.textContent = current.substring(0, letterIdx);
-      } else {
-        letterIdx++;
-        typewriterText.textContent = current.substring(0, letterIdx);
-      }
-
-      let speed = isDeleting ? 40 : 90;
-
-      if (!isDeleting && letterIdx === current.length) {
-        speed = 2200;
-        isDeleting = true;
-      } else if (isDeleting && letterIdx === 0) {
-        isDeleting = false;
-        phraseIdx = (phraseIdx + 1) % phrases.length;
-        speed = 400;
-      }
-
-      setTimeout(typeLoop, speed);
-    }
-    typeLoop();
   }
 
   // =========================================================================
-  // 5. ENHANCED 3D CARD PERSPECTIVE TILT WITH SMOOTH INERTIA
-  // =========================================================================
-  const tiltCards = document.querySelectorAll('.slide-card, .glass-card, .signature-card-wide, .feature-glass-box');
-  tiltCards.forEach(card => {
-    function rotateToMouse(e) {
-      const bounds = card.getBoundingClientRect();
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
-      const leftX = mouseX - bounds.x;
-      const topY = mouseY - bounds.y;
-      const center = {
-        x: leftX - bounds.width / 2,
-        y: topY - bounds.height / 2
-      };
-
-      const rotateX = (center.y / bounds.height) * -10;
-      const rotateY = (center.x / bounds.width) * 10;
-
-      card.style.transform = `
-        perspective(1200px)
-        scale3d(1.02, 1.02, 1.02)
-        rotateX(${rotateX.toFixed(2)}deg)
-        rotateY(${rotateY.toFixed(2)}deg)
-        translateY(-6px)
-      `;
-    }
-
-    card.addEventListener('mouseenter', () => {
-      card.style.transition = 'transform 0.12s ease-out, box-shadow 0.2s ease-out';
-    });
-
-    card.addEventListener('mousemove', rotateToMouse);
-
-    card.addEventListener('mouseleave', () => {
-      card.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease';
-      card.style.transform = '';
-    });
-  });
-
-  // =========================================================================
-  // 6. CATEGORY FILTER TABS
-  // =========================================================================
-  const filterTabs = document.querySelectorAll('.filter-tab-btn');
-  filterTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      filterTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      const filterVal = tab.getAttribute('data-filter');
-      const cards = document.querySelectorAll('#featuredTrack .slide-card');
-
-      cards.forEach(card => {
-        const cat = card.getAttribute('data-category');
-        if (filterVal === 'all' || cat === filterVal) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-
-  // =========================================================================
-  // 7. HEADER SCROLL & PROGRESS BAR
+  // 2. STICKY GLASS NAVBAR & SCROLL PROGRESS
   // =========================================================================
   const header = document.querySelector('.main-glass-header');
   const scrollProgress = document.getElementById('scrollProgressLine');
@@ -307,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (scrollTopBtn) {
-      if (scrollY > 350) {
+      if (scrollY > 400) {
         scrollTopBtn.classList.add('visible');
       } else {
         scrollTopBtn.classList.remove('visible');
@@ -322,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // 8. MOBILE NAVIGATION DRAWER
+  // 3. MOBILE NAVIGATION DRAWER
   // =========================================================================
   const mobileToggle = document.getElementById('mobileMenuToggle');
   const navLinks = document.getElementById('headerNavLinks');
@@ -339,7 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Close when clicking any nav item
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('mobile-open');
@@ -348,25 +194,327 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // 9. ALTITUDE DISPLAY SELECTOR ON SKYDIVING SECTION
+  // 4. SCROLL REVEAL OBSERVER
   // =========================================================================
-  const altButtons = document.querySelectorAll('.altitude-btn');
-  const altHeightDisplay = document.getElementById('skydiveHeightDisplay');
-  const altFreefallDisplay = document.getElementById('skydiveFreefallDisplay');
+  const revealElements = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.08,
+      rootMargin: '0px 0px -40px 0px'
+    });
 
-  if (altButtons.length > 0) {
-    altButtons.forEach(btn => {
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    revealElements.forEach(el => el.classList.add('active'));
+  }
+
+  // =========================================================================
+  // 5. INTERACTIVE ALTITUDE SELECTOR (Skydiving Showcase)
+  // =========================================================================
+  const altitudeBtns = document.querySelectorAll('.altitude-pill-btn');
+  const statAltitude = document.getElementById('skydiveStatAltitude');
+  const statFreefall = document.getElementById('skydiveStatFreefall');
+  const statSpeed = document.getElementById('skydiveStatSpeed');
+  const statDropzone = document.getElementById('skydiveStatDropzone');
+
+  if (altitudeBtns.length > 0) {
+    altitudeBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        altButtons.forEach(b => b.classList.remove('active'));
+        altitudeBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
-        const height = btn.getAttribute('data-height');
-        const freefall = btn.getAttribute('data-freefall');
+        const height = btn.getAttribute('data-height') || '15,000 Ft';
+        const freefall = btn.getAttribute('data-freefall') || '60+ Sec';
+        const speed = btn.getAttribute('data-speed') || '220 km/h';
+        const dropzone = btn.getAttribute('data-dropzone') || 'Khor Al Adaid';
 
-        if (altHeightDisplay) altHeightDisplay.textContent = height;
-        if (altFreefallDisplay) altFreefallDisplay.textContent = freefall;
+        if (statAltitude) statAltitude.textContent = height;
+        if (statFreefall) statFreefall.textContent = freefall;
+        if (statSpeed) statSpeed.textContent = speed;
+        if (statDropzone) statDropzone.textContent = dropzone;
       });
     });
+  }
+
+  // =========================================================================
+  // 6. CATEGORY FILTER TABS (Adventures & Offerings)
+  // =========================================================================
+  const filterTabs = document.querySelectorAll('.filter-tab-pill');
+  const adventureCards = document.querySelectorAll('.luxury-card');
+
+  if (filterTabs.length > 0 && adventureCards.length > 0) {
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.getAttribute('data-filter') || 'all';
+
+        adventureCards.forEach(card => {
+          const cat = card.getAttribute('data-category');
+          if (filter === 'all' || cat === filter) {
+            card.style.display = '';
+            setTimeout(() => card.classList.add('active'), 50);
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // =========================================================================
+  // 7. CONCIERGE BOOKING QUICK FORM
+  // =========================================================================
+  const bookingForm = document.getElementById('conciergeBookingForm');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('bookingName')?.value || 'Guest';
+      const adventure = document.getElementById('bookingAdventure')?.value || 'Inland Sea Safari';
+      const guests = document.getElementById('bookingGuests')?.value || '2';
+      const date = document.getElementById('bookingDate')?.value || 'Soon';
+
+      const message = `Hello Oxford Adventure Tourism! I would like to reserve a bespoke expedition.%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Experience:* ${encodeURIComponent(adventure)}%0A*Party Size:* ${encodeURIComponent(guests)} Guests%0A*Preferred Date:* ${encodeURIComponent(date)}%0A%0APlease share availability and private VIP rates.`;
+
+      window.open(`https://wa.me/97472001133?text=${message}`, '_blank');
+    });
+  }
+
+  // =========================================================================
+  // 8. 3D COVERFLOW VISUAL DIARY ENGINE (Reference Image 1)
+  // =========================================================================
+  const coverflowWrapper = document.querySelector('.coverflow-carousel-wrapper');
+  const coverflowTrack = document.getElementById('coverflowTrack');
+  const coverflowPrevBtn = document.getElementById('coverflowPrevBtn');
+  const coverflowNextBtn = document.getElementById('coverflowNextBtn');
+  const coverflowDots = document.querySelectorAll('.coverflow-dot');
+  const coverflowFilters = document.querySelectorAll('[data-coverflow-filter]');
+
+  if (coverflowTrack && coverflowWrapper) {
+    const originalCards = Array.from(coverflowTrack.querySelectorAll('.coverflow-card'));
+    const N = originalCards.length;
+
+    if (N > 0) {
+      // Create seamless infinite clones before and after
+      originalCards.forEach(card => {
+        const cloneBefore = card.cloneNode(true);
+        cloneBefore.classList.remove('active');
+        cloneBefore.setAttribute('data-clone', 'true');
+        coverflowTrack.insertBefore(cloneBefore, originalCards[0]);
+      });
+
+      originalCards.forEach(card => {
+        const cloneAfter = card.cloneNode(true);
+        cloneAfter.classList.remove('active');
+        cloneAfter.setAttribute('data-clone', 'true');
+        coverflowTrack.appendChild(cloneAfter);
+      });
+
+      // Complete array of cards: Set 0 (0..N-1), Set 1 (N..2N-1), Set 2 (2N..3N-1)
+      const allCards = Array.from(coverflowTrack.querySelectorAll('.coverflow-card'));
+      let currentCoverflowIndex = N + 2; // Start on middle card (Card 2) in Set 1
+      let autoScrollTimer = null;
+      let isAnimating = false;
+      let safetyUnlockTimer = null;
+      const AUTO_SCROLL_DELAY = 3000; // 3 seconds auto-scroll
+
+      function updateCoverflow(animate = true) {
+        const activeCard = allCards[currentCoverflowIndex];
+        if (!activeCard) return;
+
+        allCards.forEach((card, idx) => {
+          card.classList.remove('active', 'flank-prev', 'flank-next', 'flank-outer', 'flank-outer-next');
+          const diff = idx - currentCoverflowIndex;
+          if (diff === 0) {
+            card.classList.add('active');
+          } else if (diff === -1) {
+            card.classList.add('flank-prev');
+          } else if (diff === 1) {
+            card.classList.add('flank-next');
+          } else if (diff < -1) {
+            card.classList.add('flank-outer');
+          } else {
+            card.classList.add('flank-outer-next');
+          }
+        });
+
+        // Sync pagination dots
+        if (coverflowDots.length > 0) {
+          const realIndex = ((currentCoverflowIndex % N) + N) % N;
+          coverflowDots.forEach((dot, dotIdx) => {
+            dot.classList.toggle('active', dotIdx === realIndex);
+          });
+        }
+
+        // Set transition speed or jump immediately
+        if (!animate) {
+          coverflowTrack.style.transition = 'none';
+        } else {
+          coverflowTrack.style.transition = 'transform 0.65s cubic-bezier(0.25, 1, 0.5, 1)';
+        }
+
+        // Center activeCard in coverflowWrapper
+        const cardCenter = activeCard.offsetLeft + (activeCard.offsetWidth / 2);
+        const wrapperCenter = coverflowWrapper.offsetWidth / 2;
+        const shiftX = wrapperCenter - cardCenter;
+
+        coverflowTrack.style.transform = `translateX(${shiftX}px)`;
+      }
+
+      function nextSlide() {
+        if (isAnimating) return;
+        isAnimating = true;
+        currentCoverflowIndex++;
+        updateCoverflow(true);
+
+        clearTimeout(safetyUnlockTimer);
+        safetyUnlockTimer = setTimeout(() => { isAnimating = false; }, 700);
+      }
+
+      function prevSlide() {
+        if (isAnimating) return;
+        isAnimating = true;
+        currentCoverflowIndex--;
+        updateCoverflow(true);
+
+        clearTimeout(safetyUnlockTimer);
+        safetyUnlockTimer = setTimeout(() => { isAnimating = false; }, 700);
+      }
+
+      // Seamless wrap-around after transition completes
+      coverflowTrack.addEventListener('transitionend', (e) => {
+        if (e.target !== coverflowTrack || e.propertyName !== 'transform') return;
+
+        // If we crossed into Set 2 (third set), jump back silently into Set 1 (middle set)
+        if (currentCoverflowIndex >= 2 * N) {
+          currentCoverflowIndex = currentCoverflowIndex - N;
+          updateCoverflow(false);
+          void coverflowTrack.offsetHeight; // force reflow
+        } 
+        // If we crossed into Set 0 (first set), jump forward silently into Set 1 (middle set)
+        else if (currentCoverflowIndex < N) {
+          currentCoverflowIndex = currentCoverflowIndex + N;
+          updateCoverflow(false);
+          void coverflowTrack.offsetHeight; // force reflow
+        }
+        isAnimating = false;
+      });
+
+      function startAutoScroll() {
+        stopAutoScroll();
+        autoScrollTimer = setInterval(nextSlide, AUTO_SCROLL_DELAY);
+      }
+
+      function stopAutoScroll() {
+        if (autoScrollTimer) {
+          clearInterval(autoScrollTimer);
+          autoScrollTimer = null;
+        }
+      }
+
+      // Direct card click interaction on all slides
+      allCards.forEach((card, idx) => {
+        card.addEventListener('click', () => {
+          if (isAnimating) return;
+          if (idx === currentCoverflowIndex) return;
+          isAnimating = true;
+          currentCoverflowIndex = idx;
+          updateCoverflow(true);
+          startAutoScroll();
+
+          clearTimeout(safetyUnlockTimer);
+          safetyUnlockTimer = setTimeout(() => { isAnimating = false; }, 700);
+        });
+      });
+
+      // Controls
+      if (coverflowPrevBtn) {
+        coverflowPrevBtn.addEventListener('click', () => {
+          prevSlide();
+          startAutoScroll();
+        });
+      }
+
+      if (coverflowNextBtn) {
+        coverflowNextBtn.addEventListener('click', () => {
+          nextSlide();
+          startAutoScroll();
+        });
+      }
+
+      // Pagination dots click handler
+      if (coverflowDots.length > 0) {
+        coverflowDots.forEach(dot => {
+          dot.addEventListener('click', () => {
+            if (isAnimating) return;
+            const dotIdx = parseInt(dot.getAttribute('data-dot-index'), 10);
+            if (isNaN(dotIdx)) return;
+            const targetIndex = N + dotIdx;
+            if (targetIndex === currentCoverflowIndex) return;
+
+            isAnimating = true;
+            currentCoverflowIndex = targetIndex;
+            updateCoverflow(true);
+            startAutoScroll();
+
+            clearTimeout(safetyUnlockTimer);
+            safetyUnlockTimer = setTimeout(() => { isAnimating = false; }, 700);
+          });
+        });
+      }
+
+      // Pause on hover & touch
+      coverflowWrapper.addEventListener('mouseenter', stopAutoScroll);
+      coverflowWrapper.addEventListener('mouseleave', startAutoScroll);
+      coverflowWrapper.addEventListener('touchstart', stopAutoScroll, { passive: true });
+      coverflowWrapper.addEventListener('touchend', startAutoScroll, { passive: true });
+
+      // Category filters
+      if (coverflowFilters.length > 0) {
+        coverflowFilters.forEach(pill => {
+          pill.addEventListener('click', () => {
+            coverflowFilters.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+            const target = pill.getAttribute('data-coverflow-filter');
+            if (target === 'all') {
+              currentCoverflowIndex = N + 2;
+            } else {
+              for (let i = N; i < 2 * N; i++) {
+                if (allCards[i].getAttribute('data-category') === target) {
+                  currentCoverflowIndex = i;
+                  break;
+                }
+              }
+            }
+            isAnimating = true;
+            updateCoverflow(true);
+            startAutoScroll();
+
+            clearTimeout(safetyUnlockTimer);
+            safetyUnlockTimer = setTimeout(() => { isAnimating = false; }, 700);
+          });
+        });
+      }
+
+      // Responsive window resize recalculation
+      window.addEventListener('resize', () => {
+        updateCoverflow(false);
+      });
+
+      // Initialize 3D positions and kick off 3-second auto-scroll
+      setTimeout(() => {
+        updateCoverflow(false);
+        startAutoScroll();
+      }, 100);
+    }
   }
 
 });
