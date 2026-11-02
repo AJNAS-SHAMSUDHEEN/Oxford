@@ -580,4 +580,65 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // =========================================================================
+  // 12. BACKGROUND AEROPLANE FOLLOWING MOUSE POINTER
+  // =========================================================================
+  const bgPlane = document.getElementById('bgMouseAeroplane');
+  if (bgPlane) {
+    let mouseX = window.innerWidth * 0.75;
+    let mouseY = window.innerHeight * 0.35;
+    let planeX = mouseX;
+    let planeY = mouseY;
+    let currentAngle = 45;
+    let targetAngle = 45;
+    let hasMoved = false;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      hasMoved = true;
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      if (e.touches.length > 0) {
+        mouseX = e.touches[0].clientX;
+        mouseY = e.touches[0].clientY;
+        hasMoved = true;
+      }
+    }, { passive: true });
+
+    let idleTime = 0;
+
+    function animatePlane() {
+      idleTime += 0.03;
+
+      if (hasMoved) {
+        const dx = mouseX - planeX;
+        const dy = mouseY - planeY;
+        const dist = Math.hypot(dx, dy);
+
+        // Smooth physics: plane glides smoothly toward the cursor
+        planeX += dx * 0.055;
+        planeY += dy * 0.055;
+
+        // Smooth banking rotation toward cursor direction
+        if (dist > 4) {
+          targetAngle = Math.atan2(dy, dx) * 180 / Math.PI + 90;
+          let diff = targetAngle - currentAngle;
+          while (diff < -180) diff += 360;
+          while (diff > 180) diff -= 360;
+          currentAngle += diff * 0.1;
+        }
+      }
+
+      // Gentle floating hover motion when resting
+      const hoverY = Math.sin(idleTime) * 3;
+      bgPlane.style.transform = `translate3d(${planeX}px, ${planeY + hoverY}px, 0) rotate(${currentAngle}deg)`;
+
+      requestAnimationFrame(animatePlane);
+    }
+
+    requestAnimationFrame(animatePlane);
+  }
+
 });

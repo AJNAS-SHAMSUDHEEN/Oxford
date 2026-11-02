@@ -10,12 +10,21 @@
    ========================================================================== */
 
 :root {
-  /* Official User Palette */
-  --palette-dark-cyan: #20878E;
+  /* Official User Palette & Oxford Logo Color System */
+  --oxford-emerald: #12664D;
+  --oxford-emerald-deep: #0C4332;
+  --oxford-emerald-light: #1A8565;
+  --oxford-gold: #C1933E;
+  --oxford-gold-light: #DFB258;
+  --oxford-gold-deep: #966E24;
+  --oxford-champagne: #FDF9F2;
+  --oxford-mist: rgba(18, 102, 77, 0.06);
+
+  --palette-dark-cyan: #12664D;
   --palette-light-blue: #92C4D0;
   --palette-champagne-pink: #F8E2D6;
-  --palette-earth-yellow: #F2C375;
-  --palette-cocoa-brown: #D66F29;
+  --palette-earth-yellow: #DFB258;
+  --palette-cocoa-brown: #C1933E;
 
   /* White Theme Background & Surface Tones */
   --bg-body: #FFFFFF;
@@ -134,16 +143,72 @@ button {
   cursor: pointer;
 }
 
-/* Top Scroll Progress Line (Using Palette Gradient) */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Top Scroll Progress Line (Using Logo Gradient: Emerald to Gold) */
 .scroll-progress-line {
   position: fixed;
   top: 0;
   left: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--palette-dark-cyan), var(--palette-light-blue), var(--palette-earth-yellow), var(--palette-cocoa-brown));
+  background: linear-gradient(90deg, #12664D, #1A8565, #DFB258, #C1933E);
   width: 0%;
   z-index: 10000;
   transition: width 0.1s ease-out;
+}
+
+/* ==========================================================================
+   BACKGROUND AEROPLANE FOLLOWING MOUSE POINTER (Medium Size)
+   ========================================================================== */
+.bg-mouse-aeroplane {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 52px;
+  height: 52px;
+  margin-top: -26px;
+  margin-left: -26px;
+  pointer-events: none;
+  z-index: 1; /* In the background, behind content cards and header */
+  opacity: 0.85;
+  will-change: transform;
+  filter: drop-shadow(0 6px 16px rgba(193, 147, 62, 0.45));
+}
+
+.bg-plane-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-plane-glow {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7px;
+  height: 12px;
+  background: radial-gradient(circle, rgba(255, 240, 190, 0.95) 0%, rgba(193, 147, 62, 0.45) 60%, transparent 100%);
+  border-radius: 50%;
+  animation: planeThrustPulse 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes planeThrustPulse {
+  0% { transform: translateX(-50%) scale(0.75); opacity: 0.6; }
+  100% { transform: translateX(-50%) scale(1.3); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .bg-mouse-aeroplane {
+    width: 42px;
+    height: 42px;
+    margin-top: -21px;
+    margin-left: -21px;
+    opacity: 0.75;
+  }
 }
 
 /* ==========================================================================
@@ -765,7 +830,7 @@ button {
   height: 100%;
 }
 
-/* Single Clean Animated Ocean Wave Transition */
+/* Single Clean Animated Ocean Wave Transition (Pure White) */
 .editorial-waves {
   position: relative;
   width: 100%;
@@ -778,11 +843,6 @@ button {
 .wave-parallax > use {
   animation: waveMoveForever 18s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
   will-change: transform;
-}
-
-/* Hide multi-layer ghost waves so only one single wave is displayed */
-.wave-parallax > use:not(:last-child) {
-  display: none !important;
 }
 
 @keyframes waveMoveForever {
@@ -2155,6 +2215,8 @@ button {
    EDITORIAL FOOTER
    ========================================================================== */
 .luxury-editorial-footer {
+  position: relative;
+  z-index: 10;
   background: #050E12;
   border-top: 1px solid var(--border-glass);
   padding: 80px 48px 40px;
